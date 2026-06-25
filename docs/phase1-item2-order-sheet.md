@@ -65,8 +65,21 @@ Action:   Google Sheets ▸ "Add a Row"  → Daily Orders sheet
 
 **Done when:** a new paid order appears as a correctly filled row within minutes — no typing.
 
-## Open items
-- [ ] Founder/Pitch authorises the **Shopify connection** in Make (read orders).
-- [ ] Confirm the exact **property names** Globo/native options use on the order (we map to
-      those — verified from one real order).
-- [ ] Decide refresh: scheduled (e.g. 15 min) vs instant (Shopify webhook).
+## Build status (in progress)
+
+**Working end-to-end** ✅ — scenario built (Shopify *Watch orders* → Iterator → Google Sheets
+*Add a row*), Shopify connected via OAuth, test run wrote real orders to "Daily Orders".
+Currently mapped: `order_no` (Shopify **Name**), `order_date` (**Created at**), `qty`
+(Iterator **Quantity**), `status` (static "New").
+
+**Remaining to finish:**
+- [ ] **Article (col C)** — Make's Shopify line item doesn't expose a plain "Title"; locate the
+      line-item **Name**/variant field, or add a Shopify *Get a Product* step by product ID.
+- [ ] **Size / Sleeves / Shirt length (D–F)** — these are Shopify **variant options**; map from
+      the line item's **variant title** (and split), or option fields.
+- [ ] **Custom measurements (G)** — from the line item **Properties** once Globo is live; use
+      `{{join(map(2.Properties; "value"; "name"; "Custom measurements"); ", ")}}`.
+- [ ] **Date format** — currently raw ISO (`2025-05-04T18:23:55.000Z`); prettify with
+      `formatDate` for the team.
+- [ ] **"Paid only" filter** on the link after the trigger (financial status = paid).
+- [ ] **Go automatic** — switch from *Run once* to a schedule (e.g. every 15 min) once verified.
