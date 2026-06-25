@@ -1,0 +1,33 @@
+# --- Secrets: NEVER commit real credentials (see CLAUDE.md → Security & data) ---
+.env
+.env.*
+!.env.example
+
+# --- Node / TypeScript ---
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+*.log
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Python (finance scripts) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- Data: /data is for ANONYMISED samples only. Never commit real customer PII. ---
+data/private/
+*.local.csv
+*.local.xlsx

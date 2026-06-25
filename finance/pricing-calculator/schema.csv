@@ -1,0 +1,12 @@
+column,type,source,description
+article_ref,text,manual,"Anonymised article reference / style code (no customer data)"
+fabric_cost,number,manual,"Fabric cost for the article (PKR)"
+labour_cost,number,manual,"Stitching / labour cost (PKR)"
+overhead,number,formula_or_manual,"Overhead. Flat PKR, or = (fabric_cost+labour_cost)*overhead_pct from Settings. TODO: founder to confirm basis"
+base_cost,number,formula,"= fabric_cost + labour_cost + overhead"
+margin_pct,number,settings,"Margin as fraction of selling price (e.g. 0.40). TODO: founder to supply"
+local_price,number,formula,"= ROUNDUP-rule( base_cost / (1 - margin_pct) ). If founder uses markup-on-cost instead: = base_cost * (1 + markup_pct)"
+weight_kg,number,manual,"Shipping weight of the article (kg)"
+dhl_per_kg,number,settings,"DHL cost per kg, PKR (per zone if they differ). TODO: founder to supply"
+intl_price,number,formula,"= ROUNDUP-rule( local_price + weight_kg * dhl_per_kg )"
+notes,text,manual,"Optional notes"
