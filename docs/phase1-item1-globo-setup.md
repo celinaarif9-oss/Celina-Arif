@@ -145,17 +145,22 @@ notes after each order.
 - Alysa uses the **"Default product"** template (which has the block) — so it is *not* a custom
   template issue.
 
-**Remaining suspects + asks:**
-1. **App embed disabled** — confirm **Globo Product Options** is toggled ON under the live
-   theme's **Theme settings → App embeds**.
-2. **Product assignment** — confirm **Alysa** is actually in the option set's *Assign products*
-   list (Globo's preview shows the set regardless of assignment, so this is easy to miss).
-3. **Auto-placement vs app block on a custom add-to-cart.** With widget placement on
-   "Above add to cart", Globo auto-injects and may not find this custom theme's add-to-cart
-   anchor, while the app block may be inert in that mode. Please confirm whether Globo should be
-   switched to **app-block placement**, or given a **manual anchor snippet** in the custom
-   add-to-cart markup.
+**Remaining suspects + asks (custom theme — this is the crux):**
+1. **Block may be on the wrong theme.** The live/Active theme is **"Changes"**, but the Globo
+   app block was added while editing a duplicate, **"Copy of Changes."** Please confirm the
+   Globo block is on the **live "Changes"** theme's **Default product** template (Alysa uses
+   Default product), not only on a duplicate.
+2. **No "App embeds" in this theme.** The live theme's **Theme settings** list ends at
+   "Theme style" with **no App embeds section** — this custom theme doesn't expose app embeds
+   the standard way. So Globo likely needs a **manual integration**: place the Globo app block
+   (or a Globo anchor snippet) directly in the **custom product template / add-to-cart markup**
+   where it should render.
+3. **Product assignment** — confirm **Alysa** is in the option set's *Assign products* list
+   (Globo's preview shows the set regardless of assignment, so this is easy to miss).
 4. Rule out **caching** (hard refresh / incognito).
+
+**Net:** the Globo option set is built and correct (verified in Globo's own preview); what
+remains is wiring it into this **custom theme** — a theme job for Pitch.
 
 **Acceptance:** on a live made-to-order product, ticking "Add custom measurements" reveals the
 measurements list, and a test order shows `Custom measurements` as a line-item property.
