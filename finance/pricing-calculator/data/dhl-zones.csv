@@ -1,0 +1,233 @@
+country,code,zone
+Afghanistan,AF,10
+Albania,AL,4
+Algeria,DZ,10
+American Samoa,AS,10
+Andorra,AD,4
+Angola,AO,10
+Anguilla,AI,10
+Antigua,AG,10
+Argentina,AR,9
+Armenia,AM,10
+Aruba,AW,10
+Australia,AU,11
+Austria,AT,4
+Azerbaijan,AZ,10
+Bahamas,BS,10
+Bahrain,BH,1
+Bangladesh,BD,2
+Barbados,BB,10
+Belarus,BY,10
+Belgium,BE,4
+Belize,BZ,10
+Benin,BJ,10
+Bermuda,BM,10
+Bhutan,BT,5
+Bolivia,BO,9
+Bonaire,XB,10
+Bosnia & Herzegovina,BA,4
+Botswana,BW,10
+Brazil,BR,9
+Brunei,BN,5
+Bulgaria,BG,4
+Burkina Faso,BF,10
+Burundi,BI,10
+Cambodia,KH,5
+Cameroon,CM,10
+Canada,CA,8
+"Canary Islands, The",IC,10
+Cape Verde,CV,10
+Cayman Islands,KY,10
+Central African Rep,CF,10
+Chad,TD,10
+Chile,CL,9
+China,CN,6
+Colombia,CO,9
+Comoros,KM,10
+Congo,CG,10
+"Congo, DPR",CD,10
+Cook Islands,CK,10
+Costa Rica,CR,10
+Cote D Ivoire,CI,10
+Croatia,HR,4
+Cuba,CU,10
+Curacao,XC,10
+Cyprus,CY,4
+"Czech Rep., The",CZ,4
+Denmark,DK,4
+Djibouti,DJ,10
+Dominica,DM,10
+Dominican Rep.,DO,10
+Ecuador,EC,9
+Egypt,EG,9
+El Salvador,SV,10
+Eritrea,ER,10
+Estonia,EE,4
+Eswatini,SZ,10
+Ethiopia,ET,10
+Falkland Islands,FK,10
+Faroe Islands,FO,10
+Fiji,FJ,10
+Finland,FI,4
+France,FR,4
+French Guyana,GF,9
+Gabon,GA,10
+Gambia,GM,10
+Georgia,GE,10
+Germany,DE,4
+Ghana,GH,10
+Gibraltar,GI,4
+Greece,GR,4
+Greenland,GL,10
+Grenada,GD,10
+Guadeloupe,GP,10
+Guam,GU,10
+Guatemala,GT,10
+Guernsey,GG,4
+Guinea Rep.,GN,10
+Guinea-Bissau,GW,10
+Guinea-Equatorial,GQ,10
+Guyana (British),GY,10
+Haiti,HT,10
+Honduras,HN,10
+Hong Kong SAR China,HK,6
+Hungary,HU,4
+Iceland,IS,4
+India,IN,5
+Indonesia,ID,5
+Iran,IR,10
+Iraq,IQ,10
+"Ireland, Rep. Of",IE,4
+Italy,IT,4
+Jamaica,JM,10
+Japan,JP,6
+Jersey,JE,4
+Jordan,JO,2
+Kazakhstan,KZ,10
+Kenya,KE,10
+Kiribati,KI,10
+"Korea,  D.P.R Of",KP,10
+"Korea, Rep. Of",KR,6
+Kosovo,KV,4
+Kuwait,KW,2
+Kyrgyzstan,KG,10
+Laos,LA,5
+Latvia,LV,4
+Lebanon,LB,10
+Lesotho,LS,10
+Liberia,LR,10
+Libya,LY,10
+Liechtenstein,LI,4
+Lithuania,LT,4
+Luxembourg,LU,4
+Macau SAR China,MO,6
+Madagascar,MG,10
+Malawi,MW,10
+Malaysia,MY,5
+Maldives,MV,5
+Mali,ML,10
+Malta,MT,4
+Marshall Islands,MH,10
+Martinique,MQ,10
+Mauritania,MR,10
+Mauritius,MU,9
+Mayotte,YT,10
+Mexico,MX,9
+Micronesia,FM,10
+"Moldova, Rep. Of",MD,10
+Monaco,MC,4
+Mongolia,MN,10
+"Montenegro, Rep Of",ME,4
+Montserrat,MS,10
+Morocco,MA,10
+Mozambique,MZ,10
+Myanmar,MM,5
+Namibia,NA,10
+"Nauru, Rep. Of",NR,10
+Nepal,NP,2
+"Netherlands, The",NL,4
+Nevis,XN,10
+New Caledonia,NC,10
+New Zealand,NZ,7
+Nicaragua,NI,10
+Niger,NE,10
+Nigeria,NG,9
+Niue,NU,10
+North Macedonia,MK,4
+Northern Mariana Islands,MP,10
+Norway,NO,4
+Oman,OM,2
+Palau,PW,10
+Panama,PA,9
+Papua New Guinea,PG,10
+Paraguay,PY,9
+Peru,PE,9
+"Philippines, The",PH,5
+Poland,PL,4
+Portugal,PT,4
+Puerto Rico,PR,9
+Qatar,QA,1
+"Reunion, Island Of",RE,10
+Romania,RO,4
+Russian Federation,RU,10
+Rwanda,RW,10
+Saint Helena,SH,10
+Samoa,WS,10
+San Marino,SM,4
+Sao Tome And Principe,ST,10
+Saudi Arabia,SA,13
+Senegal,SN,10
+"Serbia, Rep. Of",RS,4
+Seychelles,SC,10
+Sierra Leone,SL,10
+Singapore,SG,5
+Slovakia,SK,4
+Slovenia,SI,4
+Solomon Islands,SB,10
+Somalia Hargeisa,XS,10
+Somalia Mogadishu,SO,10
+South Africa,ZA,9
+South Sudan,SS,10
+Spain,ES,4
+Sri Lanka,LK,2
+St. Barthelemy,XY,10
+St. Eustatius,XE,10
+St. Kitts,KN,10
+St. Lucia,LC,10
+St. Maarten,XM,10
+St. Vincent,VC,10
+Sudan,SD,10
+Suriname,SR,10
+Sweden,SE,4
+Switzerland,CH,4
+Syria,SY,10
+Tahiti,PF,10
+Taiwan,TW,6
+Tajikistan,TJ,10
+Tanzania,TZ,10
+Thailand,TH,5
+Timor-Leste,TL,10
+Togo,TG,10
+Tonga,TO,10
+Trinidad And Tobago,TT,10
+Tunisia,TN,10
+Turkey,TR,2
+Turkmenistan,TM,10
+Turks & Caicos,TC,10
+Tuvalu,TV,10
+USA,US,8
+Uganda,UG,10
+Ukraine,UA,10
+United Arab Emirates,AE,12
+United Kingdom,GB,3
+Uruguay,UY,9
+Uzbekistan,UZ,10
+Vanuatu,VU,10
+Vatican City,VA,4
+Venezuela,VE,10
+Vietnam,VN,5
+Virgin Islands-British,VG,10
+Virgin Islands-US,VI,10
+"Yemen, Rep. Of",YE,10
+Zambia,ZM,10
+Zimbabwe,ZW,10

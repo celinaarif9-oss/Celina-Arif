@@ -1,75 +1,60 @@
-# Pricing Calculator — starter template (Phase 1, item 4)
+# Pricing Calculator (Phase 1, item 4)
 
 **Replaces:** costing/pricing each article by hand in Excel.
 
 Enter an article's costs → get a suggested **local retail price** and a **DHL-inclusive
-international price** (per destination zone) instantly. This folder is the version-controlled
-**template**: a column/formula schema (`schema.csv`), a DHL zone-rate table (`dhl-zones.csv`),
-and an Apps Script implementation (`pricing-calculator.gs`) you paste into a Google Sheet.
+international price** for any destination, using DHL's real zone rate card.
 
-> ⚠️ **This is a skeleton. It contains NO real numbers.** Every rate/assumption is a
-> `TODO: founder to supply` placeholder. The math is wired up; the inputs are not. Nothing is
-> pushed to Shopify — this only *suggests* prices for you to review.
-
-## The model (confirmed: markup on cost)
+## Model (confirmed with founder)
 
 ```
-total_cost  = direct_materials + direct_labour + overhead_allocation
-local_price = round_up( total_cost * (1 + markup_pct) )          # markup on cost
-intl_price  = round_up( local_price + weight_kg * dhl_per_kg )    # dhl_per_kg looked up by zone
+total_cost  = direct_materials + direct_labour + overhead_allocation   # entered per article
+local_price = round_up( total_cost * 1.50 )                            # 50% markup on cost
+intl_price  = round_up( local_price + dhl_cost )                       # dhl_cost from zone rate card
 ```
 
-`markup_pct` is a fraction (e.g. `1.5` = price is cost × 2.5). A **margin-on-price**
-alternative (`price = cost / (1 - margin_pct)`) is included but **off by default** — flip
-`USE_MARGIN_ON_PRICE` in the Settings block if you ever want it.
+- **Markup:** 50% on total cost.
+- **Rounding:** up to nearest **Rs.500** by default (set in the Apps Script `SETTINGS`). *Note:
+  your sample retail prices end in `,450` — if you round to a different step, change `ROUND_TO`.*
+- **Sanity check:** a total cost of ~Rs.33,600 → local price ~Rs.50,450, matching real order
+  #1726 (Natasha). The model lines up with current pricing.
 
-### Markup % ↔ margin % (so you set markup intentionally)
+## DHL: real rate card, per destination
 
-| Markup on cost | Margin on price |
-|----------------|-----------------|
-| ×1.5 (+50%)    | 33%             |
-| ×2.0 (+100%)   | 50%             |
-| ×2.5 (+150%)   | 60%             |
-| ×3.0 (+200%)   | 67%             |
+Two reference datasets (DHL's published rate card — no customer data) live in `data/`:
 
-## Per-zone DHL
+- **`data/dhl-zones.csv`** — 232 countries → DHL zone (1–13). *(UK = zone 3, USA = 8, UAE = 12.)*
+- **`data/dhl-rates-nondoc.csv`** — DHL **non-document** rates (clothing) by weight bracket
+  (0.5–20 kg in 0.5 kg steps, Zone 1–13), in PKR.
 
-International shipping cost varies by destination, so `dhl_per_kg` comes from a **DHL Zones**
-lookup table (`dhl-zones.csv` / a "DHL Zones" sheet tab). Each article row picks a `dest_zone`;
-the rate is pulled with `=VLOOKUP(dest_zone, 'DHL Zones'!A:B, 2, FALSE)`. Fill the table from
-the DHL zone list you'll share.
-
-## Inputs the founder must supply (replace the TODOs)
-
-| Input | Where | Notes |
-|-------|-------|-------|
-| `markup_pct` | Settings cell / Apps Script | e.g. 1.5 |
-| Overhead basis + value | Settings | flat PKR per article, or % of (materials+labour) |
-| DHL per-kg, **per zone** | `DHL Zones` table | from the DHL list you'll share |
-| Rounding rule | Settings | default: round up to nearest Rs.500 |
-| Sample article costs (anonymised) | `../../data/` | to validate output vs. current prices |
+The calculator looks up: `dest_country → zone`, rounds weight up to the next 0.5 kg, then reads
+the rate for that (weight, zone). **Valid to 20 kg** — an outfit is ~1–3 kg; above 20 kg DHL
+uses incremental pricing, so the calculator flags it for a manual quote.
 
 ## How to use (non-technical)
 
 1. Create a new Google Sheet named **"Pricing Calculator"**.
-2. **Extensions → Apps Script**, delete the sample code, paste in `pricing-calculator.gs`, Save.
-3. Back in the Sheet, run **`setupTemplate`** once from the Apps Script **Run** menu — it lays
-   out the columns and adds a **DHL Zones** tab.
-4. Fill the **Settings** block (markup %, overhead) and the **DHL Zones** rates.
-5. In an article row, type materials/labour/overhead/weight and pick a `dest_zone`. The
-   **local_price** and **intl_price** columns fill in automatically.
-6. Sanity-check against a few recent articles before trusting it. Flag anything that looks off.
+2. **Import the two reference tabs** — *File → Import → Upload*, "Insert new sheet(s)":
+   - `data/dhl-zones.csv` → rename the tab exactly **`DHL Zones`**
+   - `data/dhl-rates-nondoc.csv` → rename the tab exactly **`DHL Rates`**
+3. **Extensions → Apps Script**, delete the sample code, paste `pricing-calculator.gs`, **Save**.
+4. Back in the Sheet, open the first (blank) tab and run **`setupTemplate`** once from the Apps
+   Script **Run** menu. It lays out the columns, formulas, and a country dropdown.
+5. In a row, type **materials / labour / overhead** (cols B,C,D) and **weight_kg** (G), then pick
+   a **dest_country** (H). **local_price** (F) and **intl_price** (K) fill in automatically.
+6. Drag row 2's formulas down for more articles.
+
+Columns and formulas are documented in `schema.csv`.
 
 **Bulk price updates to Shopify are a separate, gated step** (dry-run → founder approval →
 apply). Not part of this calculator.
 
 ## A note on cost-plus for a luxury label
 
-Markup-on-cost is a sound **floor** — it guarantees every article covers materials + labour +
-overhead and a target margin, which is exactly right for made-to-order work where costs vary
-piece to piece. Its limit: it's cost-anchored, not value-anchored, and luxury pricing is
-largely about positioning and perceived value. Recommended use: treat cost-plus as the
-**minimum**, then sense-check hero/statement pieces against what your market tier commands and
-nudge those up. (Realized margin after discounts/returns/shipping is tracked later in the
+50% markup-on-cost is a sound **floor** — every article covers materials + labour + overhead
+plus margin, which is right for made-to-order work where costs vary piece to piece. Its limit:
+it's cost-anchored, not value-anchored, and luxury pricing is largely about positioning. Use it
+as the **minimum**, then sense-check hero/statement pieces against what your market tier commands
+and nudge those up. (Realized margin after discounts/returns/shipping is tracked later in the
 Phase 4 finance work.) *Not financial advice — your accountant should confirm the overhead
 allocation method.*
