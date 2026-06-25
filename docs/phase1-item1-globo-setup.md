@@ -53,9 +53,15 @@ Globo is installed. Build **one small option set** — measurements typed as a l
 
 3. **Conditional logic:** on field 2, set **show when `Add custom measurements` = ticked**.
    *(Alternatively, gate on the native `Size = CUSTOM` if Globo can read the variant.)*
-4. **Display position:** in Globo **Settings → display position**, set the options to render
-   **above/below the Add-to-Cart button** so they appear in the right-hand column, not at the
-   page bottom. Pixel-precise placement is a theme anchor Pitch can set.
+4. **Display position — DONE / hand to Pitch for fine-tuning.** The Globo **app block** has been
+   added to the **Product information** section (theme: *Copy of Changes*), so the box now renders
+   in the **right-hand column** next to Size/Sleeves — no longer at the page bottom.
+   - The block currently sits near the Size options; this is acceptable as-is.
+   - **For Pitch:** to nudge it just above the *Add to Bag* button, open *Online Store → Themes →
+     Customize → Default product*, hover the **Globo Product Options** block in the left list until
+     the **⠿** handle appears, and drag it below *Price*. (Shopify's block-drag is unreliable on
+     touch and occasionally on trackpads — use a mouse.) Then **Publish** the theme.
+   - Do this on the **duplicated theme** first, then Publish — don't edit the live theme directly.
 5. **Upcharge (optional):** if made-to-measure carries a fee, set a Globo **add-on price** on the
    `Add custom measurements` checkbox. ⚠️ Taking a live price change is a **founder-approval
    gate** — confirm the amount first.
