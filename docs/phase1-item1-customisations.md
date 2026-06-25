@@ -32,7 +32,11 @@ Each becomes a **line-item property** on the order. Anything that needs an **upc
 bespoke measurements beyond standard) is handled separately via Shopify **Draft Orders** — a
 custom invoice the founder approves before sending.
 
-## App choice — recommendation: **Globo Product Options**
+## App choice — **Globo Product Options** (confirmed)
+
+> Decision: **Globo Product Options** (founder-confirmed). Setup, duplicate-product test plan,
+> and the team SOP are in `phase1-item1-globo-setup.md`.
+
 
 Both shortlisted apps store selections as line-item properties on the order. The deciding
 factor is **file upload** (your custom-measurement photos):
