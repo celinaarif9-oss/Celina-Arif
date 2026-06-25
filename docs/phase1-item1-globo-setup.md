@@ -4,51 +4,66 @@ Runbook for capturing customisations as line-item properties using **Globo Produ
 (app confirmed). Pairs with the spec in `phase1-item1-customisations.md`.
 
 > ⚠️ **Who runs this:** these are clicks in your **Shopify admin + Globo dashboard**, performed
-> by you or Pitch — Claude has repo access only, not your store, so it can't install the app or
-> build the option set for you. Claude provides the exact steps and verifies the test order.
+> by you or Pitch — Claude has repo access only, not your store, so it can't build the option set
+> for you. Claude provides the exact steps and verifies the test order.
 >
-> ✅ **Inputs received:** size range **XXS–XXL**, the **17-field custom measurement form**, and
-> the official **size chart** (see `size-chart.md`). Only the **upcharge amount** (if any) for
-> custom measurements is still open.
+> ⚠️ **Scope (decided):** the live product pages **already** capture Size (incl. CUSTOM),
+> Sleeves, Shirt length, and dupatta add-ons. **Globo must not duplicate those.** Its only job is
+> the **made-to-measure form + measurement photo**, gated so standard buyers don't see it.
 
 ---
 
-## Part A — Install & build the option set
+## Part A — Build the (slim) option set
 
-1. **Install** "Globo Product Options, Variant" from the Shopify App Store. *(Confirm the plan
-   on the listing; the free tier includes file upload ~20 MB/file, which covers measurement
-   photos.)*
-2. In Globo, create an **Option Set** named **"Made-to-order customisation"**.
-3. Add a **Fit** dropdown first, then the fields for each path:
+Globo is installed. Build **one small option set** — measurements typed as a list, **no photo**:
 
-   | Field | Globo field type | Req? | Values |
-   |-------|------------------|------|--------|
-   | **Fit** | Dropdown | Required | `Standard size`, `Custom measurements` |
-   | Size | Dropdown | Required* | XXS, XS, S, M, L, XL, XXL |
-   | Sleeve style | Dropdown | Optional | Cap, Full, Sleeveless *(confirm full list)* |
-   | Sleeve length (inches) | Number | Optional | free number |
-   | Garment length (inches) | Number | Optional | e.g. 32, or leave blank for "As shown" |
-   | Front neck depth (inches) | Number | Optional | free number |
-   | Back neck depth (inches) | Number | Optional | free number |
-   | Measurements 1–16 (inches) | Number ×16 | Required* | Height, Shoulder, Armhole, Arm/Sleeve length, Wrist, Bicep, Bust, Under bust, High waist, Waist, Low waist, Hip, Thigh, Ankle, Inseam, Trouser/Shalwar/Lehenga/Saree/Kaftaan length |
-   | Any extra requirements (#17) | Text box | Optional | free text |
-   | Custom measurement photo | **File upload** | Optional | image; replaces "photo in comments" |
-   | Special requests | Text box | Optional | free text |
+1. Open the option set (rename to **"Custom measurements"**). **Delete** the duplicate
+   `Fit` / `Standard Size` fields you built earlier — Size lives in the existing native options.
+2. Add these fields:
 
-   *\*Conditional:* Size + sleeve/length/neck fields show when **Fit = Standard size**; the 16
-   measurement numbers + #17 show when **Fit = Custom measurements**. Use Globo's
-   conditional/dependent-option logic to toggle each group by the Fit value.
+   | # | Field (Name on cart page) | Globo type | Notes |
+   |---|---------------------------|------------|-------|
+   | 1 | `Add custom measurements` | **Checkbox / Switch** | the gate — when ticked, reveal the list below |
+   | 2 | `Custom measurements` | **Textarea** | the customer writes each measurement on its own line |
 
-4. **Size chart:** upload the official size-chart image to the product page (theme media or a
-   Globo info link) so the Size dropdown has a visible guide. Don't re-type the numbers.
-5. **Upcharge (optional):** if `Custom measurements` carries a fee, set a Globo **add-on price**
-   on that choice. ⚠️ Taking a live price change is a **founder-approval gate** — confirm the
-   amount first.
-6. **Assign** the option set to your made-to-order products (start with the test product in
-   Part B — not live products yet).
+   Pre-load the **Textarea placeholder/help text** with the numbered list so they just fill in
+   the inches next to each — it lands on the order as a tidy written list:
+   ```
+   1. Height:
+   2. Shoulder:
+   3. Armhole:
+   4. Arm/Sleeve length:
+   5. Wrist:
+   6. Bicep:
+   7. Bust:
+   8. Under bust:
+   9. High waist:
+   10. Waist:
+   11. Low waist:
+   12. Hip:
+   13. Thigh:
+   14. Ankle:
+   15. Inseam:
+   16. Trouser/Shalwar/Lehenga/Saree/Kaftaan length:
+   17. Any extra requirements:
+   ```
 
-Each field saves on the order as a **line-item property**, which feeds the production sheet
-(item 2) and the slips (item 3) automatically.
+   *(Prefer each measurement captured separately? Use 17 individual fields instead — cleaner
+   data, but a longer form to build. The single Textarea above is the quick, tidy option.)*
+
+3. **Conditional logic:** on field 2, set **show when `Add custom measurements` = ticked**.
+   *(Alternatively, gate on the native `Size = CUSTOM` if Globo can read the variant.)*
+4. **Display position:** in Globo **Settings → display position**, set the options to render
+   **above/below the Add-to-Cart button** so they appear in the right-hand column, not at the
+   page bottom. Pixel-precise placement is a theme anchor Pitch can set.
+5. **Upcharge (optional):** if made-to-measure carries a fee, set a Globo **add-on price** on the
+   `Add custom measurements` checkbox. ⚠️ Taking a live price change is a **founder-approval
+   gate** — confirm the amount first.
+6. **Assign** the set to your made-to-order products — but for now, the **test product only**
+   (Part B). Keep the set on **Draft** until the test passes.
+
+These two new fields save on the order as line-item properties, feeding the production sheet
+(item 2) and slips (item 3). Size / Sleeves / Length already arrive from the native options.
 
 ---
 
@@ -57,14 +72,15 @@ Each field saves on the order as a **line-item property**, which feeds the produ
 1. **Duplicate** one real product (Shopify: product → ••• → Duplicate). Name it
    `ZZ-TEST – customisation` and keep it on the **Online Store** but **not** in any collection /
    not pushed to customers.
-2. Assign the "Made-to-order customisation" option set to the test product.
-3. **Place a test order**: open the test product, fill every field, **upload a sample photo**,
-   add to cart, and check out (use a real or bogus payment per your setup).
-4. **Verify on the order** (Admin → Orders → the test order): the line item shows each
-   customisation as a property — Size, Sleeves, Length, Neck F/B, the **photo as a file/URL**,
-   and Special requests. Nothing was re-typed.
-5. **Acceptance:** ✅ all fields present and correct on the order, ✅ photo opens from the order,
-   ✅ values are clean enough to drop into the production sheet columns (item 2 mapping).
+2. Assign the "Custom measurements" option set to the test product.
+3. **Place a test order**: open the test product, tick **Add custom measurements**, fill the
+   measurements list, add to cart, and check out (use a real or bogus payment per your setup).
+4. **Verify on the order** (Admin → Orders → the test order): the line item shows the native
+   **Size / Sleeves / Length** *and* the new **Custom measurements** list as properties.
+   Nothing was re-typed.
+5. **Acceptance:** ✅ the measurements list appears on the order and reads cleanly, ✅ values drop
+   neatly into the production sheet columns (item 2 mapping), ✅ standard buyers (checkbox
+   un-ticked) don't see the measurements box.
 6. Delete or archive the test order/product when done.
 
 ---
@@ -83,16 +99,16 @@ so live listings are never at risk during testing.
 
 ## Part D — Team SOP (daily use, non-technical)
 
-**Reading a customisation:** open the order → the customisation shows under the line item
-(Size, Sleeves, Length, Neck, photo, Special requests). Work from that — do **not** re-type it
-elsewhere. (It also lands in the production sheet automatically once item 2 is on.)
+**Reading a customisation:** open the order → the line item shows the native **Size / Sleeves /
+Length** and, for custom orders, the **Custom measurements** list. Work from that — do **not**
+re-type it elsewhere. (It also lands in the production sheet automatically once item 2 is on.)
 
 **Custom work that costs extra (upcharge):** don't change the product price. Create a **Draft
 Order** with the custom amount and send the invoice — **founder approval required** before
 sending (it's a customer message).
 
-**Changing options or the size chart:** edit the "Made-to-order customisation" set in Globo.
-Big changes → test on the `ZZ-TEST` product first.
+**Changing the measurements field or the size chart:** edit the "Custom measurements" set in
+Globo. Big changes → test on the `ZZ-TEST` product first.
 
 **What this replaces:** the team re-typing DM/WhatsApp/note customisations onto Shopify order
 notes after each order.
@@ -100,8 +116,10 @@ notes after each order.
 ---
 
 ## Open items before go-live
-- [x] Size range (XXS–XXL), custom measurement form (17 fields), and size chart — received.
-- [ ] Confirm the **sleeve-style list** and the **custom-measurement upcharge amount** (if any).
-- [ ] You/Pitch run **Part A** (install + build the option set) in the Shopify/Globo dashboard.
-- [ ] Run **Part B** (duplicate-product test); Claude verifies the test order against the
-      acceptance criteria, then you approve **Part C** (live rollout).
+- [x] Scope decided: Globo adds **only** the custom-measurements written list (no photo); Size /
+      Sleeves / Length stay as the existing native options.
+- [ ] Delete the duplicate `Fit` / `Standard Size` fields; keep checkbox + Textarea.
+- [ ] Set Globo **display position** (right column, not page bottom).
+- [ ] Confirm the **custom-measurement upcharge amount** (if any).
+- [ ] Run **Part B** (duplicate-product test); Claude verifies the order, then you approve
+      **Part C** (live rollout).
