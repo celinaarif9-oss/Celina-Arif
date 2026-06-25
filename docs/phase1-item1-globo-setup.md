@@ -139,20 +139,23 @@ notes after each order.
 **Symptom:** the Globo "Custom measurements" field does not appear on live product pages
 (e.g. Alysa) even though it renders correctly in Globo's own preview.
 
-**Already verified (not the cause):**
+**Already verified (NOT the cause):**
 - Option set is **Active**; checkbox has **no** conditional logic (only the Textarea does).
-- Globo **app block** was added and the theme was **Published**.
-- Widget placement = "Above add to cart button".
+- Globo **app block** added; theme **Published**; widget placement = "Above add to cart".
+- Alysa uses the **"Default product"** template (which has the block) — so it is *not* a custom
+  template issue.
 
-**Most likely cause + asks:**
-1. **Custom product template.** Alysa (and other made-to-order products) likely use a *custom*
-   product template, not "Default product" — so the Globo app block (added to Default product)
-   never renders there. **Please add the Globo Product Options app block to the custom product
-   template(s)** these products use, positioned just above the Add-to-Cart button.
-2. Confirm the option set is **assigned** to those products in Globo.
-3. Confirm Globo's **app embed** is enabled in the live theme.
-4. The theme's add-to-cart is custom, so Globo **auto-placement may not find an anchor** — the
-   app block on the correct template (or a manual Globo anchor snippet) is the reliable fix.
+**Remaining suspects + asks:**
+1. **App embed disabled** — confirm **Globo Product Options** is toggled ON under the live
+   theme's **Theme settings → App embeds**.
+2. **Product assignment** — confirm **Alysa** is actually in the option set's *Assign products*
+   list (Globo's preview shows the set regardless of assignment, so this is easy to miss).
+3. **Auto-placement vs app block on a custom add-to-cart.** With widget placement on
+   "Above add to cart", Globo auto-injects and may not find this custom theme's add-to-cart
+   anchor, while the app block may be inert in that mode. Please confirm whether Globo should be
+   switched to **app-block placement**, or given a **manual anchor snippet** in the custom
+   add-to-cart markup.
+4. Rule out **caching** (hard refresh / incognito).
 
 **Acceptance:** on a live made-to-order product, ticking "Add custom measurements" reveals the
 measurements list, and a test order shows `Custom measurements` as a line-item property.
