@@ -3,13 +3,13 @@
 Runbook for capturing customisations as line-item properties using **Globo Product Options**
 (app confirmed). Pairs with the spec in `phase1-item1-customisations.md`.
 
-> ⚠️ **Approval gate:** nothing here touches live products until the founder approves. Everything
-> is built and verified on a **duplicate test product** first. Installing the app and going live
-> are the founder's call.
+> ⚠️ **Who runs this:** these are clicks in your **Shopify admin + Globo dashboard**, performed
+> by you or Pitch — Claude has repo access only, not your store, so it can't install the app or
+> build the option set for you. Claude provides the exact steps and verifies the test order.
 >
-> ⏳ **Still needed before install:** the exact option lists — full **size range**, **sleeve
-> styles**, **length options**, and which (if any) carry an **upcharge**. Placeholders below are
-> marked `TODO: confirm`.
+> ✅ **Inputs received:** size range **XXS–XXL**, the **17-field custom measurement form**, and
+> the official **size chart** (see `size-chart.md`). Only the **upcharge amount** (if any) for
+> custom measurements is still open.
 
 ---
 
@@ -19,22 +19,32 @@ Runbook for capturing customisations as line-item properties using **Globo Produ
    on the listing; the free tier includes file upload ~20 MB/file, which covers measurement
    photos.)*
 2. In Globo, create an **Option Set** named **"Made-to-order customisation"**.
-3. Add these fields (mark Required/Optional as noted):
+3. Add a **Fit** dropdown first, then the fields for each path:
 
    | Field | Globo field type | Req? | Values |
    |-------|------------------|------|--------|
-   | Size | Dropdown | Required | `TODO: confirm` (e.g. XS, S, M, L, XL) |
-   | Sleeve style | Dropdown | Required | `TODO: confirm` (e.g. Cap, Full, Sleeveless) |
-   | Sleeve length (inches) | Dropdown or Number | Optional | `TODO: confirm` |
-   | Garment length (inches) | Dropdown or Number | Required | e.g. 30–34, or "As shown" |
+   | **Fit** | Dropdown | Required | `Standard size`, `Custom measurements` |
+   | Size | Dropdown | Required* | XXS, XS, S, M, L, XL, XXL |
+   | Sleeve style | Dropdown | Optional | Cap, Full, Sleeveless *(confirm full list)* |
+   | Sleeve length (inches) | Number | Optional | free number |
+   | Garment length (inches) | Number | Optional | e.g. 32, or leave blank for "As shown" |
    | Front neck depth (inches) | Number | Optional | free number |
    | Back neck depth (inches) | Number | Optional | free number |
+   | Measurements 1–16 (inches) | Number ×16 | Required* | Height, Shoulder, Armhole, Arm/Sleeve length, Wrist, Bicep, Bust, Under bust, High waist, Waist, Low waist, Hip, Thigh, Ankle, Inseam, Trouser/Shalwar/Lehenga/Saree/Kaftaan length |
+   | Any extra requirements (#17) | Text box | Optional | free text |
    | Custom measurement photo | **File upload** | Optional | image; replaces "photo in comments" |
    | Special requests | Text box | Optional | free text |
 
-4. *(Optional)* Conditional logic — e.g. only show neck-depth fields when the customer ticks
-   "custom measurements". Keep it simple for v1.
-5. **Assign** the option set to your made-to-order products (start with the test product in
+   *\*Conditional:* Size + sleeve/length/neck fields show when **Fit = Standard size**; the 16
+   measurement numbers + #17 show when **Fit = Custom measurements**. Use Globo's
+   conditional/dependent-option logic to toggle each group by the Fit value.
+
+4. **Size chart:** upload the official size-chart image to the product page (theme media or a
+   Globo info link) so the Size dropdown has a visible guide. Don't re-type the numbers.
+5. **Upcharge (optional):** if `Custom measurements` carries a fee, set a Globo **add-on price**
+   on that choice. ⚠️ Taking a live price change is a **founder-approval gate** — confirm the
+   amount first.
+6. **Assign** the option set to your made-to-order products (start with the test product in
    Part B — not live products yet).
 
 Each field saves on the order as a **line-item property**, which feeds the production sheet
@@ -90,6 +100,8 @@ notes after each order.
 ---
 
 ## Open items before go-live
-- [ ] Founder confirms size range, sleeve styles, length options, and any upcharge options.
-- [ ] Founder confirms the size chart.
-- [ ] Founder approves installing Globo and going live after the duplicate-product test passes.
+- [x] Size range (XXS–XXL), custom measurement form (17 fields), and size chart — received.
+- [ ] Confirm the **sleeve-style list** and the **custom-measurement upcharge amount** (if any).
+- [ ] You/Pitch run **Part A** (install + build the option set) in the Shopify/Globo dashboard.
+- [ ] Run **Part B** (duplicate-product test); Claude verifies the test order against the
+      acceptance criteria, then you approve **Part C** (live rollout).

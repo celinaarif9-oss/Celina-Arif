@@ -11,26 +11,39 @@ into the production sheet (item 2) and the packing/delivery slips (item 3).
 > anything is installed. Installing/changing an app on the live store is a Human-Approval gate
 > (tested on a duplicate product first).
 
-## Customisation fields (derived from how current orders are actually structured)
+## Customisation fields (two paths — confirmed from the size chart + custom form)
 
-Recent orders show a consistent pattern — e.g. *"S / 4 inch Cap Sleeves (embroidery on ends) /
-32 inches"*, plus notes like *"front neck depth 6 inch, back neck depth 3 inch"* and *"custom
-measurement photos attached"*. Proposed per-product option set:
+Customers choose a **Fit** first; that drives which fields show. Full sizing reference in
+`size-chart.md`. Each field saves on the order as a **line-item property**.
 
-| Field | Type | Example / notes |
-|-------|------|-----------------|
-| Size | dropdown | XS–XL (confirm your range) — drives the size chart |
+**Step 1 — Fit** (dropdown, required): `Standard size` · `Custom measurements`
+
+**If Standard size:**
+
+| Field | Type | Values / notes |
+|-------|------|----------------|
+| Size | dropdown | **XXS · XS · S · M · L · XL · XXL** (link the official size chart image) |
 | Sleeve style | dropdown | e.g. Cap / Full / Sleeveless (confirm full list) |
-| Sleeve length | dropdown or number (inches) | e.g. "4 inch cap sleeves" |
-| Garment length | dropdown or number (inches) | e.g. 32" / "As shown" |
-| Front neck depth | number (inches) | optional |
-| Back neck depth | number (inches) | optional |
+| Sleeve length (inches) | number | optional adjustment |
+| Garment length (inches) | number | e.g. 32" / "As shown" |
+| Front / Back neck depth (inches) | number | optional |
+
+**If Custom measurements** (the 17-field form, shown only on this path via conditional logic;
+1–16 numeric inches, 17 free text): Height, Shoulder, Armhole, Arm/Sleeve length, Wrist, Bicep,
+Bust, Under bust, High waist, Waist, Low waist, Hip, Thigh, Ankle, Inseam,
+Trouser/Shalwar/Lehenga/Saree/Kaftaan length, Any extra requirements.
+
+**Both paths:**
+
+| Field | Type | Notes |
+|-------|------|-------|
 | Custom measurement photo | **file upload** | replaces the current "attached in comments" workaround |
 | Special requests | free text | catch-all |
 
-Each becomes a **line-item property** on the order. Anything that needs an **upcharge** (e.g.
-bespoke measurements beyond standard) is handled separately via Shopify **Draft Orders** — a
-custom invoice the founder approves before sending.
+**Upcharge:** if made-to-measure carries a fee, the cleanest option is a Globo **add-on price**
+on the `Custom measurements` choice (auto-applied at checkout) — *taking that price live is a
+founder-approval gate*. Alternatively, bill it via a Shopify **Draft Order** the founder
+approves before sending.
 
 ## App choice — **Globo Product Options** (confirmed)
 
