@@ -72,14 +72,29 @@ Action:   Google Sheets ▸ "Add a Row"  → Daily Orders sheet
 Currently mapped: `order_no` (Shopify **Name**), `order_date` (**Created at**), `qty`
 (Iterator **Quantity**), `status` (static "New").
 
-**Remaining to finish:**
-- [ ] **Article (col C)** — Make's Shopify line item doesn't expose a plain "Title"; locate the
-      line-item **Name**/variant field, or add a Shopify *Get a Product* step by product ID.
-- [ ] **Size / Sleeves / Shirt length (D–F)** — these are Shopify **variant options**; map from
-      the line item's **variant title** (and split), or option fields.
-- [ ] **Custom measurements (G)** — from the line item **Properties** once Globo is live; use
-      `{{join(map(2.Properties; "value"; "name"; "Custom measurements"); ", ")}}`.
-- [ ] **Date format** — currently raw ISO (`2025-05-04T18:23:55.000Z`); prettify with
-      `formatDate` for the team.
-- [ ] **"Paid only" filter** on the link after the trigger (financial status = paid).
-- [ ] **Go automatic** — switch from *Run once* to a schedule (e.g. every 15 min) once verified.
+**Key finding:** Make's Shopify *Watch Orders* line item is **thin** — only IDs, prices,
+inventory, quantity. **No product title, variant title, or properties.** So Article + size +
+customisations can't be mapped from the trigger directly. Fix: fetch the full order via an API
+call. *(Best finished on a laptop — inserting a module mid-flow is fiddly on a tablet.)*
+
+### Recipe to finish (laptop)
+
+1. **Insert a Shopify "Make an API Call" module between the trigger and the Iterator.**
+   - To insert mid-flow: hover the route and use **Add a module**; if only the filter wrench
+     appears, drag the Iterator's input off the trigger, add the API Call to the trigger's
+     output, then reconnect the Iterator after it.
+   - **URL:** `/admin/api/2024-10/orders/{{1.Legacy_resource_id}}.json`
+   - **Method:** `GET`  (this returns the full order: titles, variant_title, properties)
+2. **Repoint the Iterator** → Array = `{{2.body.order.line_items}}` (module 2 = the API call).
+3. **Remap Google Sheets "Add a Row"** from the now-rich Iterator line item:
+   - `article` (C) → `name` (e.g. "Alysa - S / Cap Sleeves / 32 inches") or `title` for product only
+   - `size`/`sleeves`/`shirt_length` (D–F) → from `variant_title` (one combined value, or split)
+   - `custom_measurements` (G) → `{{join(map(<lineitem>.properties; "value"; "name"; "Custom measurements"); ", ")}}`
+   - `qty` (H) → `quantity`
+4. **Date format** (B) → `{{formatDate(1.Created at; "YYYY-MM-DD")}}`.
+5. **"Paid only" filter** on the route after the trigger → `{{1.Display_financial_status}}`
+   **Equal to** `PAID` (confirm exact casing from a test run).
+6. **Run once** to verify a clean row, then switch the schedule **ON** (e.g. every 15 min).
+
+**Alternative:** this rich-data extraction is also a clean fit for the Node/TS layer (direct
+Shopify Admin API) if Make's modules stay limiting — see CLAUDE.md architecture.
