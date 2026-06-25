@@ -121,6 +121,19 @@ notes after each order.
 
 ---
 
+## Troubleshooting (seen during setup)
+
+- **Field shows in Globo's own preview but NOT on the live product page.** The Globo block was
+  added to a **draft theme** (e.g. "Copy of Changes") that isn't published — the live store runs a
+  different theme without the block. Fix: either set Globo **Settings → Display position** to
+  **automatic** (injects near Add-to-Cart on any theme, no block needed), **or** add the block to
+  the **live** theme, **or** publish the draft theme (only if all its other changes are intended).
+- **Nothing shows at all, even in preview.** Check the **checkbox** field has **no conditional
+  logic** (a stray "show if variant = on" hides it, and the dependent Textarea with it). Only the
+  **Textarea** should carry conditional logic ("show when the checkbox is ticked").
+- **Empty preview in the theme editor.** The option set must be **Active** (not Draft) and the
+  previewed product must be in **Assign products**.
+
 ## Open items before go-live
 - [x] Scope decided: Globo adds **only** the custom-measurements written list (no photo); Size /
       Sleeves / Length stay as the existing native options.
