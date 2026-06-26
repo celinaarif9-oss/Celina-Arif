@@ -98,3 +98,26 @@ call. *(Best finished on a laptop — inserting a module mid-flow is fiddly on a
 
 **Alternative:** this rich-data extraction is also a clean fit for the Node/TS layer (direct
 Shopify Admin API) if Make's modules stay limiting — see CLAUDE.md architecture.
+
+## For Pitch — two ways to finish (either is ~5 min)
+
+The scenario is built and the code path is written; the only remaining piece needs developer
+access. Pick one:
+
+**Option A — code path (recommended, most reliable).**
+1. Create a **read-only Admin API token** (scope `read_orders`). Shopify now routes "Develop
+   apps" to the **Dev Dashboard** → Create app → add the `read_orders` scope → install on the
+   store → copy the Admin API access token (`shpat_…`).
+2. Add it to the repo `.env` as `SHOPIFY_ADMIN_API_TOKEN` (and `SHOPIFY_STORE_DOMAIN`).
+3. Run `node src/shopify-order-sync/sync.mjs` → import the resulting
+   `data/private/daily-orders.csv` into the Daily Orders sheet. (Schedulable via cron.)
+
+**Option B — fix the existing Make scenario.** It runs successfully but the Google Sheets
+"Add a Row" module was resolving the spreadsheet **by name** ("Search by path") and writing to a
+**different "Daily Orders" file** than the team's. Fix: set Search Method to **Enter manually**,
+point it at the **correct** Daily Orders spreadsheet ID (the file the team actually uses), Save,
+verify one order lands, then switch the schedule **ON**. The trigger only fetches **new** orders,
+so test with a fresh order rather than re-running old ones.
+
+**Done when:** a new paid order lands as a correct row (article, size, qty, price) in the team's
+Daily Orders sheet, automatically.
