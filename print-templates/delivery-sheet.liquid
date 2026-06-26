@@ -1,0 +1,66 @@
+{% comment %}
+  Celina Arif — Delivery Sheet  (Order Printer Pro template)
+  Dispatch sheet: name, address, contact, email + articles.
+  Uses the standard `order` Liquid object. Customer details come from the live
+  order at print time — nothing is stored in this template.
+{% endcomment %}
+<style>
+  .ca-doc   { font-family: Georgia, 'Times New Roman', serif; color:#1a1a1a; }
+  .ca-head  { text-align:center; border-bottom:2px solid #1a1a1a; padding-bottom:12px; margin-bottom:18px; }
+  .ca-brand { font-size:26px; letter-spacing:6px; text-transform:uppercase; }
+  .ca-sub   { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#666; margin-top:6px; }
+  .ca-meta  { display:flex; justify-content:space-between; font-size:13px; margin-bottom:16px; }
+  table.ca  { width:100%; border-collapse:collapse; font-size:13px; }
+  table.ca th { text-align:left; border-bottom:1px solid #1a1a1a; padding:6px 4px; text-transform:uppercase; font-size:10px; letter-spacing:1px; }
+  table.ca td { padding:8px 4px; border-bottom:1px solid #ddd; vertical-align:top; }
+  .ca-ship td { border-bottom:none; padding:4px; }
+  .ca-ship .lbl { width:90px; text-transform:uppercase; font-size:10px; letter-spacing:1px; color:#666; }
+  .ca-foot  { margin-top:24px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#999; text-align:center; }
+</style>
+
+{% assign ship = order.shipping_address %}
+<div class="ca-doc">
+  <div class="ca-head">
+    <div class="ca-brand">Celina Arif</div>
+    <div class="ca-sub">Delivery Sheet</div>
+  </div>
+
+  <div class="ca-meta">
+    <div><strong>Order:</strong> {{ order.name }}</div>
+    <div><strong>Date:</strong> {{ order.created_at | date: "%d %b %Y" }}</div>
+  </div>
+
+  <table class="ca ca-ship" style="margin-bottom:18px;">
+    <tr><td class="lbl">Name</td><td>{{ ship.name }}</td></tr>
+    <tr><td class="lbl">Address</td>
+      <td>
+        {{ ship.address1 }}{% if ship.address2 != blank %}, {{ ship.address2 }}{% endif %}<br>
+        {{ ship.city }}{% if ship.province != blank %}, {{ ship.province }}{% endif %} {{ ship.zip }}<br>
+        {{ ship.country }}
+      </td>
+    </tr>
+    <tr><td class="lbl">Contact</td><td>{{ ship.phone | default: order.phone }}</td></tr>
+    <tr><td class="lbl">Email</td><td>{{ order.email }}</td></tr>
+  </table>
+
+  <table class="ca">
+    <thead>
+      <tr>
+        <th style="width:50%;">Article</th>
+        <th style="width:35%;">Size / Options</th>
+        <th style="width:15%; text-align:center;">Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for line_item in order.line_items %}
+      <tr>
+        <td>{{ line_item.title }}</td>
+        <td>{{ line_item.variant_title }}</td>
+        <td style="text-align:center;">{{ line_item.quantity }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="ca-foot">Celina Arif &middot; {{ order.name }}</div>
+</div>

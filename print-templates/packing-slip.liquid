@@ -1,0 +1,68 @@
+{% comment %}
+  Celina Arif — Production / Packing Slip  (Order Printer Pro template)
+  Internal workroom sheet: article, size/options, customisation, quantity.
+  Customer address is intentionally NOT shown here (that's the Delivery Sheet).
+  Uses the standard `order` Liquid object. Globo "Custom measurements" appear
+  automatically once that line-item property is saving on orders.
+{% endcomment %}
+<style>
+  .ca-doc   { font-family: Georgia, 'Times New Roman', serif; color:#1a1a1a; }
+  .ca-head  { text-align:center; border-bottom:2px solid #1a1a1a; padding-bottom:12px; margin-bottom:18px; }
+  .ca-brand { font-size:26px; letter-spacing:6px; text-transform:uppercase; }
+  .ca-sub   { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#666; margin-top:6px; }
+  .ca-meta  { display:flex; justify-content:space-between; font-size:13px; margin-bottom:16px; }
+  table.ca  { width:100%; border-collapse:collapse; font-size:13px; }
+  table.ca th { text-align:left; border-bottom:1px solid #1a1a1a; padding:6px 4px; text-transform:uppercase; font-size:10px; letter-spacing:1px; }
+  table.ca td { padding:8px 4px; border-bottom:1px solid #ddd; vertical-align:top; }
+  .ca-cust  { font-size:12px; color:#333; }
+  .ca-cust span { display:block; margin-bottom:2px; }
+  .ca-foot  { margin-top:24px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#999; text-align:center; }
+</style>
+
+<div class="ca-doc">
+  <div class="ca-head">
+    <div class="ca-brand">Celina Arif</div>
+    <div class="ca-sub">Production &middot; Packing Slip</div>
+  </div>
+
+  <div class="ca-meta">
+    <div><strong>Order:</strong> {{ order.name }}</div>
+    <div><strong>Date:</strong> {{ order.created_at | date: "%d %b %Y" }}</div>
+  </div>
+
+  <table class="ca">
+    <thead>
+      <tr>
+        <th style="width:30%;">Article</th>
+        <th style="width:25%;">Size / Options</th>
+        <th style="width:35%;">Customisation</th>
+        <th style="width:10%; text-align:center;">Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for line_item in order.line_items %}
+      <tr>
+        <td>{{ line_item.title }}{% if line_item.sku != blank %}<br><small>SKU {{ line_item.sku }}</small>{% endif %}</td>
+        <td>{{ line_item.variant_title }}</td>
+        <td class="ca-cust">
+          {% for p in line_item.properties %}
+            {% assign pname = p.first %}
+            {% assign pval = p.last %}
+            {% assign pfirst = pname | slice: 0 %}
+            {% if pname != blank and pfirst != "_" and pval != blank %}
+              <span><strong>{{ pname }}:</strong> {{ pval | newline_to_br }}</span>
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td style="text-align:center;">{{ line_item.quantity }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if order.note != blank %}
+    <p style="margin-top:14px; font-size:13px;"><strong>Order note:</strong> {{ order.note | newline_to_br }}</p>
+  {% endif %}
+
+  <div class="ca-foot">Celina Arif &middot; Made to order &middot; DHA Karachi</div>
+</div>
