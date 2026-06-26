@@ -34,10 +34,11 @@ swap `order.name` → `order_name`, `order.line_items` → `line_items`, and
 **One order:** Shopify → **Orders** → open the order → **More actions → Print with Order Printer
 Pro** → tick **Packing slip** and/or **Delivery sheet** → Print or Save as PDF.
 
-**A batch (dispatch routine — recommended):** Shopify → **Orders** → filter to **Unfulfilled**
-(or a saved *Paid + Unfulfilled* view) → tick the orders going out → in the bar that appears →
-**Print → Print with Order Printer Pro** → choose the template → one combined PDF → print the
-stack. (Same thing is available inside Apps → **Order Printer Pro → Orders**.)
+**A batch (dispatch routine — recommended):** do this **inside the app**, because Shopify's
+native bulk "Print packing slips" uses Shopify's *default* template, **not** our branded one.
+Go to **Apps → Order Printer Pro → Orders** tab → filter/select the orders going out → **Print**
+→ choose **Packing slip** or **Delivery sheet** → one combined branded PDF → print the stack.
+*(Optional: the app has a setting to add a bulk-print button onto Shopify's own Orders page.)*
 
 **A typical dispatch run:** select the day's paid/unfulfilled orders → print **Delivery sheets**
 (for packages/courier) + **Packing slips** (for the workroom) → pack → mark fulfilled.
