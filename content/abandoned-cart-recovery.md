@@ -7,6 +7,9 @@ automatically — recovering sales with no manual chase.
 
 > ⚠️ **Customer-facing — approval gate.** Sends to real customers. Email is approved to go live;
 > WhatsApp is drafted but needs the BSP (see below) before it can auto-send.
+>
+> ✅ **Status:** Email is **LIVE** — automation on (24h), sender email verified, branded copy
+> below in place. WhatsApp (24h + 48h) queued for the BSP (Phase 4).
 
 ## Cadence & channels (founder-approved)
 
