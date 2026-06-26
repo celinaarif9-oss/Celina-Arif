@@ -23,7 +23,8 @@ confirmation email. No app, no cost.
 
 ## Bank Transfer — instructions (placeholders → fill in Shopify)
 
-> Thank you for your order. To complete it, please transfer the total to:
+> Thank you for your order. To complete it, please transfer the **full order total — including
+> shipping** (the amount shown at checkout) to:
 >
 > **Account title:** [ACCOUNT NAME]
 > **Bank:** [BANK NAME]
@@ -31,21 +32,22 @@ confirmation email. No app, no cost.
 > **IBAN:** [IBAN]
 > **SWIFT/BIC (international):** [SWIFT]
 >
-> Please use your order number **{{ order_name }}** as the payment reference, and email a
-> screenshot of the transfer to **[store email]**. We'll begin your order as soon as payment is
-> confirmed.
+> Please use your order number **{{ order_name }}** as the payment reference, then send a
+> screenshot of the transfer to us on **WhatsApp: [WhatsApp number]** (or email [store email]).
+> We'll begin your order as soon as payment is confirmed.
 
 ## Western Union — instructions (placeholders → fill in Shopify)
 
-> Thank you for your order. To pay via Western Union, please send the total to:
+> Thank you for your order. To pay via Western Union, please send the **full order total —
+> including shipping** (the amount shown at checkout) to:
 >
 > **Receiver name:** [FULL NAME — exactly as on CNIC/passport]
 > **City:** Karachi
 > **Country:** Pakistan
 >
-> After sending, please email the **MTCN (tracking number)**, the **sender's full name**, and the
-> **amount** to **[store email]**, with your order number **{{ order_name }}**. We'll begin your
-> order once payment is confirmed.
+> After sending, please share the **MTCN (tracking number)**, the **sender's full name**, and the
+> **amount** with us on **WhatsApp: [WhatsApp number]** (or email [store email]), along with your
+> order number **{{ order_name }}**. We'll begin your order once payment is confirmed.
 
 ---
 
@@ -70,5 +72,5 @@ details — no manual send. (Verifying the payment before dispatch remains a hum
 - `{{ order_name }}` is Shopify's order-number variable (auto-fills).
 - For your ~60% international orders, the **IBAN + SWIFT** lets overseas customers wire in; WU
   covers cash transfers.
-- *Founder to provide & approve:* the real bank details, the WU receiver name/city, the store
-  email for proofs, and the final wording.
+- *Founder to provide:* the real bank details, the WU receiver name/city, the **WhatsApp number**
+  for proofs, and the store email. **Wording approved.**
