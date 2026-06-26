@@ -53,6 +53,23 @@ the token stored securely as a **GitHub secret** (never in code or chat).
 After that it runs **daily on its own**; trigger it any time with **Run workflow**. (A red ✗ run
 means the token can't read orders — tell me and we'll fix the scope/token.)
 
+### ⏳ Token status (pick up here next session)
+The Dev Dashboard app **"Order Sync" is created and installed** on the store with `read_orders` +
+`read_products` (scopes granted on the install consent screen). A first CI run failed with
+**`Shopify API 401: Invalid API key or access token`** — because the **"App automation token"**
+(Settings → App automation token) is for **CI/CD app-management, not the store Admin API**, so the
+Admin API rejects it.
+
+**Next step — get the real Admin API access token:**
+- Easiest if available: check the installed app for an **Admin API access token** to reveal
+  (Overview → Installs, or an "API access" area).
+- Otherwise, do the **OAuth authorize** once: add a **Redirect URL** to the app version, open
+  `https://celina-arif-3dm.myshopify.com/admin/oauth/authorize?client_id=<CLIENT_ID>&scope=read_orders,read_products&redirect_uri=<REDIRECT>&state=x`,
+  approve, copy the `code` from the redirect, then exchange it (with the client secret) at
+  `POST /admin/oauth/access_token` for the token (`shpat_…` / offline token).
+- Put that token in the `SHOPIFY_ADMIN_API_TOKEN` GitHub secret (replacing the automation token)
+  and re-run the workflow.
+
 ## Notes
 - **No customer PII** (names/addresses) — production-sheet columns only.
 - **Price/sales:** `line_total` is gross (a sum of paid line prices) — **not** net revenue
