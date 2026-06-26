@@ -67,10 +67,16 @@ Action:   Google Sheets ▸ "Add a Row"  → Daily Orders sheet
 
 ## Build status (in progress)
 
-**Working end-to-end** ✅ — scenario built (Shopify *Watch orders* → Iterator → Google Sheets
-*Add a row*), Shopify connected via OAuth, test run wrote real orders to "Daily Orders".
-Currently mapped: `order_no` (Shopify **Name**), `order_date` (**Created at**), `qty`
-(Iterator **Quantity**), `status` (static "New").
+**Working end-to-end** ✅ — scenario built (Shopify *Watch orders* → GraphQL API call → Iterator
+→ Google Sheets *Add a row*), Shopify connected via OAuth. Data confirmed flowing: a manual run
+on a known order shows **Iterator ✓4** (line items reach the final step), correct Spreadsheet ID
+pinned, column range `A-Z`, mappings intact (`title`, `variantTitle`, `quantity`).
+
+**⚠️ Open blocker:** the **Google Sheets "Add a Row" step does not execute** even though the
+Iterator hands it 4 items, and there is **no filter** on that link and **no red error** on the
+canvas. Next diagnostic: open the run in **History → click the Google Sheets circle** to read why
+it's "not executed" (or its error). Likely a module-level config the inspector will name. Until
+then, use the **code path** (`src/shopify-order-sync/`) or a manual Shopify CSV export.
 
 **Key finding:** Make's Shopify *Watch Orders* line item is **thin** — only IDs, prices,
 inventory, quantity. **No product title, variant title, or properties.** So Article + size +
