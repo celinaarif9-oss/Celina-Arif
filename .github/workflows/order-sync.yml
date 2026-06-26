@@ -1,0 +1,39 @@
+# Order sync — pulls recent paid orders from Shopify and produces daily-orders.csv.
+# Runs on a schedule (and on demand). The Shopify token lives ONLY in GitHub repo
+# secrets — never in the code or the chat. The CSV is uploaded as a private artifact
+# you download and import into the Daily Orders sheet.
+#
+# Required repo secrets (Settings → Secrets and variables → Actions):
+#   SHOPIFY_STORE_DOMAIN     = celina-arif-3dm.myshopify.com
+#   SHOPIFY_ADMIN_API_TOKEN  = (the app automation token)
+
+name: Order sync
+
+on:
+  workflow_dispatch: {}            # run manually from the Actions tab
+  schedule:
+    - cron: '7 6 * * *'            # daily ~06:07 UTC (~11am PKT)
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pull orders → CSV
+        env:
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+          SHOPIFY_ADMIN_API_TOKEN: ${{ secrets.SHOPIFY_ADMIN_API_TOKEN }}
+          ORDERS_LIMIT: '250'
+        run: node src/shopify-order-sync/sync.mjs
+
+      - name: Upload daily-orders.csv (private artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-orders
+          path: data/private/daily-orders.csv
+          if-no-files-found: error

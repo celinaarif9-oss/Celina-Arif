@@ -35,6 +35,24 @@ a count plus a rough gross-sales total.
 In your **Daily Orders** Google Sheet: **File → Import → Upload** `daily-orders.csv` →
 **Replace current sheet** (or **Append**). Columns line up with the sheet headers.
 
+## Run it automatically (recommended — GitHub Actions, no laptop needed)
+
+The workflow `.github/workflows/order-sync.yml` runs this sync in the cloud on a schedule, with
+the token stored securely as a **GitHub secret** (never in code or chat).
+
+**One-time setup (you):**
+1. On GitHub → your repo → **Settings → Secrets and variables → Actions → New repository secret**.
+   Add two secrets:
+   - `SHOPIFY_STORE_DOMAIN` = `celina-arif-3dm.myshopify.com`
+   - `SHOPIFY_ADMIN_API_TOKEN` = the app automation token you generated
+2. Go to the **Actions** tab → **Order sync** → **Run workflow** (manual test).
+3. When it finishes (green ✓), open the run → **Artifacts → daily-orders** → download the CSV.
+4. Import it into the **Daily Orders** sheet (File → Import → Upload → **Replace current sheet** —
+   it's a fresh snapshot of recent paid orders each run).
+
+After that it runs **daily on its own**; trigger it any time with **Run workflow**. (A red ✗ run
+means the token can't read orders — tell me and we'll fix the scope/token.)
+
 ## Notes
 - **No customer PII** (names/addresses) — production-sheet columns only.
 - **Price/sales:** `line_total` is gross (a sum of paid line prices) — **not** net revenue
