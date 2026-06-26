@@ -31,10 +31,19 @@ swap `order.name` → `order_name`, `order.line_items` → `line_items`, and
 
 ## How to use (the team, daily)
 
-- **One order:** open the order → **More actions / Print** (Order Printer Pro) → pick **Packing
-  slip** or **Delivery sheet** → Print or Save as PDF.
-- **In bulk:** Orders list → tick several orders → **Print** → choose the template → one combined
-  PDF.
+**One order:** Shopify → **Orders** → open the order → **More actions → Print with Order Printer
+Pro** → tick **Packing slip** and/or **Delivery sheet** → Print or Save as PDF.
+
+**A batch (dispatch routine — recommended):** Shopify → **Orders** → filter to **Unfulfilled**
+(or a saved *Paid + Unfulfilled* view) → tick the orders going out → in the bar that appears →
+**Print → Print with Order Printer Pro** → choose the template → one combined PDF → print the
+stack. (Same thing is available inside Apps → **Order Printer Pro → Orders**.)
+
+**A typical dispatch run:** select the day's paid/unfulfilled orders → print **Delivery sheets**
+(for packages/courier) + **Packing slips** (for the workroom) → pack → mark fulfilled.
+
+**Hands-off option:** Order Printer Pro's **Automated PDFs** can auto-generate the slips the
+moment an order is paid, so they're ready with no clicking — set up when ready.
 
 **What it replaces:** no more hand-building or re-typing production and delivery sheets.
 
