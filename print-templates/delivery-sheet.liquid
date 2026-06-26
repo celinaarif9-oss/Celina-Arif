@@ -54,7 +54,7 @@
     <tbody>
       {% for line_item in order.line_items %}
       <tr>
-        <td>{{ line_item.title }}</td>
+        <td>{{ line_item.product.title | default: line_item.title }}</td>
         <td>{{ line_item.variant_title }}</td>
         <td style="text-align:center;">{{ line_item.quantity }}</td>
       </tr>

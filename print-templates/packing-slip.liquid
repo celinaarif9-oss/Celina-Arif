@@ -42,7 +42,7 @@
     <tbody>
       {% for line_item in order.line_items %}
       <tr>
-        <td>{{ line_item.title }}{% if line_item.sku != blank %}<br><small>SKU {{ line_item.sku }}</small>{% endif %}</td>
+        <td>{{ line_item.product.title | default: line_item.title }}{% if line_item.sku != blank %}<br><small>SKU {{ line_item.sku }}</small>{% endif %}</td>
         <td>{{ line_item.variant_title }}</td>
         <td class="ca-cust">
           {% for p in line_item.properties %}
