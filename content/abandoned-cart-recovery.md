@@ -1,85 +1,76 @@
-# Phase 1 · Item 6 — Abandoned-checkout recovery (draft for approval)
+# Phase 1 · Item 6 — Abandoned-checkout recovery (approved copy)
 
 **Replaces:** chasing abandoned checkouts manually.
 
-**Goal:** when a shopper adds a piece and doesn't finish, Shopify automatically sends a branded,
-on-voice reminder — recovering sales with zero manual effort.
+**Goal:** when a shopper adds a piece and doesn't finish, send a warm, on-brand reminder
+automatically — recovering sales with no manual chase.
 
-> ⚠️ **Customer-facing — approval gate.** These send to real customers automatically once on.
-> Nothing activates until the founder approves the copy + cadence. (Standard ecommerce practice;
-> you approve once, then it runs.)
+> ⚠️ **Customer-facing — approval gate.** Sends to real customers. Email is approved to go live;
+> WhatsApp is drafted but needs the BSP (see below) before it can auto-send.
 
-## Approach (free, native)
+## Cadence & channels (founder-approved)
 
-Use Shopify's built-in **Marketing → Automations → "Abandoned checkout"** (Shopify Email).
-No app, no cost. We replace the default copy with the brand version below and set the timing.
+| Touch | When | Channel | Purpose |
+|-------|------|---------|---------|
+| 1 | **24 hours** | **Email + WhatsApp** | reminder |
+| 2 | **48 hours** | **WhatsApp** | soft follow-up |
 
-## Cadence (recommended)
-
-- **Email 1 — ~5 hours** after abandonment (gentle reminder).
-- **Email 2 — ~28 hours** (optional soft follow-up + offer of help).
-
-Two touches is plenty for a luxury label — more can feel pushy. **No discount code** on purpose:
-discounting cheapens a luxury, made-to-order positioning. Instead we lead with craftsmanship and
-an offer to help (sizing / custom measurements), which fits made-to-order.
+Warm, short, not gushing. **No discount** (protects the luxury positioning).
 
 ---
 
-## Email 1 — the reminder (~5 hours)
+### Touch 1 — Email (24h)
+**Subject:** Your piece is waiting · **Preview:** It's still saved for you.
 
-**Subject:** Your piece is waiting
-**Preview text:** Pick up right where you left off.
-
-> Dear {{ first_name | default: "there" }},
+> Hi {{ first_name }},
 >
-> You left something beautiful behind. Your selection is saved — whenever you're ready, you can
-> complete your order in a moment.
+> You left a piece behind — and it's still saved for you. Whenever you're ready, finishing your
+> order only takes a moment.
 >
-> Each Celina Arif piece is **made to order** in our Karachi atelier, so it's created especially
-> for you. If you have any questions about sizing, fit, or custom measurements, simply reply to
-> this email — we're glad to help.
+> Questions about sizing or fit? Just reply — we're happy to help.
 >
 > **[ Return to your order → ]**
 >
-> With love,
-> **Celina Arif**
+> Celina Arif
+
+### Touch 1 — WhatsApp (24h)
+> Hi {{ first_name }}, you left a piece in your cart and it's still saved for you. Ready to
+> complete your order? {{ checkout_url }}
+> Any questions about sizing or fit, just reply — we're happy to help. — Celina Arif
+
+### Touch 2 — WhatsApp (48h)
+> Hi {{ first_name }}, just checking in — your piece is still saved for you. If anything held you
+> back (fit, fabric, or delivery), reply here and we'll take care of it. {{ checkout_url }}
+> — Celina Arif
 
 ---
 
-## Email 2 — soft follow-up (~28 hours, optional)
+## Setup
 
-**Subject:** Still thinking it over?
-**Preview text:** We're here if you need anything.
+### Email (live now — free, native)
+1. Shopify → **Marketing → Automations** → **Abandoned checkout** → Edit/Turn on.
+2. Set the delay to **24 hours**; paste the **Touch 1 — Email** copy (subject, preview, body),
+   brand logo + footer.
+3. **Send a test to yourself**, confirm the "Return to your order" link works, then **Turn on**.
 
-> Dear {{ first_name | default: "there" }},
->
-> Your piece is still saved for you. Made-to-order means it's crafted just for you — including
-> adjustments to length, sleeves, or full custom measurements if you'd like.
->
-> If anything held you back — a question on fit, fabric, or delivery — just reply and we'll take
-> care of it personally.
->
-> **[ Complete your order → ]**
->
-> Warmly,
-> **Celina Arif**
+### WhatsApp (needs setup first — flagged)
+Automated WhatsApp can't run yet. It requires:
+- A **WhatsApp BSP** (Interakt / AiSensy / Wati) — Phase 4 infrastructure — connected to
+  Shopify's abandoned-checkout event.
+- **Meta-approved message templates** (marketing templates need approval) and **customer
+  opt-in** to receive WhatsApp marketing.
 
----
+**Two ways forward:**
+- **(a) Recommended now:** turn on the **email** today; **queue WhatsApp** for when we stand up
+  the BSP (we can bring this forward from Phase 4 if recovery on WhatsApp is a priority).
+- **(b) Interim manual:** the team sends the WhatsApp by hand from the Business inbox, using
+  **Shopify → Orders → Abandoned checkouts** (shows the customer + phone if they entered it).
+  Human-in-the-loop, no automation — fine for low volume, not scalable for peak.
 
-## How to set it up (after approval)
-
-1. Shopify → **Marketing → Automations**.
-2. Find **"Abandoned checkout"** → **Turn on** (or **Edit** if it exists).
-3. Replace the default email content with **Email 1** above (subject, preview, body). Use the
-   brand logo, fonts, and footer (unsubscribe + address are added automatically).
-4. *(Optional)* add **Email 2** as a second step in the flow, delayed ~28 hours, with a condition
-   to skip if the order was already completed.
-5. Set the delay on Email 1 to ~5 hours.
-6. **Preview / send a test to yourself**, confirm links return to checkout, then **Turn on**.
-
-**Done when:** an abandoned checkout triggers the approved email automatically — no manual chase.
+**Done when:** an abandoned checkout triggers the approved **email** automatically; WhatsApp
+follows once the BSP is connected (or is sent manually in the interim).
 
 ## Notes
-- A **WhatsApp** nudge can be added later (Phase 4, via the BSP) for an even higher recovery rate.
-- Keep the brand voice warm and unhurried — these represent the label.
-- *Founder to approve:* the wording above, the 5h / 28h timing, and whether to include Email 2.
+- `{{ first_name }}` / `{{ checkout_url }}` are merge fields — Shopify Email and the BSP each
+  have their own equivalents; map them at setup.
+- Keep the voice warm and brief — it represents the label.
