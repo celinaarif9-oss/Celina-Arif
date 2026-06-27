@@ -1,0 +1,33 @@
+Celina Arif — KPI Dashboard,
+Month,May 2026
+,
+INPUTS — paste monthly (Shopify report + Meta ad export + commission audit),
+Gross sales (incl shipping),3475450
+Shipping (pass-through — from consignee ledger),661200
+Refunds / returns,0
+Articles (units) sold this month,
+Ad spend — Meta (from Ads Manager export),
+Pitch commission (from audit),265492
+Pitch retainer,80000
+Other operating costs (optional),0
+,
+REVENUE,
+Net product revenue (gross − shipping − refunds),=B5-B6-B7
+Previous month net revenue (for growth),
+Growth vs last month %,"=IF(B16>0,(B15-B16)/B16,""—"")"
+,
+PROFITABILITY — wired to the Pricing Calculator tab,
+Avg cost per article (Calculator col E),"=IFERROR(AVERAGE(Calculator!E2:E1000),""—"")"
+Avg sale price per article (Calculator col F),"=IFERROR(AVERAGE(Calculator!F2:F1000),""—"")"
+Profit per article (price − cost),"=IFERROR(B21-B20,""—"")"
+Est. product cost this month (units × avg cost),"=IFERROR(B8*B20,""—"")"
+Gross profit (net revenue − product cost),"=IFERROR(B15-B23,""—"")"
+,
+MARKETING EFFICIENCY,
+Total marketing spend (ads + commission + retainer),=B9+B10+B11
+ROAS — blended (net revenue ÷ ad spend),"=IFERROR(B15/B9,""—"")"
+Marketing cost ratio (marketing ÷ net revenue),"=IFERROR(B27/B15,""—"")"
+,
+BOTTOM LINE,
+Net profit (gross profit − marketing − other),"=IFERROR(B24-B27-B12,""—"")"
+Net margin %,"=IFERROR(B32/B15,""—"")"
