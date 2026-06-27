@@ -1,0 +1,10 @@
+Celina Arif — Shipping Reconciliation (charged vs cost),,,,
+Shopify shipping CHARGED to customers  vs  consignee delivery COST,,,,
+,,,,
+SUMMARY,,,,
+Total shipping CHARGED (Shopify),=SUM(C10:C1000),,,
+Total shipping COST (consignee ledger),=SUM(D10:D1000),,,
+Variance (charged − cost),=B5-B6,,,
+Outcome,"=IF(B7>=0,""✓ shipping covered (margin)"",""⚠ you absorbed this shortfall"")",,,
+order_ref,destination,shipping_charged_pkr,consignee_cost_pkr,variance
+,,,,=C10-D10
