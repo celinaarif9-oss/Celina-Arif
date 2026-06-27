@@ -38,25 +38,35 @@ billed, and the variance.
 The formula is simple and shown in the sheet:
 `correct commission = (gross online sales − shipping) × 8%`.
 
-## May 2026 — worked example & finding
-
-The template ships pre-filled with May's invoice figures so you can see it work:
+## May 2026 — finding (reconciled against the consignee ledger)
 
 | | Amount |
 |---|---|
-| Pitch "Total Sales" | Rs.3,475,450 |
+| Pitch "Total Sales" (gross) | Rs.3,475,450 |
 | Pitch "Net Sale" (base they used) | Rs.3,318,650 |
+| Shipping Pitch excluded (Total − Net) | Rs.156,800 |
+| **Your ACTUAL May shipping (consignee ledger)** | **Rs.661,200** |
 | Commission billed @ 8% | Rs.265,492 |
 
-- ✅ **Their arithmetic is correct:** 8% × 3,318,650 = 265,492 exactly.
-- ⚠️ **The base can't be verified from the invoice.** They deducted Rs.156,800 from Total→Net
-  but don't label it. Your term is *"excluding shipping,"* and with ~60% of orders going
-  international by DHL (Rs.15k–26k each), real monthly shipping should be **much larger** than
-  Rs.156,800. **Action:** replace `B5`/`B6` with your **actual** May gross and shipping from
-  Shopify. If your real shipping was higher than 156,800, the base was overstated and you were
-  overbilled (every Rs.100k of un-excluded shipping = **Rs.8,000** overcharged).
-- ℹ️ If May's sales were taken manually (store launches August) and shipping was handled
-  outside this figure, the base may be fine — the reconciliation will confirm which.
+- ✅ **Their arithmetic is internally correct:** 8% × 3,318,650 = 265,492 exactly.
+- 🚩 **But the shipping deduction is far too small.** Your term is *"gross sales excluding
+  shipping."* Pitch excluded only **Rs.156,800**, yet the consignee ledger shows you actually
+  spent **Rs.661,200** on shipping in May — a **Rs.504,400 gap**.
+- **Corrected:** base should be 3,475,450 − 661,200 = **Rs.2,814,250**; commission @ 8% =
+  **Rs.225,140**. Pitch billed **Rs.265,492** → **overbilled by ~Rs.40,352** for May alone
+  (~**Rs.484,000/year** if this repeats).
+
+**Before you raise it, confirm two things (the finding depends on them):**
+1. **Does "Total Sales" (3,475,450) already include the shipping customers paid?** If yes
+   (most likely — they bill on gross), the exclusion should remove the full shipping, so the
+   overbilling stands. If "Total Sales" is product-only and shipping was never in it, then
+   nothing should be excluded — flip side, they'd have slightly *under*billed. Your sales
+   records settle this.
+2. **Is Rs.661,200 the shipping that belongs in the base?** The ledger is your courier *cost*.
+   If you charge customers shipping at roughly cost (pass-through), cost ≈ the shipping revenue
+   to exclude. If customers paid more/less, use that figure instead.
+3. **Ask Pitch what the Rs.156,800 they deducted actually represents** — that single answer
+   tells you how they're interpreting "shipping."
 
 ## Notes & guardrails
 
