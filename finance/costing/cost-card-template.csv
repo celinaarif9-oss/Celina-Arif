@@ -1,0 +1,34 @@
+Celina Arif — Article Cost Card,,,,,
+Article / design name,,,,,
+Size / variant,,,,,
+,,,,,
+Category,Item,Unit,Qty,Rate (PKR),Amount
+DIRECT MATERIALS,,,,,
+,Main fabric,metres,,,=D7*E7
+,Contrast / secondary fabric,metres,,,=D8*E8
+,Lining,metres,,,=D9*E9
+,Embroidery / handwork material,lump,,,=D10*E10
+,"Trims (lace, piping, buttons, hooks, tassels)",lump,,,=D11*E11
+,Dupatta / additional piece,metres,,,=D12*E12
+,"Packaging (box, bag, tags, tissue)",set,,,=D13*E13
+,Materials subtotal,,,,=SUM(F7:F13)
+,,,,,
+DIRECT LABOUR,,,,,
+,Cutting,piece,,,=D17*E17
+,Stitching / tailoring,piece,,,=D18*E18
+,Embroidery / handwork (karigar),lump,,,=D19*E19
+,Finishing / pressing / QC,piece,,,=D20*E20
+,Labour subtotal,,,,=SUM(F17:F20)
+,,,,,
+,Prime cost (materials + labour),,,,=F14+F21
+,,,,,
+OVERHEADS,,,,,
+,Overhead (enter % of prime cost in Rate column),%,,,=F23*E26
+,,,,,
+,TOTAL COST,,,,=F23+F26
+,,,,,
+PRICING,,,,,
+,Markup on cost (enter % in Rate column),%,,0.5,
+,Suggested LOCAL price (rounded to 500),,,,"=IF(F28>0,CEILING(F28*(1+E31),500),""—"")"
+,,,,,
+,International price = local price + DHL by zone — use the Pricing Calculator,,,,
