@@ -12,7 +12,7 @@ or quoting every international customer by hand.
 | File | What it is |
 |------|------------|
 | `international-rates.csv` | Per **DHL zone**, the price for each weight band (DHL cost rounded **up to nearest Rs.1,000**). |
-| `local-rates.csv` | Domestic flat rate: **Karachi Rs.300, Rest of Pakistan Rs.500** (per order, not weight-based). |
+| `local-rates.csv` | Domestic flat rate: **Rs.400 nationwide** (per order, not weight-based). |
 | `zone-countries.csv` | Which countries belong to each DHL zone — use this to build the Shopify zones. |
 | `build-shipping-rates.mjs` | The generator. Re-run it if DHL/local rates change (see bottom). |
 
@@ -23,9 +23,10 @@ or quoting every international customer by hand.
   `intl_price` your pricing calculator already shows. **No double charge.**
 - **International rate** = real DHL non-doc cost at the band's top weight, rounded **up to
   Rs.1,000** (a 0–1,000 cushion for fuel/FX swings).
-- **Local rate** = flat per order: **Karachi Rs.300, Rest of Pakistan Rs.500** — benchmarked
-  against peers (Nadia Khan & Sania Maskatiya = free; Sana Safinaz = flat Rs.250). You absorb
-  the small gap vs your consignee's cost, which is normal for luxury at this AOV.
+- **Local rate** = flat **Rs.400 nationwide** — benchmarked against peers (Nadia Khan & Sania
+  Maskatiya = free; Sana Safinaz = flat Rs.250). You absorb the small gap vs your consignee's
+  cost, which is normal for luxury at this AOV. *(To later charge Karachi less than the rest,
+  add a postcode app — see the domestic setup step.)*
 - **8 kg+** international (rare — 3+ formals) = **"Contact for quote"** so a giant order never
   ships at a loss.
 
@@ -36,14 +37,13 @@ or quoting every international customer by hand.
 
 **Settings → Shipping and delivery → Manage rates** (under your shipping profile):
 
-1. **Domestic (Pakistan) — flat Rs.300 Karachi / Rs.500 rest:**
-   > ⚠️ Shopify can't split shipping by **city** — natively it charges **one rate for all of
-   > Pakistan**. So Karachi vs rest needs one of these:
-   - **Option A (does what you asked — recommended):** install a postcode-rate app such as
-     **Zapiet – Rates by Zip Code** (~$15/mo). Set **Karachi postcodes 74000–75999 → Rs.300**
-     and a fallback **Rest of Pakistan → Rs.500**.
-   - **Option B (no app):** in the native **Pakistan** zone, **Add rate → flat rate → Rs.400**
-     for the whole country. Simplest and free, but no Karachi discount.
+1. **Domestic (Pakistan) — flat Rs.400 nationwide:**
+   - Find the **Pakistan** shipping zone (or create it).
+   - **Add rate → Use flat rate → Set up your own** → name it *Standard Delivery* → **Rs.400**.
+   - That's it — one rate covers all of Pakistan.
+   > 💡 *Later option:* to charge Karachi less than the rest, Shopify can't split by city on its
+   > own — you'd add a postcode-rate app (e.g. **Zapiet – Rates by Zip Code**, ~$15/mo) and set
+   > Karachi postcodes 74000–75999 to a lower rate. Not needed now.
 2. **International — one Shopify zone per DHL zone:**
    - **Create shipping zone** → name it e.g. **"Zone 3 — UK & nearby"** → add the countries
      listed for that zone in `zone-countries.csv`.
