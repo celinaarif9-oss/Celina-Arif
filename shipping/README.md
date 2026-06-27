@@ -12,7 +12,7 @@ or quoting every international customer by hand.
 | File | What it is |
 |------|------------|
 | `international-rates.csv` | Per **DHL zone**, the price for each weight band (DHL cost rounded **up to nearest Rs.1,000**). |
-| `local-rates.csv` | Domestic flat rate: **Rs.400 nationwide** (per order, not weight-based). |
+| `local-rates.csv` | Domestic flat rate: **Rs.500 nationwide** (per order, not weight-based). |
 | `zone-countries.csv` | Which countries belong to each DHL zone — use this to build the Shopify zones. |
 | `build-shipping-rates.mjs` | The generator. Re-run it if DHL/local rates change (see bottom). |
 
@@ -23,7 +23,7 @@ or quoting every international customer by hand.
   `intl_price` your pricing calculator already shows. **No double charge.**
 - **International rate** = real DHL non-doc cost at the band's top weight, rounded **up to
   Rs.1,000** (a 0–1,000 cushion for fuel/FX swings).
-- **Local rate** = flat **Rs.400 nationwide** — benchmarked against peers (Nadia Khan & Sania
+- **Local rate** = flat **Rs.500 nationwide** — benchmarked against peers (Nadia Khan & Sania
   Maskatiya = free; Sana Safinaz = flat Rs.250). You absorb the small gap vs your consignee's
   cost, which is normal for luxury at this AOV. *(To later charge Karachi less than the rest,
   add a postcode app — see the domestic setup step.)*
@@ -37,9 +37,9 @@ or quoting every international customer by hand.
 
 **Settings → Shipping and delivery → Manage rates** (under your shipping profile):
 
-1. **Domestic (Pakistan) — flat Rs.400 nationwide:**
+1. **Domestic (Pakistan) — flat Rs.500 nationwide:**
    - Find the **Pakistan** shipping zone (or create it).
-   - **Add rate → Use flat rate → Set up your own** → name it *Standard Delivery* → **Rs.400**.
+   - **Add rate → Use flat rate → Set up your own** → name it *Standard Delivery* → **Rs.500**.
    - That's it — one rate covers all of Pakistan.
    > 💡 *Later option:* to charge Karachi less than the rest, Shopify can't split by city on its
    > own — you'd add a postcode-rate app (e.g. **Zapiet – Rates by Zip Code**, ~$15/mo) and set

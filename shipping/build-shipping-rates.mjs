@@ -9,7 +9,7 @@
  *             - zone-countries.csv      : which countries belong to each DHL zone
  * Model   : INTERNATIONAL = real DHL non-doc cost at the band's TOP weight, rounded UP to
  *           the nearest Rs.1,000 (a 0-1,000 cushion for fuel/FX drift; never undercharges).
- *           LOCAL = single flat Rs.400 for all of Pakistan (founder decision; no postcode app
+ *           LOCAL = single flat Rs.500 for all of Pakistan (founder decision; no postcode app
  *           needed). Benchmarked vs peers (Nadia Khan & Sania Maskatiya free; Sana Safinaz 250).
  *           If a postcode app is added later, switch to Karachi 300 / rest 500 (see README).
  * Inputs  : ../finance/pricing-calculator/data/dhl-rates-nondoc.csv
@@ -39,7 +39,7 @@ const INTL_ROUND = 1000; // round international charge UP to nearest this (fuel/
 
 // Local: single flat rate for all of Pakistan (no postcode app needed — see README).
 const LOCAL_TIERS = [
-  { area: 'Pakistan (all)', charge: 400, note: 'flat per order, nationwide' },
+  { area: 'Pakistan (all)', charge: 500, note: 'flat per order, nationwide' },
 ];
 
 const roundUpTo = (v, step) => Math.ceil(v / step) * step;
