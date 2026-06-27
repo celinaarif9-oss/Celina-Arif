@@ -12,9 +12,9 @@ or quoting every international customer by hand.
 | File | What it is |
 |------|------------|
 | `international-rates.csv` | Per **DHL zone**, the price for each weight band (DHL cost rounded **up to nearest Rs.1,000**). |
-| `local-rates.csv` | Domestic price per weight band (consignee cost **+ Rs.200** petrol buffer). |
+| `local-rates.csv` | Domestic flat rate: **Karachi Rs.300, Rest of Pakistan Rs.500** (per order, not weight-based). |
 | `zone-countries.csv` | Which countries belong to each DHL zone — use this to build the Shopify zones. |
-| `build-shipping-rates.mjs` | The generator. Re-run it if DHL/consignee rates change (see bottom). |
+| `build-shipping-rates.mjs` | The generator. Re-run it if DHL/local rates change (see bottom). |
 
 ## Pricing model (so you can sanity-check)
 
@@ -23,10 +23,11 @@ or quoting every international customer by hand.
   `intl_price` your pricing calculator already shows. **No double charge.**
 - **International rate** = real DHL non-doc cost at the band's top weight, rounded **up to
   Rs.1,000** (a 0–1,000 cushion for fuel/FX swings).
-- **Local rate** = consignee cost (1kg Rs.800, 2kg Rs.1,400, ≈ +Rs.600/kg) **+ Rs.200**.
-  ⚠️ Local rates **above 2 kg are estimated** at +Rs.600/kg — confirm the real figures with
-  your consignee and update `local-rates.csv` (or tell me and I'll regenerate).
-- **8 kg+** (rare — 3+ formals) = **"Contact for quote"** so a giant order never ships at a loss.
+- **Local rate** = flat per order: **Karachi Rs.300, Rest of Pakistan Rs.500** — benchmarked
+  against peers (Nadia Khan & Sania Maskatiya = free; Sana Safinaz = flat Rs.250). You absorb
+  the small gap vs your consignee's cost, which is normal for luxury at this AOV.
+- **8 kg+** international (rare — 3+ formals) = **"Contact for quote"** so a giant order never
+  ships at a loss.
 
 ## How to set it up in Shopify (≈20–30 min, one time)
 
@@ -35,10 +36,14 @@ or quoting every international customer by hand.
 
 **Settings → Shipping and delivery → Manage rates** (under your shipping profile):
 
-1. **Domestic (Pakistan):**
-   - Find the **Pakistan** shipping zone (or create it).
-   - **Add rate → Use flat rate → Set up your own → Add conditions → Based on item weight.**
-   - Add one rate per row in `local-rates.csv` (e.g. *0–1 kg → Rs.1,000*, *1–2 kg → Rs.1,600*…).
+1. **Domestic (Pakistan) — flat Rs.300 Karachi / Rs.500 rest:**
+   > ⚠️ Shopify can't split shipping by **city** — natively it charges **one rate for all of
+   > Pakistan**. So Karachi vs rest needs one of these:
+   - **Option A (does what you asked — recommended):** install a postcode-rate app such as
+     **Zapiet – Rates by Zip Code** (~$15/mo). Set **Karachi postcodes 74000–75999 → Rs.300**
+     and a fallback **Rest of Pakistan → Rs.500**.
+   - **Option B (no app):** in the native **Pakistan** zone, **Add rate → flat rate → Rs.400**
+     for the whole country. Simplest and free, but no Karachi discount.
 2. **International — one Shopify zone per DHL zone:**
    - **Create shipping zone** → name it e.g. **"Zone 3 — UK & nearby"** → add the countries
      listed for that zone in `zone-countries.csv`.

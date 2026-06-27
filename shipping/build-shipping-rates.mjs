@@ -9,8 +9,9 @@
  *             - zone-countries.csv      : which countries belong to each DHL zone
  * Model   : INTERNATIONAL = real DHL non-doc cost at the band's TOP weight, rounded UP to
  *           the nearest Rs.1,000 (a 0-1,000 cushion for fuel/FX drift; never undercharges).
- *           LOCAL = consignee cost (1kg=800, 2kg=1400, i.e. +600/kg) + Rs.200 buffer.
- *           Rates above 2 kg local are EXTRAPOLATED at +600/kg — confirm with the consignee.
+ *           LOCAL = flat per-order, two tiers (founder decision, benchmarked vs peers):
+ *             Karachi = Rs.300, Rest of Pakistan = Rs.500. NOT weight-based.
+ *           (Free/low-flat local matches Nadia Khan, Sania Maskatiya, Sana Safinaz.)
  * Inputs  : ../finance/pricing-calculator/data/dhl-rates-nondoc.csv
  *           ../finance/pricing-calculator/data/dhl-zones.csv
  * Outputs : shipping/international-rates.csv, local-rates.csv, zone-countries.csv
@@ -35,9 +36,12 @@ const BANDS = [
 ];
 
 const INTL_ROUND = 1000; // round international charge UP to nearest this (fuel/FX cushion)
-const LOCAL_BASE_1KG = 800;   // consignee charge at 1 kg
-const LOCAL_PER_KG = 600;     // consignee increment per extra kg (800->1400 = +600)
-const LOCAL_BUFFER = 200;     // we charge the customer this much over our consignee cost
+
+// Local: flat per-order, two tiers (Shopify can't split by city natively — see README).
+const LOCAL_TIERS = [
+  { area: 'Karachi',           charge: 300, note: 'flat per order (postcodes 74xxx-75xxx)' },
+  { area: 'Rest of Pakistan',  charge: 500, note: 'flat per order (all other PK postcodes)' },
+];
 
 const roundUpTo = (v, step) => Math.ceil(v / step) * step;
 
@@ -80,14 +84,8 @@ for (let zone = 1; zone <= 13; zone++) {
 writeFileSync(resolve(HERE, 'international-rates.csv'), intlLines.join('\n') + '\n');
 
 // --- local-rates.csv -------------------------------------------------------------------------
-const localLines = ['weight_band,our_cost_pkr,charge_customer_pkr,note'];
-for (const b of BANDS) {
-  const cost = LOCAL_BASE_1KG + (b.rateKg - 1) * LOCAL_PER_KG; // consignee cost at band top
-  const charge = cost + LOCAL_BUFFER;
-  const note = b.rateKg > 2 ? 'EXTRAPOLATED +600/kg - confirm with consignee' : 'from consignee quote';
-  localLines.push([b.label, cost, charge, note].join(','));
-}
-localLines.push('8 kg+,,,Contact for quote');
+const localLines = ['area,charge_customer_pkr,note'];
+for (const t of LOCAL_TIERS) localLines.push([t.area, t.charge, t.note].join(','));
 writeFileSync(resolve(HERE, 'local-rates.csv'), localLines.join('\n') + '\n');
 
 // --- zone-countries.csv (grouped, for building Shopify shipping zones) -----------------------

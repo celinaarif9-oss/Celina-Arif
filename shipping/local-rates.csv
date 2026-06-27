@@ -1,7 +1,3 @@
-weight_band,our_cost_pkr,charge_customer_pkr,note
-0-1 kg,800,1000,from consignee quote
-1-2 kg,1400,1600,from consignee quote
-2-3 kg,2000,2200,EXTRAPOLATED +600/kg - confirm with consignee
-3-5 kg,3200,3400,EXTRAPOLATED +600/kg - confirm with consignee
-5-8 kg,5000,5200,EXTRAPOLATED +600/kg - confirm with consignee
-8 kg+,,,Contact for quote
+area,charge_customer_pkr,note
+Karachi,300,flat per order (postcodes 74xxx-75xxx)
+Rest of Pakistan,500,flat per order (all other PK postcodes)
