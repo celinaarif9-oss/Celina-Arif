@@ -1,23 +1,24 @@
 Celina Arif — Pitch Commission Audit,
 Month,May 2026
 ,
-INPUTS — from YOUR records (Shopify / sales sheet), NOT from Pitch's invoice,
-Gross online sales (all online revenue incl. shipping),3475450
-Shipping (excluded per terms — actual May consignee ledger),661200
-Refunds / returns (FYI only — terms say gross, so NOT deducted),0
+INPUTS — from Shopify order report (paid orders only),
+Commissionable base = sum of PAID order Subtotals,3225450
+Less: any voided / cancelled orders still in that sum,0
 Commission rate,0.08
 ,
-WHAT PITCH SHOULD CHARGE,
-Correct commission base (gross − shipping),=B5-B6
-Correct commission (base × rate),=B11*B8
+NOTE: Shopify 'Subtotal' already excludes shipping & tax — so shipping needs no separate deduction.,
 ,
-WHAT PITCH ACTUALLY BILLED — from the invoice,
-Base Pitch used (their 'Net Sale'),3318650
-Commission Pitch billed,265492
+WHAT PITCH SHOULD CHARGE,
+Correct base (paid subtotals − voids),=B5-B6
+Correct commission (base × rate),=B12*B7
+,
+WHAT PITCH BILLED — from their commissions sheet,
+Base Pitch used,3225450
+Commission Pitch billed,258036
 ,
 RESULT,
-Pitch's own math check (their base × rate),=B15*B8
-Does their math add up? (should equal billed),"=IF(ABS(B19-B16)<1,""✓ yes"",""⚠ no — recompute"")"
-Base difference (their base − correct base),=B15-B11
-Commission variance (billed − correct),=B16-B12
-Verdict,"=IF(ABS(B22)<1,""✓ Matches terms"",IF(B22>0,""⚠ OVERBILLED by this much"",""Underbilled (in your favour)""))"
+Pitch's own math check (their base × rate),=B16*B7
+Does their math add up? (should equal billed),"=IF(ABS(B20-B17)<1,""✓ yes"",""⚠ no — recompute"")"
+Base difference (their base − correct base),=B16-B12
+Commission variance (billed − correct),=B17-B13
+Verdict,"=IF(ABS(B23)<1,""✓ Matches terms"",IF(B23>0,""⚠ OVERBILLED by this much"",""Underbilled (in your favour)""))"
