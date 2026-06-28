@@ -29,6 +29,32 @@ Confirm it does what we need (don't assume the website):
    what happens to our number/data if we leave?
 10. **Support** — hours, channel (WhatsApp/phone), Urdu + English.
 
+### Ready-to-send enquiry (paste to WeTarseel)
+> Hi, I run **Celina Arif**, a luxury womenswear brand on **Shopify**. We'd like to move our
+> existing customer WhatsApp number onto your platform as a **shared team inbox**. Before we
+> sign up, could you confirm:
+>
+> 1. Do you support Meta **Coexistence** — so we keep our **existing number**, keep the WhatsApp
+>    Business **app active** on our phone, and **sync our past chats**? How many months transfer?
+> 2. Your **monthly PKR pricing** for a shared inbox with **multiple agents** — any **setup fee**
+>    or **contract term**? Are Meta's per-conversation charges passed through **at actuals**?
+> 3. How many **agent logins** are included, and can we set **roles** (team replies, owner
+>    controls settings)?
+> 4. Do you integrate with **Shopify** for order updates/tracking and **WhatsApp abandoned-cart**?
+> 5. Can your **AI/chatbot** answer FAQs in **draft/suggest mode** (agent approves before
+>    sending), not auto-reply — using **our own FAQ** content?
+> 6. Can you also manage **Instagram DMs** in the same inbox?
+> 7. Do you help with **Meta business verification** + **display-name** approval, and what's the
+>    typical **go-live timeline**?
+> 8. If we ever leave, can we **export our data and keep our number**?
+>
+> Thank you!
+
+**What a good answer sounds like:** Coexistence = **yes, 6 months** of chats sync · pricing is a
+clear **PKR monthly** figure with Meta charges **at actuals (no markup)** · **multiple agents**
+included · Shopify + draft-mode AI = **yes** · they **help with verification**. Red flags: vague
+pricing, "auto-reply only" AI, no Coexistence, or no data export.
+
 ## Step 2 — Gather before onboarding
 - 🟣 **Meta Business account** (Business Manager) for Celina Arif — created, with **verification
   documents** ready (business registration / utility bill / etc.).
