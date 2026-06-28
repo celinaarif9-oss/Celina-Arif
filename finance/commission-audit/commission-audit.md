@@ -78,6 +78,17 @@ removed only Rs 93,200 of corrections, not the full Rs 355,400 of returns.
 **Ask Pitch:** *"Shopify Net Sales for May is 3,171,700 but your base is 3,225,450 — are the
 Rs 355,400 of May returns deducted?"* That one answer closes it.
 
+## Resolution (June 2026)
+- **May settled at Rs 258,036** (Pitch's figure). The ~Rs 4,300 difference was let go — not worth
+  the time, and the agreed term is **voids-only**, so Pitch's number is defensible.
+- Pitch's pushback was fair: the Shopify "Returns" of Rs 355,400 wasn't itemised, likely overlaps
+  the refunded cancellations already removed (we have a **no-returns policy**), so deducting it on
+  top risked double-counting. Gross also didn't match (Shopify 3,527,100 vs Pitch 3,429,700).
+- **Going forward:** requested a **written commission-base definition** — base = gross product
+  subtotals (ex shipping & tax) **less voided/cancelled/refunded** orders, all channels, monthly —
+  plus an explanation of the gross gap, so monthly figures reconcile cleanly. Awaiting Pitch's
+  written confirmation.
+
 ## Each month going forward — what to spot-check
 
 - **Voided/cancelled orders** are pulled out of the base (they were here).
