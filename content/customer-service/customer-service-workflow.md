@@ -40,7 +40,7 @@ sits inside your software allowance. *(We'll pick one and configure it as a sepa
 Complaints, refunds, delays, custom pricing, anything emotional or money-related → **route to a
 person**. The FAQ explicitly flags these.
 
-## To finish Layer 1, I need from you
-- The **CONFIRM** items in the FAQ (lead time, returns/exchange policy, customisation limits,
-  care, duties wording).
-- Which channel to template first — **WhatsApp**, **Instagram**, or both.
+## Status
+- Policies **confirmed** (lead time, no returns/exchanges, customisation via website, care).
+- Channels: **WhatsApp + Instagram** — load the quick replies in both (Layer 1).
+- Next: load the saved replies, then choose a BSP when ready for AI-drafted replies (Layer 2).

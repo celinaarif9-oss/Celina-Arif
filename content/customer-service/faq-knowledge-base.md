@@ -4,8 +4,8 @@ The answers to your most common customer questions, in your warm, minimal voice.
 1. **Now:** paste into WhatsApp Business & Instagram as **Saved/Quick Replies** — a person sends.
 2. **Later:** this is the source an **AI assistant** drafts from (still human-approved before sending).
 
-> ⚠️ Lines marked **CONFIRM** are policy I must not guess — tell me the answer and I'll finalise.
 > 🔒 Every reply is **approved by a person** before it goes out. Nothing here auto-sends.
+> Contact: **@celinaariff** · **celinaarif.com** · **info@celinaarif.com**
 
 ## How to order / made-to-order
 **Q: How do I order?**
@@ -23,7 +23,8 @@ The answers to your most common customer questions, in your warm, minimal voice.
 
 ## Lead time
 **Q: How long will my order take?**
-> Because each piece is made to order, it takes **[CONFIRM: 10–20] working days** to make, plus delivery time. We'll keep you posted along the way.
+> Because each piece is made to order, the making time is: **Luxury Pret — 10–15 working days**,
+> **Semi-formals — 15–20 working days**, plus delivery. We'll keep you posted along the way.
 
 ## Shipping
 **Q: Do you ship internationally?**
@@ -33,7 +34,7 @@ The answers to your most common customer questions, in your warm, minimal voice.
 > Within Pakistan, a flat **Rs.500**. International is by destination, shown at checkout.
 
 **Q: Will I pay customs/duties? (international)**
-> International orders may have **import duties/taxes** set by your country, collected by DHL on delivery. These are separate from our charges. **CONFIRM: any wording you prefer here.**
+> International orders may have **import duties/taxes** set by your country, collected by DHL on delivery. These are separate from our charges.
 
 ## Payment
 **Q: How can I pay?**
@@ -45,17 +46,23 @@ The answers to your most common customer questions, in your warm, minimal voice.
 
 ## Customisation
 **Q: Can I customise a design (colour/sleeves/length)?**
-> In many cases, yes — tell us what you have in mind and we'll let you know what's possible. **CONFIRM: what customisations you allow / any that you don't.**
+> The customisation options for each piece are noted in its **description on the website** — take
+> a look, and message us if you'd like a hand.
 
 ## Exchanges & returns
 **Q: Can I return or exchange?**
-> **CONFIRM — needs your policy.** (Made-to-order pieces are often exchange-only or final sale;
-> tell me your exact policy — e.g. size exchange within X days, no returns on customised pieces —
-> and I'll write it warmly.)
+> As each piece is made to order especially for you, we're unable to offer **returns or
+> exchanges**. You'll find our full policy on the website — and of course, we're always here to
+> help you choose the right size before you order.
 
-## Care
+## Care — "Essentials for Care"
 **Q: How do I care for my outfit?**
-> We recommend **dry clean only** to protect the fabric and handwork. **CONFIRM if different.**
+> - Dry clean only
+> - Handle with care
+> - Do not use bleach or harsh detergents
+> - Steam on low heat; avoid ironing directly on embellishments
+> - Store in a cool, dry place
+> - Keep away from moisture and perfumes
 
 ## Can't answer / sensitive
 For anything not covered — complaints, custom pricing, delays, refunds — **don't auto-reply**:
