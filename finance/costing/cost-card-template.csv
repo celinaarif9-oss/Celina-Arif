@@ -1,34 +1,45 @@
 Celina Arif — Article Cost Card,,,,,
 Article / design name,,,,,
-Size / variant,,,,,
 ,,,,,
 Category,Item,Unit,Qty,Rate (PKR),Amount
 DIRECT MATERIALS,,,,,
-,Main fabric,metres,,,=D7*E7
-,Contrast / secondary fabric,metres,,,=D8*E8
-,Lining,metres,,,=D9*E9
-,Embroidery / handwork material,lump,,,=D10*E10
-,"Trims (lace, piping, buttons, hooks, tassels)",lump,,,=D11*E11
-,Dupatta / additional piece,metres,,,=D12*E12
-,"Packaging (box, bag, tags, tissue)",set,,,=D13*E13
-,Materials subtotal,,,,=SUM(F7:F13)
+,Sheesha silk,metres,,,=D6*E6
+,Inner fabric,metres,,,=D7*E7
+,Chiffon / georgette,metres,,,=D8*E8
+,Organza / buckram,metres,,,=D9*E9
+,Resham / thread,lump,,,=D10*E10
+,Handwork materials,lump,,,=D11*E11
+,Dye,lump,,,=D12*E12
+,Zips / buttons / elastic,lump,,,=D13*E13
+,Packaging,set,,,=D14*E14
+,Extras,lump,,,=D15*E15
+,Materials subtotal,,,,=SUM(F6:F15)
 ,,,,,
 DIRECT LABOUR,,,,,
-,Cutting,piece,,,=D17*E17
-,Stitching / tailoring,piece,,,=D18*E18
-,Embroidery / handwork (karigar),lump,,,=D19*E19
-,Finishing / pressing / QC,piece,,,=D20*E20
-,Labour subtotal,,,,=SUM(F17:F20)
+,Cutting,piece,,,=D19*E19
+,Stitching,piece,,,=D20*E20
+,Hand work,lump,,,=D21*E21
+,Machine work,lump,,,=D22*E22
+,Finishing,piece,,,=D23*E23
+,Labour subtotal,,,,=SUM(F19:F23)
 ,,,,,
-,Prime cost (materials + labour),,,,=F14+F21
+,PRIME COST (materials + labour),,,,=F16+F24
 ,,,,,
-OVERHEADS,,,,,
-,Overhead (enter % of prime cost in Rate column),%,,,=F23*E26
+FACTORY OVERHEAD,,,,,
+,Allocated overhead (rent/electricity/water/maintenance) — % from Overhead Pool tab,% of prime,,,=F26*E29
 ,,,,,
-,TOTAL COST,,,,=F23+F26
+,PRODUCTION COST,,,,=F26+F29
 ,,,,,
 PRICING,,,,,
-,Markup on cost (enter % in Rate column),%,,0.5,
-,Suggested LOCAL price (rounded to 500),,,,"=IF(F28>0,CEILING(F28*(1+E31),500),""—"")"
+,Markup on cost,%,,0.5,
+,SELLING PRICE (rounded to 500),,,,"=IF(F31>0,CEILING(F31*(1+E34),500),""—"")"
 ,,,,,
-,International price = local price + DHL by zone — use the Pricing Calculator,,,,
+SELLING COSTS — taken from the sale (% of price),,,,,
+,Marketing commission (Pitch),% of price,,0.08,=F35*E38
+,Payment gateway / Shopify fee,% of price,,0.0136,=F35*E39
+,Bank charges,% of price,,,=F35*E40
+,Ads (Meta) = monthly spend ÷ monthly revenue,% of price,,,=F35*E41
+,Selling costs subtotal,,,,=SUM(F38:F41)
+,,,,,
+,NET PROFIT (price − production − selling),,,,=F35-F31-F42
+,Net margin %,,,,"=IFERROR(F44/F35,""—"")"

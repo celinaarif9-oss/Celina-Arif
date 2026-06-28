@@ -21,7 +21,9 @@ The Cost Card's three subtotals drop straight into one Calculator row:
 1. Open your finance Google Sheet (the one that will hold the Calculator + Dashboard).
 2. **File → Import → Upload** `cost-card-template.csv` → **Insert new sheet** → name the tab
    **`Cost Card`**. The `=` cells become live formulas.
-3. To cost several designs, **duplicate the tab** (right-click → Duplicate) — one card per design.
+3. Also import **`overhead-pool-template.csv`** as a tab named **`Overhead Pool`** — it sets your
+   monthly overhead %.
+4. To cost several designs, **duplicate the Cost Card tab** (right-click → Duplicate) — one per design.
 
 ## How to fill a Cost Card (5 minutes per design)
 
@@ -38,18 +40,34 @@ Fill only **Qty** and **Rate (PKR)** — every **Amount** and subtotal calculate
 > Edit the line items to match how *you* actually buy and make — add/rename rows freely. The
 > rates are **yours to enter**; nothing is pre-filled with invented numbers.
 
-## Overhead — pick one method
+## Overhead — the two-bucket method (the important bit)
 
-Overhead = the shared costs not tied to one piece (factory rent, utilities, machine
-depreciation, supervisor/indirect salaries, sampling/wastage).
+Your costing sheet groups two different cost types under "overhead." They must be handled
+differently, or the maths breaks:
 
-- **Recommended — % of prime cost.** Enter a single % in the Rate column of the Overhead row;
-  the card applies it to (materials + labour). It scales with complexity — a heavy bridal
-  carries more overhead than a simple pret. **To set the %:** `monthly overhead ÷ monthly
-  prime cost`. *(Tell me your monthly overhead total and rough monthly material+labour spend
-  and I'll work out the %.)*
-- **Alternative — flat per article.** If you'd rather, divide total monthly overhead by your
-  ~96 articles/month and enter that rupee figure instead (change the Overhead row to a lump).
+### Bucket 1 — Factory overhead (rent, electricity, water, maintenance, Shopify subscription)
+Fixed, shared, monthly. You can't know one dress's share, so **pool it monthly and spread it**:
+
+1. In the **Overhead Pool** tab (`overhead-pool-template.csv`), enter the month's rent,
+   electricity, water, maintenance, Shopify subscription → it totals them.
+2. Enter the month's **total prime cost** (all articles' materials + labour).
+3. It returns an **overhead rate (% of prime)**. Put that % in the Cost Card's overhead row.
+4. **Update it monthly, not per design** — this is what removes the "manual every time" pain.
+   Heavier pieces carry proportionally more overhead, which is fair.
+
+### Bucket 2 — Selling costs (commission 8%, gateway/Shopify fee, ads, bank charges)
+These scale with the **sale**, not the article — so they're a **% of the selling price**, taken
+*after* price, to show **net profit**. They are **not** in the production cost, and **not** in
+the markup base.
+
+> ⚠️ Why not just add commission/ads into cost and mark up? Because commission is **8% of the
+> price** — if it's in the cost, and price = cost × 1.5, the price depends on a cost that depends
+> on the price. Circular. Keeping selling costs as a % of price avoids this entirely.
+
+The Cost Card already has both: an **allocated factory-overhead** line (Bucket 1) feeding
+**Production Cost**, then a **Selling Costs** block (Bucket 2) feeding **Net Profit / margin**.
+Known rates are pre-filled — commission **8%**, gateway **~1.36%** (0.5% + 0.86%); you add your
+**bank charges %** and **ads %** (monthly Meta spend ÷ monthly revenue).
 
 This is a **costing convention, not accounting** — your accountant should confirm the overhead
 basis for any formal reporting.
@@ -62,6 +80,8 @@ basis for any formal reporting.
   which already holds the full DHL zone rate card.
 
 ## What I need from you to finish it
-1. Confirm/adjust the **material & labour line items** to match your real process.
-2. Your **overhead approach** (the %, or a flat per-article figure) — or send me the monthly
-   overhead + production numbers and I'll set the %.
+1. The **rates** for one real article (materials metres × rate, labour) — drop them in and the
+   card computes.
+2. The month's **fixed overhead figures** (rent, electricity, water, maintenance, Shopify sub)
+   plus **monthly prime cost** → goes in the Overhead Pool tab, which sets the %.
+3. Your **bank charges %** and a starting **ads %** (monthly Meta spend ÷ monthly revenue).
