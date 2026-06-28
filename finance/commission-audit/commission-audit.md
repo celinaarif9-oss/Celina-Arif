@@ -64,6 +64,20 @@ prompted Pitch to recheck and they found a genuine **Rs.93,200** error, cutting 
 > the base included shipping. The order-level detail disproved that — the base is product
 > subtotals (pre-shipping). Recorded here for an honest trail.
 
+## Open point — "net sales" vs returns (raised June 2026)
+
+Pitch later said they charge "on net sales." But **Shopify's own Net Sales for May = Rs 3,171,700**
+(Gross 3,527,100 − Returns 355,400), while **Pitch's base = Rs 3,225,450** — i.e. **Rs 53,750
+higher** than Shopify's net sales. So they are *not* using Shopify's net-sales figure; they
+removed only Rs 93,200 of corrections, not the full Rs 355,400 of returns.
+
+- If "net sales" truly means **net of returns**, the base should be ≈3,171,700 → commission
+  **≈253,736** (Pitch's 258,036 is then ~Rs 4,300 high; more if all May returns apply).
+- If returns are from **earlier months**, 258,036 stands.
+
+**Ask Pitch:** *"Shopify Net Sales for May is 3,171,700 but your base is 3,225,450 — are the
+Rs 355,400 of May returns deducted?"* That one answer closes it.
+
 ## Each month going forward — what to spot-check
 
 - **Voided/cancelled orders** are pulled out of the base (they were here).
