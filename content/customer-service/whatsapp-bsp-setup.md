@@ -61,15 +61,16 @@ Plan for **Meta business verification (1–3 days)** + a display-name approval.
 - **AI:** drafts for agents to approve before sending ✅ · **Instagram + WhatsApp one inbox** ✅
 - **Setup:** they guide Meta verification + display name, **live in <24h** ✅
 - **Ownership:** you own the number, can leave, export data ✅
-- ⚠️ **Coexistence — UNRESOLVED:** the rep said you *can't* keep the app or transfer chats (the
-  old-migration answer), which **contradicts their own Coexistence page**. **Pushing back to
-  confirm.** Worst case is acceptable: Pitch accesses via the **shared inbox (agent login)**, and
-  we **export chats first** as a backup.
+- **Coexistence — RESOLVED (acceptable):** it's a **transition bridge**, not permanent — the move
+  brings the number + chats across, but long-term the phone app isn't kept; **everyone uses the
+  shared inbox** (Pitch as an agent). We **export a chat backup first** regardless. Both needs
+  (keep chats / Pitch access) are met.
+- **Recommended plan:** **Founder Plan + Shopify Add-on = PKR 8,000/month**, no lock-in (covers
+  volume; Meta charges minimal, billed per 24h conversation window). ✅ Inside budget — price OK'd.
 
 ## Status / decisions
-- ✅ Provider: **WeTarseel** — pricing + features confirmed, great fit.
-- 🔶 Number/chats: confirm **Coexistence**; if unavailable, export chats then migrate (Pitch
-  becomes a shared-inbox agent).
-- ✅ Pitch: ready to be looped in.
-- ▶️ Next: get the Coexistence answer + recommended plan → founder approves sign-up (money gate)
-  → configure agents, quick replies, FAQ, Shopify together.
+- ✅ Provider + plan: **WeTarseel, Founder + Shopify Add-on, PKR 8,000/mo**, no lock-in.
+- ✅ Number/chats: migrate via the coexistence transition; **export chats as backup** first.
+- ✅ Pitch: shared-inbox agent.
+- ▶️ Next: get the **written pricing sheet** to info@celinaarif.com → founder approves sign-up
+  (money gate) → configure agents, quick replies, FAQ, Shopify (live in <24h).
