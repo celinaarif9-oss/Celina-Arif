@@ -3,11 +3,11 @@
 The guide for every caption, story, and reply. Keep it here; update it when the voice shifts.
 
 ## Personality
-Elegant, understated, friendly, quietly confident. The garment is the hero — words stay out of
-its way. Think **Aleen Sabbagh**: minimal, considered, never loud.
+Elegant, warm, friendly, quietly confident. The garment is the hero — words stay out of its way,
+but they say hello. Think **Aleen Sabbagh**: minimal and considered, with a welcoming touch.
 
 ## The voice in one line
-> Say less. Let the piece speak. Warm, never salesy.
+> Say it warmly, say it short. Let the piece speak. Friendly, never salesy.
 
 ## Rules
 - **Short.** One line, occasionally two. Often just the piece name is enough.
@@ -32,9 +32,9 @@ its way. Think **Aleen Sabbagh**: minimal, considered, never loud.
 ## Quick yes / no
 | ✅ Do | ❌ Don't |
 |------|---------|
-| "Noor. Now available." | "😍 Our STUNNING new Noor is here!! Don't miss out 🔥🔥" |
-| "Made by hand, in your measurements." | "Each exquisite piece is meticulously handcrafted by our team of artisans over many hours…" |
-| "Back by request." | "IT'S BACK!!! You asked, we delivered 🙌" |
+| "Say hello to Noor. Now available." | "😍 Our STUNNING new Noor is here!! Don't miss out 🔥🔥" |
+| "Made by hand, with care." | "Each exquisite piece is meticulously handcrafted by our team of artisans over many hours…" |
+| "You asked — Noor is back." | "IT'S BACK!!! You asked, we delivered 🙌" |
 
 ## Human approval
 AI may **draft** captions; a person **reviews and posts**. Posting is public publishing — it
