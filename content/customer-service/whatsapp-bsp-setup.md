@@ -54,9 +54,22 @@ Plan for **Meta business verification (1–3 days)** + a display-name approval.
    **suggest/draft mode** (never auto-send) from `faq-knowledge-base.md`.
 5. **Go live** → you + Pitch use the shared inbox from any device; Pitch can still use the phone app.
 
+## WeTarseel quote (from their sales, June 2026)
+- **Price:** **PKR 5,000/month, no lock-in contract**, zero setup fee if self-setup; **Meta
+  per-conversation charges separate, passed at actual cost**. ✅ Well inside budget.
+- **Agents:** multiple logins + custom roles ✅ · **Shopify:** order updates + abandoned-cart ✅
+- **AI:** drafts for agents to approve before sending ✅ · **Instagram + WhatsApp one inbox** ✅
+- **Setup:** they guide Meta verification + display name, **live in <24h** ✅
+- **Ownership:** you own the number, can leave, export data ✅
+- ⚠️ **Coexistence — UNRESOLVED:** the rep said you *can't* keep the app or transfer chats (the
+  old-migration answer), which **contradicts their own Coexistence page**. **Pushing back to
+  confirm.** Worst case is acceptable: Pitch accesses via the **shared inbox (agent login)**, and
+  we **export chats first** as a backup.
+
 ## Status / decisions
-- ✅ Provider direction: **WeTarseel** (PKR, Coexistence, Shopify) — WAB2C as backup.
-- ✅ Number: **keep the existing one via Coexistence** (chats preserved).
-- ✅ Pitch: ready to be looped in for setup.
-- ▶️ Next: founder signs up with WeTarseel (spends money — approval gate) → we configure agents,
-  quick replies, FAQ, and Shopify together.
+- ✅ Provider: **WeTarseel** — pricing + features confirmed, great fit.
+- 🔶 Number/chats: confirm **Coexistence**; if unavailable, export chats then migrate (Pitch
+  becomes a shared-inbox agent).
+- ✅ Pitch: ready to be looped in.
+- ▶️ Next: get the Coexistence answer + recommended plan → founder approves sign-up (money gate)
+  → configure agents, quick replies, FAQ, Shopify together.
