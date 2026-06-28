@@ -1,0 +1,17 @@
+Celina Arif — Meta Ad Report,,,,,,,,,,
+Paste from Meta Ads Manager export — one row per campaign per period,,,,,,,,,,
+,,,,,,,,,,
+TARGETS (set these),,,,,,,,,,
+Target ROAS (min — e.g. 3 = Rs3 back per Rs1),3,,,,,,,,,
+Max cost per purchase PKR (e.g. 8000),8000,,,,,,,,,
+,,,,,,,,,,
+SUMMARY (auto),,,,,,,,,,
+Total spend,=SUM(C14:C200),,,,,,,,,
+Total purchase value,=SUM(H14:H200),,,,,,,,,
+Blended ROAS,"=IFERROR(B10/B9,""—"")",,,,,,,,,
+,,,,,,,,,,
+campaign,period,amount_spent,impressions,link_clicks,ctr,purchases,purchase_value,roas,cpp,flag
+Example Campaign,2026-05,150000,400000,6000,"=IFERROR(E14/D14,"""")",30,900000,"=IFERROR(H14/C14,"""")","=IFERROR(C14/G14,"""")","=IF(I14="""","""",IF(OR(I14<$B$5,J14>$B$6),""⚠ review"",""✓ ok""))"
+,,,,,"=IFERROR(E15/D15,"""")",,,"=IFERROR(H15/C15,"""")","=IFERROR(C15/G15,"""")","=IF(I15="""","""",IF(OR(I15<$B$5,J15>$B$6),""⚠ review"",""✓ ok""))"
+,,,,,"=IFERROR(E16/D16,"""")",,,"=IFERROR(H16/C16,"""")","=IFERROR(C16/G16,"""")","=IF(I16="""","""",IF(OR(I16<$B$5,J16>$B$6),""⚠ review"",""✓ ok""))"
+,,,,,"=IFERROR(E17/D17,"""")",,,"=IFERROR(H17/C17,"""")","=IFERROR(C17/G17,"""")","=IF(I17="""","""",IF(OR(I17<$B$5,J17>$B$6),""⚠ review"",""✓ ok""))"
