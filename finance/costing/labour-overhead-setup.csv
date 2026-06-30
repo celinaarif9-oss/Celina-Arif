@@ -8,12 +8,12 @@ Articles per week,,,,=E5*E6
 Weeks per month,,,,4.33
 Articles per month,,,,=E7*E8
 ,,,,
-A. DIRECT LABOUR — DAILY wage PER WORKER = weekly wage ÷ days per week,,,,
-Role,Weekly wage (per worker),,,Daily wage (per worker)
-Cutting (Master),18000,,,=B13/$E$6
-Machine Work,15000,,,=B14/$E$6
-Hand Work,11833,,,=B15/$E$6
-Stitching,13750,,,=B16/$E$6
+A. DIRECT LABOUR — type the DAILY wage per worker (what one person earns in one day),,,,
+Role,Weekly wage (optional reference),,,Daily wage per worker  ← TYPE HERE
+Cutting (Master),,,,3000
+Machine Work,,,,2500
+Hand Work,,,,1972
+Stitching,,,,2292
 Finishing (flat per outfit),,,,500
 ,Labour if 1 worker × 1 day each (reference),,,=SUM(E13:E17)
 ,,,,
@@ -37,7 +37,7 @@ Bank charges (inbound — money gone),,,,0.02875
 ,TOTAL SELLING %,,,=E35+E36
 ,,,,
 NOTES,,,,
-Wage = weekly wage PER WORKER (one person). Daily wage = that ÷ 6 days. In the Cost Card multiply by Workers and Days for this outfit,,,,
+Daily wage = what ONE worker earns in ONE day (column E). In the Cost Card multiply by Workers and Days for this outfit. The current numbers are placeholders — replace with your real per-day figures,,,,
 Only the real bank fee (money gone) is costed; withholding/advance/income tax are recoverable so excluded — accountant confirms sales-tax creditability,,,,
 $ items converted at ~280 PKR/$ — update for the current rate,,,,
 Ads can instead be tracked separately (KPI dashboard) rather than absorbed per article — your choice,,,,
