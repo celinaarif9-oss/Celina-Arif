@@ -72,8 +72,12 @@ That's it — you never open a settings box again.
      **Days** column enter **how many articles he cut that day** — the sheet divides his daily
      wage by that, charging this outfit only its share. **Default is 5** (the working average):
      Rs3,000 ÷ 5 = **Rs600**. Change it for a specific batch if he cut more (cheaper) or fewer.
-4. **Sale Price:** enter it. **Overhead, selling costs, Total Cost, Net Profit & margin all
-   calculate automatically** (labour/overhead pull from the Setup tab).
+4. **Sale Price:** check the **Pricing Guide** (just below the summary) — it suggests a price at
+   **80% markup on cost** (production cost × 1.8, rounded up to the nearest 500). Copy that into
+   the **Sale Price** box, or set your own. Overhead, selling costs, Total Cost, Net Profit &
+   margin then calculate automatically.
+   - *Note:* 80% markup leaves roughly **30% actual net profit** after the Pitch commission and
+     bank fees — those come out of the markup. Change the **Markup on cost** cell anytime.
 5. **Product details:** fill weight, lengths, neckline, customisations.
 
 ## Adding a brand-new material (one place only)

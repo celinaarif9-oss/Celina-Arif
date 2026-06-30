@@ -52,6 +52,12 @@ SALE PRICE,,,,=E38
 NET PROFIT,,,,=E51-E50
 Net margin %,,,,"=IFERROR(E52/E51,""—"")"
 ,,,,
+PRICING GUIDE — suggested price from markup on cost,,,,
+Markup on cost (you set),,,,0.8
+Production cost (Materials + Labour + Overhead),,,,=E46+E47+E48
+Suggested sale price (rounded up to nearest 500),,,,"=IFERROR(CEILING(E57*(1+E56),500),""—"")"
+Copy this number into the Sale Price box above to use it,,,,
+,,,,
 PRODUCT DETAILS — launch-ready copy for the website,,,,
 Website description,A three-piece set in Sheesha Silk; 3D sequin flowers and lace detail on the sleeves; neckline and daaman; with a Sheesha Silk farshi shalwar and an Organza dupatta.,,,
 Pieces,3-piece (kurta + farshi shalwar + dupatta),,,
