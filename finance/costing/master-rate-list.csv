@@ -78,26 +78,26 @@ Crystals,Crystal 5mm,400,10,lari,"=IFERROR(C77/D77,""—"")",per 10 lari
 Crystals,Crystal 6mm,400,10,lari,"=IFERROR(C78/D78,""—"")",per 10 lari
 Crystals,Crystal Diamond Shape Small,750,20,lari,"=IFERROR(C79/D79,""—"")",per 20 lari
 Crystals,Crystal Diamond Shape Big,750,20,lari,"=IFERROR(C80/D80,""—"")",per 20 lari
-Sequins,Sequin Matt no.3,350,100,gram,"=IFERROR(C81/D81,""—"")",packet 100g
-Sequins,Sequin Matt no.4,350,100,gram,"=IFERROR(C82/D82,""—"")",packet 100g
-Sequins,Sequin Matt no.5,350,100,gram,"=IFERROR(C83/D83,""—"")",packet 100g
-Sequins,Sequin Matt no.6,350,100,gram,"=IFERROR(C84/D84,""—"")",packet 100g
-Sequins,Sequin Matt no.7,350,100,gram,"=IFERROR(C85/D85,""—"")",packet 100g
-Sequins,Sequin Water no.3,350,100,gram,"=IFERROR(C86/D86,""—"")",packet 100g
-Sequins,Sequin Water no.4,350,100,gram,"=IFERROR(C87/D87,""—"")",packet 100g
-Sequins,Sequin Water no.5,350,100,gram,"=IFERROR(C88/D88,""—"")",packet 100g
-Sequins,Sequin Water no.6,350,100,gram,"=IFERROR(C89/D89,""—"")",packet 100g
-Sequins,Sequin Water no.7,350,100,gram,"=IFERROR(C90/D90,""—"")",packet 100g
-Sequins,Sequin Shade no.3,350,100,gram,"=IFERROR(C91/D91,""—"")",packet 100g
-Sequins,Sequin Shade no.4,350,100,gram,"=IFERROR(C92/D92,""—"")",packet 100g
-Sequins,Sequin Shade no.5,350,100,gram,"=IFERROR(C93/D93,""—"")",packet 100g
-Sequins,Sequin Shade no.6,350,100,gram,"=IFERROR(C94/D94,""—"")",packet 100g
-Sequins,Sequin Shade no.7,350,100,gram,"=IFERROR(C95/D95,""—"")",packet 100g
-Sequins,Sequin Katori no.3,350,100,gram,"=IFERROR(C96/D96,""—"")",packet 100g
-Sequins,Sequin Katori no.4,350,100,gram,"=IFERROR(C97/D97,""—"")",packet 100g
-Sequins,Sequin Katori no.5,350,100,gram,"=IFERROR(C98/D98,""—"")",packet 100g
-Sequins,Sequin Katori no.6,350,100,gram,"=IFERROR(C99/D99,""—"")",packet 100g
-Sequins,Sequin Katori no.7,350,100,gram,"=IFERROR(C100/D100,""—"")",packet 100g
+Sequins,Sequin Matt no.3,350,1,packet,"=IFERROR(C81/D81,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Matt no.4,350,1,packet,"=IFERROR(C82/D82,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Matt no.5,350,1,packet,"=IFERROR(C83/D83,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Matt no.6,350,1,packet,"=IFERROR(C84/D84,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Matt no.7,350,1,packet,"=IFERROR(C85/D85,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Water no.3,350,1,packet,"=IFERROR(C86/D86,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Water no.4,350,1,packet,"=IFERROR(C87/D87,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Water no.5,350,1,packet,"=IFERROR(C88/D88,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Water no.6,350,1,packet,"=IFERROR(C89/D89,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Water no.7,350,1,packet,"=IFERROR(C90/D90,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Shade no.3,350,1,packet,"=IFERROR(C91/D91,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Shade no.4,350,1,packet,"=IFERROR(C92/D92,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Shade no.5,350,1,packet,"=IFERROR(C93/D93,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Shade no.6,350,1,packet,"=IFERROR(C94/D94,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Shade no.7,350,1,packet,"=IFERROR(C95/D95,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Katori no.3,350,1,packet,"=IFERROR(C96/D96,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Katori no.4,350,1,packet,"=IFERROR(C97/D97,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Katori no.5,350,1,packet,"=IFERROR(C98/D98,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Katori no.6,350,1,packet,"=IFERROR(C99/D99,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
+Sequins,Sequin Katori no.7,350,1,packet,"=IFERROR(C100/D100,""—"")",Rs350/packet (100g); enter Qty in packets — 0.5 = half a packet
 Moti,Moti Cutdana 3mm,450,1,packet,"=IFERROR(C101/D101,""—"")",Rs450/packet (450g); enter Qty in packets — 0.5 = half a packet
 Moti,Moti Cutdana 4mm,450,1,packet,"=IFERROR(C102/D102,""—"")",Rs450/packet (450g); enter Qty in packets — 0.5 = half a packet
 Moti,Moti Cutdana 5mm,450,1,packet,"=IFERROR(C103/D103,""—"")",Rs450/packet (450g); enter Qty in packets — 0.5 = half a packet

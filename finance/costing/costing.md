@@ -28,8 +28,8 @@ duplicate one tab per article.
 3. **`Cost Card`** — per design: materials + auto labour/overhead + sale price → net profit.
 
 ## Set once a month — in `Labour & Overhead Setup`
-- **Production rate** — articles/day (4), days/week (6) → it works out articles/week (24) and
-  /month (~104).
+- **Production rate** — articles/day (3), days/week (6) → it works out articles/week (18) and
+  /month (~78). This is the divisor for overhead per article — lower output = more overhead each.
 - **Direct labour** — each role's **weekly wage per worker** (one person) → it works out the
   **daily wage** (weekly ÷ 6). Finishing is a flat per-outfit figure.
 - **Overheads** — Rent, Electricity, Internet, Maintenance, Cleaning, Food & Beverages, Ads,
