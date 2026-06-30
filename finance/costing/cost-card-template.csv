@@ -3,23 +3,23 @@ Vol. 2 Costing — Cost Card (duplicate this tab; one per article),,,,
 Name of Outfit,ZARA,Description,Light Blue,
 ,,,,
 A. DIRECT MATERIAL COST,,,,
-Item,Description,Quantity,Cost,Total
-Fabric,Sheesha Silk,7,820,=C7*D7
-,Organza,3,680,=C8*D8
-,Inner,2.5,130,=C9*D9
-Trims,Buqram,1,50,=C10*D10
-,Lace 1,3,380,=C11*D11
-,Lace 2,4,200,=C12*D12
-,Pearl No. 3,0.5,500,=C13*D13
-,Pearl No. 6,0.25,1000,=C14*D14
-,Silver No. 3,0.5,100,=C15*D15
-,White Shell Sequins,0.5,300,=C16*D16
-,Blue Shell Sequins,0.5,300,=C17*D17
-,Elastic,0.5,100,=C18*D18
-Dye,Colour,19.5,150,=C19*D19
-Packaging,Paper Bag,1,300,=C20*D20
-,Butter Paper,2,47,=C21*D21
-,Thankyou Card,1,17,=C22*D22
+Material (pick from Master Rate List),Unit (auto),Qty used,Unit cost (auto),Total
+Sheesha Silk,"=IFERROR(VLOOKUP(A7,'Master Rate List'!$B:$E,4,FALSE),"""")",7,"=IFERROR(VLOOKUP(A7,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C7*D7,"""")"
+Organza Pure,"=IFERROR(VLOOKUP(A8,'Master Rate List'!$B:$E,4,FALSE),"""")",3,"=IFERROR(VLOOKUP(A8,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C8*D8,"""")"
+Inner,"=IFERROR(VLOOKUP(A9,'Master Rate List'!$B:$E,4,FALSE),"""")",2.5,"=IFERROR(VLOOKUP(A9,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C9*D9,"""")"
+Lace White & Silver #0001,"=IFERROR(VLOOKUP(A10,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"=IFERROR(VLOOKUP(A10,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C10*D10,"""")"
+Sequin Matt no.3,"=IFERROR(VLOOKUP(A11,'Master Rate List'!$B:$E,4,FALSE),"""")",20,"=IFERROR(VLOOKUP(A11,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C11*D11,"""")"
+Pearl no.3,"=IFERROR(VLOOKUP(A12,'Master Rate List'!$B:$E,4,FALSE),"""")",5,"=IFERROR(VLOOKUP(A12,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C12*D12,"""")"
+Hooks,"=IFERROR(VLOOKUP(A13,'Master Rate List'!$B:$E,4,FALSE),"""")",8,"=IFERROR(VLOOKUP(A13,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C13*D13,"""")"
+Buqram,"=IFERROR(VLOOKUP(A14,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"=IFERROR(VLOOKUP(A14,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C14*D14,"""")"
+Stitching Thread,"=IFERROR(VLOOKUP(A15,'Master Rate List'!$B:$E,4,FALSE),"""")",2,"=IFERROR(VLOOKUP(A15,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C15*D15,"""")"
+Clothing Tag,"=IFERROR(VLOOKUP(A16,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"=IFERROR(VLOOKUP(A16,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C16*D16,"""")"
+Packaging Bag,"=IFERROR(VLOOKUP(A17,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"=IFERROR(VLOOKUP(A17,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C17*D17,"""")"
+Thankyou Card,"=IFERROR(VLOOKUP(A18,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"=IFERROR(VLOOKUP(A18,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C18*D18,"""")"
+,"=IFERROR(VLOOKUP(A19,'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(A19,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C19*D19,"""")"
+,"=IFERROR(VLOOKUP(A20,'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(A20,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C20*D20,"""")"
+,"=IFERROR(VLOOKUP(A21,'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(A21,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C21*D21,"""")"
+,"=IFERROR(VLOOKUP(A22,'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(A22,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C22*D22,"""")"
 ,MATERIALS TOTAL,,,=SUM(E7:E22)
 ,,,,
 B. LABOUR COST — set Rate/hr from salary once; enter Hours per article,,,,

@@ -29,10 +29,16 @@ duplicate one tab per article.
 
 ## For each article (≈5 min)
 1. **Duplicate the `Cost Card` tab** → rename it the outfit name.
-2. **Materials:** type each item's **Quantity** and **Cost** — totals auto.
+2. **Materials:** in the **Material** column type (or paste) the item name **exactly as it appears
+   in the Master Rate List** → the **Unit** and **Unit cost auto-fill** by lookup. Then type the
+   **Qty used** → Total auto-calculates. (Both tabs must be in the **same Google Sheet**.)
 3. **Labour:** type **Hours** for Cutting / Hand work / Stitching — costs auto from the rates.
 4. **Sale Price:** enter it → **Total Cost, Net Profit, margin** all calculate.
 5. **Product details:** fill weight, lengths, neckline, customisations (handy for dispatch + listings).
+
+> 💡 **Tip:** to avoid typos, add a dropdown — select the Material cells → **Data → Data
+> validation → Dropdown (from a range)** → choose `Master Rate List` column B. Then you *pick*
+> materials instead of typing them, and the lookup always matches.
 
 > The ZARA example has **Stitching hours (3.5)** pre-filled; add **Cutting & Hand-work hours** to
 > complete its total. Your real articles: fill all three.
