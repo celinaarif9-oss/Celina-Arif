@@ -21,27 +21,37 @@ duplicate one tab per article.
 2. It opens pre-filled with **ZARA** as a worked example (materials total = **14,331**, matching
    your sheet) so you can see it working.
 
-## Set once a month (top of the card)
-- **Labour Rate/hr** — only if a salary changes (edit the formula, e.g. `=80000/26/5`).
-- **Overhead** — update Rent / Electricity / Internet / Maintenance / Others, and **Articles/mo**
-  (48) if your output changes.
-- **Marketing rate** — 8% (or your real blended % incl. ads).
+## The three tabs (import all into one Google Sheet)
+1. **`Master Rate List`** — material prices (unit cost). *Source of truth for materials.*
+2. **`Labour & Overhead Setup`** — salaries, overheads, production rate, selling %s. *Computes
+   per-article labour + overhead once a month.*
+3. **`Cost Card`** — per design: materials + auto labour/overhead + sale price → net profit.
 
-## For each article (≈5 min)
+## Set once a month — in `Labour & Overhead Setup`
+- **Production rate** — articles/day (4), days/week (6) → it works out articles/week (24) and
+  /month (~104).
+- **Direct labour** — each role's **total weekly wage** (all workers in that role) → per-article
+  auto. Finishing is a flat per-outfit figure.
+- **Overheads** — Rent, Electricity, Internet, Maintenance, Cleaning, Food & Beverages, Ads,
+  Shopify, Globo, and **Outbound bank charges** → per-article auto.
+- **Selling %s** — Marketing commission (8%) and **Inbound charges** (income tax + bank + sales
+  tax = 5.965%).
+
+You only touch this tab when wages/overheads change — every Cost Card updates automatically.
+
+## For each article (≈3 min) — in `Cost Card`
 1. **Duplicate the `Cost Card` tab** → rename it the outfit name.
-2. **Materials:** in the **Material** column type (or paste) the item name **exactly as it appears
-   in the Master Rate List** → the **Unit** and **Unit cost auto-fill** by lookup. Then type the
-   **Qty used** → Total auto-calculates. (Both tabs must be in the **same Google Sheet**.)
-3. **Labour:** type **Hours** for Cutting / Hand work / Stitching — costs auto from the rates.
-4. **Sale Price:** enter it → **Total Cost, Net Profit, margin** all calculate.
-5. **Product details:** fill weight, lengths, neckline, customisations (handy for dispatch + listings).
+2. **Materials:** type the item name **exactly as in the Master Rate List** → Unit + Unit cost
+   auto-fill → type the **Qty used** → Total auto-calculates.
+3. **Sale Price:** enter it. **Labour, Overhead, selling costs, Total Cost, Net Profit & margin
+   all calculate automatically** (labour/overhead pull from the Setup tab).
+4. **Product details:** fill weight, lengths, neckline, customisations.
 
-> 💡 **Tip:** to avoid typos, add a dropdown — select the Material cells → **Data → Data
-> validation → Dropdown (from a range)** → choose `Master Rate List` column B. Then you *pick*
-> materials instead of typing them, and the lookup always matches.
+> 💡 **Tip:** add a dropdown on the Material cells — **Data → Data validation → Dropdown (from a
+> range)** → `Master Rate List` column B — so you *pick* materials and the lookup always matches.
 
-> The ZARA example has **Stitching hours (3.5)** pre-filled; add **Cutting & Hand-work hours** to
-> complete its total. Your real articles: fill all three.
+> ⚠️ All three tabs must be in the **same Google Sheet** for the lookups/links to work, and the
+> tab names must match exactly: `Master Rate List`, `Labour & Overhead Setup`, `Cost Card`.
 
 ## Master Rate List (your price source)
 `master-rate-list.csv` is your **single source of truth** — **116 materials** with prices, ready

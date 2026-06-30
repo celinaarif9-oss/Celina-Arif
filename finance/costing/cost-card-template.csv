@@ -22,40 +22,29 @@ Thankyou Card,"=IFERROR(VLOOKUP(A18,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"
 ,"=IFERROR(VLOOKUP(A22,'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(A22,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C22*D22,"""")"
 ,MATERIALS TOTAL,,,=SUM(E7:E22)
 ,,,,
-B. LABOUR COST — set Rate/hr from salary once; enter Hours per article,,,,
-Role,Basis (edit only if salary changes),Hours,Rate/hr,Total
-Cutting,Master 80000/mo ÷ 26 days ÷ 5 hrs,,=80000/26/5,=C27*D27
-Hand work,Labour 12500/wk ÷ 6 days ÷ 7 hrs,,=12500/6/7,=C28*D28
-Stitching,Labour 13500/wk ÷ 6 days ÷ 7 hrs,3.5,=13500/6/7,=C29*D29
-,LABOUR TOTAL,,,=SUM(E27:E29)
+B. DIRECT LABOUR (auto from 'Labour & Overhead Setup' tab),,,,
+Labour per article,,,,='Labour & Overhead Setup'!E18
 ,,,,
-C. OVERHEAD ALLOCATION — monthly cost ÷ articles per month,,,,
-Item,,Monthly cost,Articles/mo,Per article
-Rent,,112000,48,=C34/D34
-Electricity,,30000,48,=C35/D35
-Internet,,3500,48,=C36/D36
-Maintenance,,25000,48,=C37/D37
-Bank charges (outbound — Shopify/Meta/suppliers/salaries),,0,48,=C38/D38
-Others,,0,48,=C39/D39
-,OVERHEAD TOTAL,,,=SUM(E34:E39)
+C. OVERHEAD (auto from 'Labour & Overhead Setup' tab),,,,
+Overhead per article,,,,='Labour & Overhead Setup'!E32
 ,,,,
 D. SELLING COSTS — % of sale price,,,,
 Sale Price (you set),,,,41450
-Marketing commission rate,,,,0.08
-Marketing commission amount,,,,=E43*E44
-Payment processing rate (gateway + bank on receipts),,,,0.0136
-Payment processing amount,,,,=E43*E46
-Selling costs subtotal,,,,=E45+E47
+Marketing commission rate,,,,='Labour & Overhead Setup'!E35
+Marketing commission amount,,,,=E32*E33
+Inbound charges rate,,,,='Labour & Overhead Setup'!E36
+Inbound charges amount,,,,=E32*E35
+Selling costs subtotal,,,,=E34+E36
 ,,,,
 SUMMARY,,,,
 Materials,,,,=E23
-Labour,,,,=E30
-Overhead,,,,=E40
-Selling costs,,,,=E48
-TOTAL COST,,,,=SUM(E51:E54)
-SALE PRICE,,,,=E43
-NET PROFIT,,,,=E56-E55
-Net margin %,,,,"=IFERROR(E57/E56,""—"")"
+Labour,,,,=E26
+Overhead,,,,=E29
+Selling costs,,,,=E37
+TOTAL COST,,,,=SUM(E40:E43)
+SALE PRICE,,,,=E32
+NET PROFIT,,,,=E45-E44
+Net margin %,,,,"=IFERROR(E46/E45,""—"")"
 ,,,,
 PRODUCT DETAILS,,,,
 Description,3 piece set; 3D sequin flower & lace on sleeves/neckline/daaman; Sheesha Silk kurta + farshi shalwar; Organza dupatta,,,
