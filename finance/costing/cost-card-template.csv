@@ -23,8 +23,8 @@ Thankyou Card,"=IFERROR(INDEX('Master Rate List'!$E$4:$E$300,MATCH(TRIM(SUBSTITU
 ,MATERIALS TOTAL,,,=SUM(E7:E22)
 ,,,,
 B. DIRECT LABOUR — enter Workers and Days for this article (daily wage auto from Setup),,,,
-Role,Workers,Days,Daily wage,Total
-Cutting,1,1,='Labour & Overhead Setup'!E13,=B27*C27*D27
+Role,Workers,Days (cutting = articles cut that day),Daily wage,Total
+Cutting,,6,='Labour & Overhead Setup'!E13,=D27/C27
 Machine Work,1,1,='Labour & Overhead Setup'!E14,=B28*C28*D28
 Hand Work,2,1,='Labour & Overhead Setup'!E15,=B29*C29*D29
 Stitching,1,1,='Labour & Overhead Setup'!E16,=B30*C30*D30

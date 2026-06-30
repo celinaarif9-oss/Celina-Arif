@@ -62,9 +62,15 @@ That's it — you never open a settings box again.
    *(The duplicate already carries the dropdown + every formula. This is why you don't re-import.)*
 2. **Materials:** click the cell → **pick** the material from the dropdown → type the **Qty used**
    → Unit cost + Total fill in automatically.
+   - **Qty is in that material's unit.** Some are fractions: packet items (e.g. **Moti** = Rs450
+     per 450g packet) are priced **per packet**, so enter **0.5** for half a packet, **0.25** for
+     a quarter, **1** for a whole packet.
 3. **Labour:** for each role set **Workers** (how many people on this outfit) and **Days** (how
    long they spend on it — leave at **1** for a normal piece; bump to 2-3 for heavy embroidery).
    Daily wage × Workers × Days calculates the cost.
+   - **Cutting is the exception:** the master cuts several outfits a day, so in the cutting row's
+     **Days** column enter **how many articles he cut that day (4–8)** — the sheet divides his
+     daily wage by that, charging this outfit only its share (e.g. cut 6 → Rs3,000 ÷ 6 = Rs500).
 4. **Sale Price:** enter it. **Overhead, selling costs, Total Cost, Net Profit & margin all
    calculate automatically** (labour/overhead pull from the Setup tab).
 5. **Product details:** fill weight, lengths, neckline, customisations.
