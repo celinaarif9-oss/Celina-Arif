@@ -38,16 +38,29 @@ duplicate one tab per article.
 > complete its total. Your real articles: fill all three.
 
 ## Master Rate List (your price source)
-`master-rate-list.csv` is your **single source of truth** for material prices and worker salaries.
-Import it as a tab named **`Master Rate List`** and fill in every fabric, trim, and worker with
-current prices. Update a price **once here** and it flows to costing everywhere.
+`master-rate-list.csv` is your **single source of truth** — **116 materials** with prices, ready
+to use. Import it as a tab named **`Master Rate List`**.
 
-- **Materials:** category, item, unit, price.
-- **Labour:** salary + period + days + hours → **Rate/hr calculates itself** (Master 80,000/mo →
-  Rs.615/hr, etc.).
+**The key idea (handles your "quantity differs per outfit" point):** materials are bought by
+**packet / box / kg / lari / yard**, but used in small amounts. So each row stores the **Price**
+and the **Pack size**, and computes the **Unit cost = Price ÷ Pack size**:
 
-*Once it's filled, I can wire the Cost Card to **auto-pull prices** from this list (type the item
-name → price fills in via lookup), so you never enter a material price twice.*
+| Item | Price | Pack size | Unit | **Unit cost** |
+|------|-------|-----------|------|---------------|
+| Sequin Matt no.3 | 350 | 100 | gram | **3.5 / gram** |
+| Hooks | 450 | 100 | hook | **4.5 / hook** |
+| Pearl no.2 | 850 | 20 | lari | **42.5 / lari** |
+| Sheesha Silk | 850 | 1 | yard | **850 / yard** |
+
+Then in the Cost Card: **material cost = Unit cost × Quantity used**. You only update the
+**quantity used** per outfit (during production); the unit cost stays fixed until a price changes.
+
+- Update a price **once here** and it flows everywhere.
+- Edit **Pack size** if a material's basis differs (e.g. buqram per cut-piece).
+- Custom/range items (factory-designed fabrics, dabka per kg) are flagged in **Notes**.
+
+*Next step once you confirm the list: I'll wire the Cost Card to **auto-pull the unit cost** by
+item name (you pick the item → unit cost fills in → you just type the quantity used).*
 
 ## Feeds the rest
 - Put each finished article's **name, Total Cost, Sale Price, Net Profit** as one row on a

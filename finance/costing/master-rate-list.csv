@@ -1,30 +1,119 @@
-Celina Arif — Master Rate List (materials & labour),,,,,
-Single source of truth — set each price/salary once; Cost Cards reference this,,,,,
-,,,,,
-MATERIALS,,,,,
-Category,Item,Unit,Price (PKR),Notes,
-Fabric,Sheesha Silk,yard,820,,
-Fabric,Organza,yard,680,,
-Fabric,Inner,yard,130,,
-Trims,Buqram,piece,50,,
-Trims,Lace 1,yard,380,,
-Trims,Lace 2,yard,200,,
-Trims,Pearl No. 3,pack,500,,
-Trims,Pearl No. 6,pack,1000,,
-Trims,Silver No. 3,pack,100,,
-Trims,White Shell Sequins,pack,300,,
-Trims,Blue Shell Sequins,pack,300,,
-Trims,Elastic,piece,100,,
-Dye,Colour,unit,150,,
-Packaging,Paper Bag,piece,300,,
-Packaging,Butter Paper,piece,47,,
-Packaging,Thankyou Card,piece,17,,
-,(add the rest of your fabrics / trims / materials below),,,,
-,,,,,
-,,,,,
-LABOUR — Rate per hour calculates itself,,,,,
-Role,Salary (PKR),Period,Working days,Hours/day,Rate per hr
-Cutting — Master,80000,month,26,5,=B27/D27/E27
-Hand work — Labour A,12500,week,6,7,=B28/D28/E28
-Stitching — Labour A,13500,week,6,7,=B29/D29/E29
-(add more workers below — salary / period / days / hours),,,,,
+Celina Arif — Master Rate List,,,,,,
+"Set price + pack size; Unit cost = price / pack size. In costing, cost = Unit cost x Quantity used.",,,,,,
+Category,Item,Price (PKR),Pack size,Unit,Unit cost,Notes
+Fabric,Sheesha Silk,850,1,yard,"=IFERROR(C4/D4,""—"")",
+Fabric,Soft Silk,350,1,yard,"=IFERROR(C5/D5,""—"")",
+Fabric,Chiffon Georgette,370,1,yard,"=IFERROR(C6/D6,""—"")",
+Fabric,Inner,180,1,yard,"=IFERROR(C7/D7,""—"")",
+Fabric,Korean Silk,450,1,yard,"=IFERROR(C8/D8,""—"")",
+Fabric,Pakistani Raw Silk,350,1,yard,"=IFERROR(C9/D9,""—"")",
+Fabric,Pakistani Chiffon (80g),370,1,yard,"=IFERROR(C10/D10,""—"")",
+Fabric,Pure Raw Silk (60g),2950,1,yard,"=IFERROR(C11/D11,""—"")",
+Fabric,Pure Chiffon,1250,1,yard,"=IFERROR(C12/D12,""—"")",
+Fabric,Shamus Silk Polyester,2950,1,yard,"=IFERROR(C13/D13,""—"")",
+Fabric,Crinkle Chiffon,525,1,yard,"=IFERROR(C14/D14,""—"")",range 350-700/yard
+Fabric,Velvet Silk,450,1,yard,"=IFERROR(C15/D15,""—"")",
+Fabric,Velvet,650,1,yard,"=IFERROR(C16/D16,""—"")",
+Fabric,Factory Designed Custom Raw Silk,,,yard,"=IFERROR(C17/D17,""—"")",custom - varies
+Fabric,Factory Designed Custom Chiffon,,,yard,"=IFERROR(C18/D18,""—"")",custom - varies
+Fabric,Factory Designed Custom Sheesha Silk,,,yard,"=IFERROR(C19/D19,""—"")",custom - varies
+Fabric,Organza Pure,1000,1,yard,"=IFERROR(C20/D20,""—"")",range 700-1300/yard
+Fabric,Soft Net,120,1,yard,"=IFERROR(C21/D21,""—"")",
+Fabric,Custom Organza,,,yard,"=IFERROR(C22/D22,""—"")",custom - varies
+Fabric,Machine Work Organza,225,1,yard,"=IFERROR(C23/D23,""—"")",
+Fabric,Russian Silk,320,1,yard,"=IFERROR(C24/D24,""—"")",
+Fabric,Cotton Silk Pure,680,1,yard,"=IFERROR(C25/D25,""—"")",
+Fabric,Cancan Net,130,1,yard,"=IFERROR(C26/D26,""—"")",
+Lace,Lace White & Silver #0001,3500,10,yard,"=IFERROR(C27/D27,""—"")",packet 10 yard
+Lace,Lace Black Tassles #0002,3300,10,yard,"=IFERROR(C28/D28,""—"")",packet 10 yard
+Lace,Lace Black Scallops #0003,2500,10,yard,"=IFERROR(C29/D29,""—"")",packet 10 yard
+Lace,Lace Black Crystals #0004,2500,10,yard,"=IFERROR(C30/D30,""—"")",packet 10 yard
+Lace,Lace Silver Sticky #0005,1500,10,yard,"=IFERROR(C31/D31,""—"")",packet 10 yard
+Lace,Lace Big Flowers #0006,3500,10,yard,"=IFERROR(C32/D32,""—"")",packet 10 yard
+Lace,Lace Connecting 3 Leaves #0007,2600,10,yard,"=IFERROR(C33/D33,""—"")",packet 10 yard
+Lace,Lace White & Silver Scallops #0008,2800,10,yard,"=IFERROR(C34/D34,""—"")",packet 10 yard
+Basics,Resham,350,1,reel,"=IFERROR(C35/D35,""—"")",incl. tax
+Basics,Zips,12,1,piece,"=IFERROR(C36/D36,""—"")",
+Basics,Elastic,500,10,yard,"=IFERROR(C37/D37,""—"")",roll ~10 yard
+Basics,Buttons (Touch),400,100,button,"=IFERROR(C38/D38,""—"")",box of 100
+Basics,Buqram,1200,1,roll,"=IFERROR(C39/D39,""—"")",adjust pack to per-piece if needed
+Basics,Buqram Thick,5500,1,roll,"=IFERROR(C40/D40,""—"")",
+Basics,Stitching Thread,30,1,reel,"=IFERROR(C41/D41,""—"")",
+Basics,Hand Work Thread,30,1,reel,"=IFERROR(C42/D42,""—"")",
+Basics,Overlock Thread,500,1,roll,"=IFERROR(C43/D43,""—"")",
+Basics,Piping,,,yard,"=IFERROR(C44/D44,""—"")",price TBC
+Packaging,Clothing Tag,6.25,1,piece,"=IFERROR(C45/D45,""—"")",
+Packaging,Packaging Bag,275,1,piece,"=IFERROR(C46/D46,""—"")",
+Packaging,Thankyou Card,150,1,piece,"=IFERROR(C47/D47,""—"")",
+Stones,Stone Silver no.2,120,1,packet,"=IFERROR(C48/D48,""—"")",
+Stones,Stone Silver no.3,120,1,packet,"=IFERROR(C49/D49,""—"")",
+Stones,Stone Silver no.4,150,1,packet,"=IFERROR(C50/D50,""—"")",
+Stones,Stone Silver no.5,180,1,packet,"=IFERROR(C51/D51,""—"")",
+Stones,Stone Gold no.2,120,1,packet,"=IFERROR(C52/D52,""—"")",
+Stones,Stone Gold no.3,140,1,packet,"=IFERROR(C53/D53,""—"")",
+Stones,Stone Gold no.4,170,1,packet,"=IFERROR(C54/D54,""—"")",
+Stones,Stone Gold no.5,200,1,packet,"=IFERROR(C55/D55,""—"")",
+Stones,Thick Stone Gold Small,1500,1,packet,"=IFERROR(C56/D56,""—"")",
+Stones,Thick Stone Gold Big,1500,1,packet,"=IFERROR(C57/D57,""—"")",
+Stones,Thick Stone Silver Small,1500,1,packet,"=IFERROR(C58/D58,""—"")",
+Stones,Thick Stone Silver Big,1500,1,packet,"=IFERROR(C59/D59,""—"")",
+Stones,Ruby Stone Small,400,144,piece,"=IFERROR(C60/D60,""—"")",packet of 144
+Stones,Ruby Stone Big,350,144,piece,"=IFERROR(C61/D61,""—"")",packet of 144
+Stones,Scallop Stone Silver Small,1500,1,packet,"=IFERROR(C62/D62,""—"")",
+Stones,Scallop Stone Silver Big,1500,1,packet,"=IFERROR(C63/D63,""—"")",
+Stones,Scallop Stone Gold Small,1500,1,packet,"=IFERROR(C64/D64,""—"")",
+Stones,Scallop Stone Gold Big,1500,1,packet,"=IFERROR(C65/D65,""—"")",
+Pearls,Pearl no.2,850,20,lari,"=IFERROR(C66/D66,""—"")",per 20 lari
+Pearls,Pearl no.3,500,20,lari,"=IFERROR(C67/D67,""—"")",per 20 lari
+Pearls,Pearl no.4,800,20,lari,"=IFERROR(C68/D68,""—"")",per 20 lari
+Pearls,Pearl no.5,900,20,lari,"=IFERROR(C69/D69,""—"")",per 20 lari
+Pearls,Pearl no.6,900,20,lari,"=IFERROR(C70/D70,""—"")",per 20 lari
+Pearls,Pearl no.8,1000,15,lari,"=IFERROR(C71/D71,""—"")",per 15 lari
+Pearls,Pearl no.8/100,1100,15,lari,"=IFERROR(C72/D72,""—"")",per 15 lari
+Pearls,Pearl Drop Shape Small,750,20,lari,"=IFERROR(C73/D73,""—"")",per 20 lari
+Pearls,Pearl Drop Shape Big,1200,10,lari,"=IFERROR(C74/D74,""—"")",per 10 lari
+Crystals,Crystal 3mm,300,10,lari,"=IFERROR(C75/D75,""—"")",per 10 lari
+Crystals,Crystal 4mm,300,10,lari,"=IFERROR(C76/D76,""—"")",per 10 lari
+Crystals,Crystal 5mm,400,10,lari,"=IFERROR(C77/D77,""—"")",per 10 lari
+Crystals,Crystal 6mm,400,10,lari,"=IFERROR(C78/D78,""—"")",per 10 lari
+Crystals,Crystal Diamond Shape Small,750,20,lari,"=IFERROR(C79/D79,""—"")",per 20 lari
+Crystals,Crystal Diamond Shape Big,750,20,lari,"=IFERROR(C80/D80,""—"")",per 20 lari
+Sequins,Sequin Matt no.3,350,100,gram,"=IFERROR(C81/D81,""—"")",packet 100g
+Sequins,Sequin Matt no.4,350,100,gram,"=IFERROR(C82/D82,""—"")",packet 100g
+Sequins,Sequin Matt no.5,350,100,gram,"=IFERROR(C83/D83,""—"")",packet 100g
+Sequins,Sequin Matt no.6,350,100,gram,"=IFERROR(C84/D84,""—"")",packet 100g
+Sequins,Sequin Matt no.7,350,100,gram,"=IFERROR(C85/D85,""—"")",packet 100g
+Sequins,Sequin Water no.3,350,100,gram,"=IFERROR(C86/D86,""—"")",packet 100g
+Sequins,Sequin Water no.4,350,100,gram,"=IFERROR(C87/D87,""—"")",packet 100g
+Sequins,Sequin Water no.5,350,100,gram,"=IFERROR(C88/D88,""—"")",packet 100g
+Sequins,Sequin Water no.6,350,100,gram,"=IFERROR(C89/D89,""—"")",packet 100g
+Sequins,Sequin Water no.7,350,100,gram,"=IFERROR(C90/D90,""—"")",packet 100g
+Sequins,Sequin Shade no.3,350,100,gram,"=IFERROR(C91/D91,""—"")",packet 100g
+Sequins,Sequin Shade no.4,350,100,gram,"=IFERROR(C92/D92,""—"")",packet 100g
+Sequins,Sequin Shade no.5,350,100,gram,"=IFERROR(C93/D93,""—"")",packet 100g
+Sequins,Sequin Shade no.6,350,100,gram,"=IFERROR(C94/D94,""—"")",packet 100g
+Sequins,Sequin Shade no.7,350,100,gram,"=IFERROR(C95/D95,""—"")",packet 100g
+Sequins,Sequin Katori no.3,350,100,gram,"=IFERROR(C96/D96,""—"")",packet 100g
+Sequins,Sequin Katori no.4,350,100,gram,"=IFERROR(C97/D97,""—"")",packet 100g
+Sequins,Sequin Katori no.5,350,100,gram,"=IFERROR(C98/D98,""—"")",packet 100g
+Sequins,Sequin Katori no.6,350,100,gram,"=IFERROR(C99/D99,""—"")",packet 100g
+Sequins,Sequin Katori no.7,350,100,gram,"=IFERROR(C100/D100,""—"")",packet 100g
+Moti,Moti Cutdana 3mm,450,450,gram,"=IFERROR(C101/D101,""—"")",packet 450g
+Moti,Moti Cutdana 4mm,450,450,gram,"=IFERROR(C102/D102,""—"")",packet 450g
+Moti,Moti Cutdana 5mm,450,450,gram,"=IFERROR(C103/D103,""—"")",packet 450g
+Moti,Moti Water 3mm,450,450,gram,"=IFERROR(C104/D104,""—"")",packet 450g
+Moti,Moti Water 4mm,450,450,gram,"=IFERROR(C105/D105,""—"")",packet 450g
+Moti,Moti Water 5mm,450,450,gram,"=IFERROR(C106/D106,""—"")",packet 450g
+Moti,Moti Matt 3mm,450,450,gram,"=IFERROR(C107/D107,""—"")",packet 450g
+Moti,Moti Matt 4mm,450,450,gram,"=IFERROR(C108/D108,""—"")",packet 450g
+Moti,Moti Matt 5mm,450,450,gram,"=IFERROR(C109/D109,""—"")",packet 450g
+Dabka,Dabka Wire Gold,9500,1000,gram,"=IFERROR(C110/D110,""—"")",range 8000-11000/kg
+Dabka,Dabka Wire Silver,9500,1000,gram,"=IFERROR(C111/D111,""—"")",range 8000-11000/kg
+Dabka,Dabka Wire Coloured,10500,1000,gram,"=IFERROR(C112/D112,""—"")",range 8000-13000/kg
+Zarih,Zarih Gold,500,1,cone,"=IFERROR(C113/D113,""—"")",
+Zarih,Zarih Silver,500,1,cone,"=IFERROR(C114/D114,""—"")",
+Zarih,Zarih Coloured,500,1,cone,"=IFERROR(C115/D115,""—"")",
+Hooks/Buttons,Hooks,450,100,hook,"=IFERROR(C116/D116,""—"")",box of 100
+Hooks/Buttons,Buttons Small,400,100,button,"=IFERROR(C117/D117,""—"")",box of 100
+Hooks/Buttons,Buttons Medium,400,100,button,"=IFERROR(C118/D118,""—"")",box of 100
+Hooks/Buttons,Buttons Large,400,100,button,"=IFERROR(C119/D119,""—"")",box of 100
