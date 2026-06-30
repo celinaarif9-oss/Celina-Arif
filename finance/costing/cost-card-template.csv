@@ -35,23 +35,27 @@ Rent,,112000,48,=C34/D34
 Electricity,,30000,48,=C35/D35
 Internet,,3500,48,=C36/D36
 Maintenance,,25000,48,=C37/D37
-Others,,0,48,=C38/D38
-,OVERHEAD TOTAL,,,=SUM(E34:E38)
+Bank charges (outbound — Shopify/Meta/suppliers/salaries),,0,48,=C38/D38
+Others,,0,48,=C39/D39
+,OVERHEAD TOTAL,,,=SUM(E34:E39)
 ,,,,
-D. MARKETING,,,,
+D. SELLING COSTS — % of sale price,,,,
 Sale Price (you set),,,,41450
-Marketing rate (% of sale price),,,,0.08
-Marketing amount,,,,=E42*E43
+Marketing commission rate,,,,0.08
+Marketing commission amount,,,,=E43*E44
+Payment processing rate (gateway + bank on receipts),,,,0.0136
+Payment processing amount,,,,=E43*E46
+Selling costs subtotal,,,,=E45+E47
 ,,,,
 SUMMARY,,,,
 Materials,,,,=E23
 Labour,,,,=E30
-Overhead,,,,=E39
-Marketing,,,,=E44
-TOTAL COST,,,,=SUM(E47:E50)
-SALE PRICE,,,,=E42
-NET PROFIT,,,,=E52-E51
-Net margin %,,,,"=IFERROR(E53/E52,""—"")"
+Overhead,,,,=E40
+Selling costs,,,,=E48
+TOTAL COST,,,,=SUM(E51:E54)
+SALE PRICE,,,,=E43
+NET PROFIT,,,,=E56-E55
+Net margin %,,,,"=IFERROR(E57/E56,""—"")"
 ,,,,
 PRODUCT DETAILS,,,,
 Description,3 piece set; 3D sequin flower & lace on sleeves/neckline/daaman; Sheesha Silk kurta + farshi shalwar; Organza dupatta,,,
