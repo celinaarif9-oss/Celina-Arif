@@ -117,3 +117,5 @@ Hooks/Buttons,Hooks,450,100,hook,"=IFERROR(C116/D116,""—"")",box of 100
 Hooks/Buttons,Buttons Small,400,100,button,"=IFERROR(C117/D117,""—"")",box of 100
 Hooks/Buttons,Buttons Medium,400,100,button,"=IFERROR(C118/D118,""—"")",box of 100
 Hooks/Buttons,Buttons Large,400,100,button,"=IFERROR(C119/D119,""—"")",box of 100
+Dye,Colour,180,1,yard,"=IFERROR(C120/D120,""—"")",standard 180/yard
+Dye,Colour Chiffon Georgette,360,1,yard,"=IFERROR(C121/D121,""—"")",double rate for chiffon georgette
