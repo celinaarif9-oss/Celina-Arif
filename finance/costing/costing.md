@@ -69,8 +69,9 @@ That's it — you never open a settings box again.
    long they spend on it — leave at **1** for a normal piece; bump to 2-3 for heavy embroidery).
    Daily wage × Workers × Days calculates the cost.
    - **Cutting is the exception:** the master cuts several outfits a day, so in the cutting row's
-     **Days** column enter **how many articles he cut that day (4–8)** — the sheet divides his
-     daily wage by that, charging this outfit only its share (e.g. cut 6 → Rs3,000 ÷ 6 = Rs500).
+     **Days** column enter **how many articles he cut that day** — the sheet divides his daily
+     wage by that, charging this outfit only its share. **Default is 5** (the working average):
+     Rs3,000 ÷ 5 = **Rs600**. Change it for a specific batch if he cut more (cheaper) or fewer.
 4. **Sale Price:** enter it. **Overhead, selling costs, Total Cost, Net Profit & margin all
    calculate automatically** (labour/overhead pull from the Setup tab).
 5. **Product details:** fill weight, lengths, neckline, customisations.
