@@ -32,13 +32,13 @@ Finishing (flat per outfit),,,,='Labour & Overhead Setup'!E17
 ,LABOUR TOTAL,,,=SUM(E27:E31)
 ,,,,
 C. OVERHEAD (auto from 'Labour & Overhead Setup' tab),,,,
-Overhead per article,,,,='Labour & Overhead Setup'!E32
+Overhead per article,,,,='Labour & Overhead Setup'!E33
 ,,,,
 D. SELLING COSTS — % of sale price,,,,
 Sale Price (you set),,,,41450
-Marketing commission rate,,,,='Labour & Overhead Setup'!E35
+Marketing commission rate,,,,='Labour & Overhead Setup'!E36
 Marketing commission amount,,,,=E38*E39
-Bank charges (inbound) rate,,,,='Labour & Overhead Setup'!E36
+Bank charges (inbound) rate,,,,='Labour & Overhead Setup'!E37
 Bank charges (inbound) amount,,,,=E38*E41
 Selling costs subtotal,,,,=E40+E42
 ,,,,

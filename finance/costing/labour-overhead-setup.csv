@@ -25,22 +25,24 @@ Internet,3500,,,=B24/$E$9
 Maintenance,18000,,,=B25/$E$9
 Cleaning,32000,,,=B26/$E$9
 Food & Beverages,23000,,,=B27/$E$9
-Ads,200000,,,=B28/$E$9
-Shopify subscription ($25 ~ Rs7000),7000,,,=B29/$E$9
-Globo app ($9 ~ Rs2520),2520,,,=B30/$E$9
-Outbound bank charges (from section D),=E53,,,=B31/$E$9
-,OVERHEAD PER ARTICLE,,,=SUM(E22:E31)
+Meta ad spend,200000,,,=B28/$E$9
+Marketing retainer (Pitch — fixed),80000,,,=B29/$E$9
+Shopify subscription ($25 ~ Rs7000),7000,,,=B30/$E$9
+Globo app ($9 ~ Rs2520),2520,,,=B31/$E$9
+Outbound bank charges (from section D),=E55,,,=B32/$E$9
+,OVERHEAD PER ARTICLE,,,=SUM(E22:E32)
 ,,,,
 C. SELLING COSTS — % of sale price,,,,
 Marketing commission (on net sales),,,,0.08
 Bank charges (inbound — money gone),,,,0.02875
-,TOTAL SELLING %,,,=E35+E36
+,TOTAL SELLING %,,,=E36+E37
 ,,,,
 NOTES,,,,
-Daily wage = what ONE worker earns in ONE day (column E). In the Cost Card multiply by Workers and Days for this outfit. The current numbers are placeholders — replace with your real per-day figures,,,,
+Daily wage = what ONE worker earns in ONE day (column E). In the Cost Card multiply by Workers and Days for this outfit,,,,
+Pitch agency = fixed 80k/month retainer (here in overheads) PLUS 8% commission (in selling costs above) — both are real and kept separate,,,,
 Only the real bank fee (money gone) is costed; withholding/advance/income tax are recoverable so excluded — accountant confirms sales-tax creditability,,,,
 $ items converted at ~280 PKR/$ — update for the current rate,,,,
-Ads can instead be tracked separately (KPI dashboard) rather than absorbed per article — your choice,,,,
+Ads/retainer can instead be tracked separately (KPI dashboard) rather than absorbed per article — your choice,,,,
 ,,,,
 D. OUTBOUND BANK CHARGES — money-gone portion (recoverable taxes excluded),,,,
 Outbound payment (update monthly),Amount,,,
@@ -48,7 +50,7 @@ Meta ads,200000,,,
 Shopify subscription,7000,,,
 Globo app,2520,,,
 Other international transfers,0,,,
-Total outbound payments,=SUM(B47:B50),,,
+Total outbound payments,=SUM(B49:B52),,,
 Bank charge rate (4% bank + 0.52% sales tax on it = money gone),,,,0.0452
-OUTBOUND BANK CHARGES (monthly),,,,=B51*E52
+OUTBOUND BANK CHARGES (monthly),,,,=B53*E54
 Recoverable (NOT in cost): 4% withholding + 5% advance + 15% sales tax — accountant to confirm,,,,
