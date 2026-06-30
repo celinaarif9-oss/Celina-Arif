@@ -39,10 +39,29 @@ duplicate one tab per article.
 
 You only touch this tab when wages/overheads change — every Cost Card updates automatically.
 
-## For each article (≈3 min) — in `Cost Card`
-1. **Duplicate the `Cost Card` tab** → rename it the outfit name.
-2. **Materials:** type the item name **exactly as in the Master Rate List** → Unit + Unit cost
-   auto-fill → type the **Qty used** → Total auto-calculates.
+## ⭐ ONE-TIME SETUP (do this ONCE, then never again)
+
+Import is only the *seed*. Dropdowns and formatting are **not** saved in a CSV, so re-importing
+loses them. So set things up once, then **stop importing** — duplicate the tab instead.
+
+1. Import the three CSVs once and rename the tabs exactly: `Master Rate List`,
+   `Labour & Overhead Setup`, `Cost Card` (capitals + spaces + the `&` matter).
+2. On the `Cost Card` tab, set up the material **dropdown** so you pick instead of type:
+   - Select cells **`A7:A22`**
+   - **Data → Data validation → Add rule → Dropdown (from a range)**
+   - In the range box type **exactly** (this value never changes):
+     ```
+     ='Master Rate List'!$B$4:$B$300
+     ```
+   - **Done.**
+
+That's it — you never open a settings box again.
+
+## For each new outfit (≈3 min) — NEVER re-import, just duplicate
+1. **Right-click the `Cost Card` tab → Duplicate** → rename the copy the outfit name.
+   *(The duplicate already carries the dropdown + every formula. This is why you don't re-import.)*
+2. **Materials:** click the cell → **pick** the material from the dropdown → type the **Qty used**
+   → Unit cost + Total fill in automatically.
 3. **Labour:** for each role set **Workers** (how many people on this outfit) and **Days** (how
    long they spend on it — leave at **1** for a normal piece; bump to 2-3 for heavy embroidery).
    Daily wage × Workers × Days calculates the cost.
@@ -50,8 +69,14 @@ You only touch this tab when wages/overheads change — every Cost Card updates 
    calculate automatically** (labour/overhead pull from the Setup tab).
 5. **Product details:** fill weight, lengths, neckline, customisations.
 
-> 💡 **Tip:** add a dropdown on the Material cells — **Data → Data validation → Dropdown (from a
-> range)** → `Master Rate List` column B — so you *pick* materials and the lookup always matches.
+## Adding a brand-new material (one place only)
+Add it on the **`Master Rate List`** tab in the first empty row: fill **Category, Item, Price,
+Pack size, Unit**, then copy the **Unit cost** cell from the row above so it gets the ÷ formula.
+Keep it **above row 300**. It instantly appears in the Cost Card dropdown — nothing else to do.
+
+## The only exact values you ever type in a settings box (so you never have to ask)
+- **Material dropdown range:** `='Master Rate List'!$B$4:$B$300`
+- **Tab names (must match exactly):** `Master Rate List` · `Labour & Overhead Setup` · `Cost Card`
 
 > ⚠️ All three tabs must be in the **same Google Sheet** for the lookups/links to work, and the
 > tab names must match exactly: `Master Rate List`, `Labour & Overhead Setup`, `Cost Card`.
