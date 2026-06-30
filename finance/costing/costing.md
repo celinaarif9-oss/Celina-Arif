@@ -37,6 +37,18 @@ duplicate one tab per article.
 > The ZARA example has **Stitching hours (3.5)** pre-filled; add **Cutting & Hand-work hours** to
 > complete its total. Your real articles: fill all three.
 
+## Master Rate List (your price source)
+`master-rate-list.csv` is your **single source of truth** for material prices and worker salaries.
+Import it as a tab named **`Master Rate List`** and fill in every fabric, trim, and worker with
+current prices. Update a price **once here** and it flows to costing everywhere.
+
+- **Materials:** category, item, unit, price.
+- **Labour:** salary + period + days + hours → **Rate/hr calculates itself** (Master 80,000/mo →
+  Rs.615/hr, etc.).
+
+*Once it's filled, I can wire the Cost Card to **auto-pull prices** from this list (type the item
+name → price fills in via lookup), so you never enter a material price twice.*
+
 ## Feeds the rest
 - Put each finished article's **name, Total Cost, Sale Price, Net Profit** as one row on a
   **`Summary`** tab (you already have a "Summery" tab) — that's what the **KPI dashboard** reads
