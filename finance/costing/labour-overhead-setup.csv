@@ -12,8 +12,8 @@ A. DIRECT LABOUR — type the DAILY wage per worker (what one person earns in on
 Role,Weekly wage (optional reference),,,Daily wage per worker  ← TYPE HERE
 Cutting (Master),,,,3000
 Machine Work,,,,2500
-Hand Work,,,,1972
-Stitching,,,,2292
+Hand Work,,,,1972.17
+Stitching,,,,2291.67
 Finishing (flat per outfit),,,,500
 ,Labour if 1 worker × 1 day each (reference),,,=SUM(E13:E17)
 ,,,,
