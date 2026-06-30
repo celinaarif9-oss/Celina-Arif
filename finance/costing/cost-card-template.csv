@@ -38,8 +38,8 @@ D. SELLING COSTS — % of sale price,,,,
 Sale Price (you set),,,,41450
 Marketing commission rate,,,,='Labour & Overhead Setup'!E35
 Marketing commission amount,,,,=E38*E39
-Inbound charges rate,,,,='Labour & Overhead Setup'!E36
-Inbound charges amount,,,,=E38*E41
+Bank charges (inbound) rate,,,,='Labour & Overhead Setup'!E36
+Bank charges (inbound) amount,,,,=E38*E41
 Selling costs subtotal,,,,=E40+E42
 ,,,,
 SUMMARY,,,,

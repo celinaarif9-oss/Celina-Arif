@@ -28,17 +28,27 @@ Food & Beverages,23000,,,=B27/$E$9
 Ads,200000,,,=B28/$E$9
 Shopify subscription ($25 ~ Rs7000),7000,,,=B29/$E$9
 Globo app ($9 ~ Rs2520),2520,,,=B30/$E$9
-Outbound bank charges & taxes,59755,,,=B31/$E$9
+Outbound bank charges (from section D),=E53,,,=B31/$E$9
 ,OVERHEAD PER ARTICLE,,,=SUM(E22:E31)
 ,,,,
 C. SELLING COSTS — % of sale price,,,,
 Marketing commission (on net sales),,,,0.08
-Inbound charges (income tax 2.06% + bank 2.875% + sales tax 1.03%),,,,0.05965
+Bank charges (inbound — money gone),,,,0.02875
 ,TOTAL SELLING %,,,=E35+E36
 ,,,,
 NOTES,,,,
 Wage = TOTAL weekly wage for the role (all workers combined) — not one person,,,,
-Outbound charges = 4% bank + 0.52% (13% of the 4%) + 4% withholding + 5% advance tax + 15% sales tax on outbound payments; some taxes may be creditable — accountant to confirm,,,,
-Inbound income tax (2.06%) is likely advance/creditable — accountant to confirm vs true cost,,,,
+Only the real bank fee (money gone) is costed; withholding/advance/income tax are recoverable so excluded — accountant confirms sales-tax creditability,,,,
 $ items converted at ~280 PKR/$ — update for the current rate,,,,
 Ads can instead be tracked separately (KPI dashboard) rather than absorbed per article — your choice,,,,
+,,,,
+D. OUTBOUND BANK CHARGES — money-gone portion (recoverable taxes excluded),,,,
+Outbound payment (update monthly),Amount,,,
+Meta ads,200000,,,
+Shopify subscription,7000,,,
+Globo app,2520,,,
+Other international transfers,0,,,
+Total outbound payments,=SUM(B47:B50),,,
+Bank charge rate (4% bank + 0.52% sales tax on it = money gone),,,,0.0452
+OUTBOUND BANK CHARGES (monthly),,,,=B51*E52
+Recoverable (NOT in cost): 4% withholding + 5% advance + 15% sales tax — accountant to confirm,,,,
