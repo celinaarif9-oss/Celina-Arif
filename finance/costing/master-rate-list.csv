@@ -107,9 +107,9 @@ Moti,Moti Water 5mm,450,1,packet,"=IFERROR(C106/D106,""—"")",Rs450/packet (450
 Moti,Moti Matt 3mm,450,1,packet,"=IFERROR(C107/D107,""—"")",Rs450/packet (450g); enter Qty in packets — 0.5 = half a packet
 Moti,Moti Matt 4mm,450,1,packet,"=IFERROR(C108/D108,""—"")",Rs450/packet (450g); enter Qty in packets — 0.5 = half a packet
 Moti,Moti Matt 5mm,450,1,packet,"=IFERROR(C109/D109,""—"")",Rs450/packet (450g); enter Qty in packets — 0.5 = half a packet
-Dabka,Dabka Wire Gold,9500,1000,gram,"=IFERROR(C110/D110,""—"")",set your exact price
-Dabka,Dabka Wire Silver,9500,1000,gram,"=IFERROR(C111/D111,""—"")",set your exact price
-Dabka,Dabka Wire Coloured,10500,1000,gram,"=IFERROR(C112/D112,""—"")",set your exact price
+Dabka,Dabka Wire Gold,9500,85.73,tola,"=IFERROR(C110/D110,""—"")",Rs9500/kg ÷ 85.73 = per tola (1 tola=11.66g); enter Qty in tolas; confirm your exact price
+Dabka,Dabka Wire Silver,9500,85.73,tola,"=IFERROR(C111/D111,""—"")",Rs9500/kg ÷ 85.73 = per tola (1 tola=11.66g); enter Qty in tolas; confirm your exact price
+Dabka,Dabka Wire Coloured,10500,85.73,tola,"=IFERROR(C112/D112,""—"")",Rs10500/kg ÷ 85.73 = per tola (1 tola=11.66g); enter Qty in tolas; confirm your exact price
 Zarih,Zarih Gold,500,1,cone,"=IFERROR(C113/D113,""—"")",
 Zarih,Zarih Silver,500,1,cone,"=IFERROR(C114/D114,""—"")",
 Zarih,Zarih Coloured,500,1,cone,"=IFERROR(C115/D115,""—"")",
