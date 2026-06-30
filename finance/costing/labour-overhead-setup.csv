@@ -8,14 +8,14 @@ Articles per week,,,,=E5*E6
 Weeks per month,,,,4.33
 Articles per month,,,,=E7*E8
 ,,,,
-A. DIRECT LABOUR — weekly wage ÷ articles per week,,,,
-Role,Weekly wage (all workers in the role),,,Per article
+A. DIRECT LABOUR — rate PER WORKER = avg weekly wage ÷ articles per week,,,,
+Role,Avg weekly wage (per worker),,,Rate per worker
 Cutting (Master),18000,,,=B13/$E$7
 Machine Work,15000,,,=B14/$E$7
 Hand Work,11833,,,=B15/$E$7
 Stitching,13750,,,=B16/$E$7
 Finishing (flat per outfit),,,,500
-,LABOUR PER ARTICLE,,,=SUM(E13:E17)
+,Labour if 1 worker each (reference),,,=SUM(E13:E17)
 ,,,,
 B. OVERHEADS — monthly cost ÷ articles per month,,,,
 Item,Monthly cost,,,Per article

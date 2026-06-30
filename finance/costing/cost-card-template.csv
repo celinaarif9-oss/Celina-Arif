@@ -22,8 +22,14 @@ Thankyou Card,"=IFERROR(VLOOKUP(A18,'Master Rate List'!$B:$E,4,FALSE),"""")",1,"
 ,"=IFERROR(VLOOKUP(A22,'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(A22,'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C22*D22,"""")"
 ,MATERIALS TOTAL,,,=SUM(E7:E22)
 ,,,,
-B. DIRECT LABOUR (auto from 'Labour & Overhead Setup' tab),,,,
-Labour per article,,,,='Labour & Overhead Setup'!E18
+B. DIRECT LABOUR — enter Workers per role for this article (rate auto from Setup),,,,
+Role,Workers,Rate/worker,,Total
+Cutting,1,='Labour & Overhead Setup'!E13,,=B27*C27
+Machine Work,1,='Labour & Overhead Setup'!E14,,=B28*C28
+Hand Work,2,='Labour & Overhead Setup'!E15,,=B29*C29
+Stitching,1,='Labour & Overhead Setup'!E16,,=B30*C30
+Finishing (flat per outfit),,,,='Labour & Overhead Setup'!E17
+,LABOUR TOTAL,,,=SUM(E27:E31)
 ,,,,
 C. OVERHEAD (auto from 'Labour & Overhead Setup' tab),,,,
 Overhead per article,,,,='Labour & Overhead Setup'!E32
@@ -31,20 +37,20 @@ Overhead per article,,,,='Labour & Overhead Setup'!E32
 D. SELLING COSTS — % of sale price,,,,
 Sale Price (you set),,,,41450
 Marketing commission rate,,,,='Labour & Overhead Setup'!E35
-Marketing commission amount,,,,=E32*E33
+Marketing commission amount,,,,=E38*E39
 Inbound charges rate,,,,='Labour & Overhead Setup'!E36
-Inbound charges amount,,,,=E32*E35
-Selling costs subtotal,,,,=E34+E36
+Inbound charges amount,,,,=E38*E41
+Selling costs subtotal,,,,=E40+E42
 ,,,,
 SUMMARY,,,,
 Materials,,,,=E23
-Labour,,,,=E26
-Overhead,,,,=E29
-Selling costs,,,,=E37
-TOTAL COST,,,,=SUM(E40:E43)
-SALE PRICE,,,,=E32
-NET PROFIT,,,,=E45-E44
-Net margin %,,,,"=IFERROR(E46/E45,""—"")"
+Labour,,,,=E32
+Overhead,,,,=E35
+Selling costs,,,,=E43
+TOTAL COST,,,,=SUM(E46:E49)
+SALE PRICE,,,,=E38
+NET PROFIT,,,,=E51-E50
+Net margin %,,,,"=IFERROR(E52/E51,""—"")"
 ,,,,
 PRODUCT DETAILS,,,,
 Description,3 piece set; 3D sequin flower & lace on sleeves/neckline/daaman; Sheesha Silk kurta + farshi shalwar; Organza dupatta,,,
