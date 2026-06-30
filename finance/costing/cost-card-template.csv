@@ -1,45 +1,64 @@
-Celina Arif — Article Cost Card,,,,,
-Article / design name,,,,,
-,,,,,
-Category,Item,Unit,Qty,Rate (PKR),Amount
-DIRECT MATERIALS,,,,,
-,Sheesha silk,metres,,,=D6*E6
-,Inner fabric,metres,,,=D7*E7
-,Chiffon / georgette,metres,,,=D8*E8
-,Organza / buckram,metres,,,=D9*E9
-,Resham / thread,lump,,,=D10*E10
-,Handwork materials,lump,,,=D11*E11
-,Dye,lump,,,=D12*E12
-,Zips / buttons / elastic,lump,,,=D13*E13
-,Packaging,set,,,=D14*E14
-,Extras,lump,,,=D15*E15
-,Materials subtotal,,,,=SUM(F6:F15)
-,,,,,
-DIRECT LABOUR,,,,,
-,Cutting,piece,,,=D19*E19
-,Stitching,piece,,,=D20*E20
-,Hand work,lump,,,=D21*E21
-,Machine work,lump,,,=D22*E22
-,Finishing,piece,,,=D23*E23
-,Labour subtotal,,,,=SUM(F19:F23)
-,,,,,
-,PRIME COST (materials + labour),,,,=F16+F24
-,,,,,
-FACTORY OVERHEAD,,,,,
-,Allocated overhead (rent/electricity/water/maintenance) — % from Overhead Pool tab,% of prime,,,=F26*E29
-,,,,,
-,PRODUCTION COST,,,,=F26+F29
-,,,,,
-PRICING,,,,,
-,Markup on cost,%,,0.5,
-,SELLING PRICE (rounded to 500),,,,"=IF(F31>0,CEILING(F31*(1+E34),500),""—"")"
-,,,,,
-SELLING COSTS — taken from the sale (% of price),,,,,
-,Marketing commission (Pitch),% of price,,0.08,=F35*E38
-,Payment gateway / Shopify fee,% of price,,0.0136,=F35*E39
-,Bank charges,% of price,,,=F35*E40
-,Ads (Meta) = monthly spend ÷ monthly revenue,% of price,,,=F35*E41
-,Selling costs subtotal,,,,=SUM(F38:F41)
-,,,,,
-,NET PROFIT (price − production − selling),,,,=F35-F31-F42
-,Net margin %,,,,"=IFERROR(F44/F35,""—"")"
+Celina Arif Textile (Pvt) Ltd,,,,
+Vol. 2 Costing — Cost Card (duplicate this tab; one per article),,,,
+Name of Outfit,ZARA,Description,Light Blue,
+,,,,
+A. DIRECT MATERIAL COST,,,,
+Item,Description,Quantity,Cost,Total
+Fabric,Sheesha Silk,7,820,=C7*D7
+,Organza,3,680,=C8*D8
+,Inner,2.5,130,=C9*D9
+Trims,Buqram,1,50,=C10*D10
+,Lace 1,3,380,=C11*D11
+,Lace 2,4,200,=C12*D12
+,Pearl No. 3,0.5,500,=C13*D13
+,Pearl No. 6,0.25,1000,=C14*D14
+,Silver No. 3,0.5,100,=C15*D15
+,White Shell Sequins,0.5,300,=C16*D16
+,Blue Shell Sequins,0.5,300,=C17*D17
+,Elastic,0.5,100,=C18*D18
+Dye,Colour,19.5,150,=C19*D19
+Packaging,Paper Bag,1,300,=C20*D20
+,Butter Paper,2,47,=C21*D21
+,Thankyou Card,1,17,=C22*D22
+,MATERIALS TOTAL,,,=SUM(E7:E22)
+,,,,
+B. LABOUR COST — set Rate/hr from salary once; enter Hours per article,,,,
+Role,Basis (edit only if salary changes),Hours,Rate/hr,Total
+Cutting,Master 80000/mo ÷ 26 days ÷ 5 hrs,,=80000/26/5,=C27*D27
+Hand work,Labour 12500/wk ÷ 6 days ÷ 7 hrs,,=12500/6/7,=C28*D28
+Stitching,Labour 13500/wk ÷ 6 days ÷ 7 hrs,3.5,=13500/6/7,=C29*D29
+,LABOUR TOTAL,,,=SUM(E27:E29)
+,,,,
+C. OVERHEAD ALLOCATION — monthly cost ÷ articles per month,,,,
+Item,,Monthly cost,Articles/mo,Per article
+Rent,,112000,48,=C34/D34
+Electricity,,30000,48,=C35/D35
+Internet,,3500,48,=C36/D36
+Maintenance,,25000,48,=C37/D37
+Others,,0,48,=C38/D38
+,OVERHEAD TOTAL,,,=SUM(E34:E38)
+,,,,
+D. MARKETING,,,,
+Sale Price (you set),,,,41450
+Marketing rate (% of sale price),,,,0.08
+Marketing amount,,,,=E42*E43
+,,,,
+SUMMARY,,,,
+Materials,,,,=E23
+Labour,,,,=E30
+Overhead,,,,=E39
+Marketing,,,,=E44
+TOTAL COST,,,,=SUM(E47:E50)
+SALE PRICE,,,,=E42
+NET PROFIT,,,,=E52-E51
+Net margin %,,,,"=IFERROR(E53/E52,""—"")"
+,,,,
+PRODUCT DETAILS,,,,
+Description,3 piece set; 3D sequin flower & lace on sleeves/neckline/daaman; Sheesha Silk kurta + farshi shalwar; Organza dupatta,,,
+Weight (kg),1.5,,,
+Shirt length,28-34 (original 32),,,
+Shalwar length,38-47 (original 41),,,
+Dupatta length,3 yards,,,
+Neckline,8 with hook,,,
+Customisations,Available,,,
+Model,5'7 / size S,,,
