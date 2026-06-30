@@ -30,8 +30,8 @@ duplicate one tab per article.
 ## Set once a month — in `Labour & Overhead Setup`
 - **Production rate** — articles/day (4), days/week (6) → it works out articles/week (24) and
   /month (~104).
-- **Direct labour** — each role's **total weekly wage** (all workers in that role) → per-article
-  auto. Finishing is a flat per-outfit figure.
+- **Direct labour** — each role's **weekly wage per worker** (one person) → it works out the
+  **daily wage** (weekly ÷ 6). Finishing is a flat per-outfit figure.
 - **Overheads** — Rent, Electricity, Internet, Maintenance, Cleaning, Food & Beverages, Ads,
   Shopify, Globo, and **Outbound bank charges** → per-article auto.
 - **Selling %s** — Marketing commission (8%) and **Inbound charges** (income tax + bank + sales
@@ -43,9 +43,12 @@ You only touch this tab when wages/overheads change — every Cost Card updates 
 1. **Duplicate the `Cost Card` tab** → rename it the outfit name.
 2. **Materials:** type the item name **exactly as in the Master Rate List** → Unit + Unit cost
    auto-fill → type the **Qty used** → Total auto-calculates.
-3. **Sale Price:** enter it. **Labour, Overhead, selling costs, Total Cost, Net Profit & margin
-   all calculate automatically** (labour/overhead pull from the Setup tab).
-4. **Product details:** fill weight, lengths, neckline, customisations.
+3. **Labour:** for each role set **Workers** (how many people on this outfit) and **Days** (how
+   long they spend on it — leave at **1** for a normal piece; bump to 2-3 for heavy embroidery).
+   Daily wage × Workers × Days calculates the cost.
+4. **Sale Price:** enter it. **Overhead, selling costs, Total Cost, Net Profit & margin all
+   calculate automatically** (labour/overhead pull from the Setup tab).
+5. **Product details:** fill weight, lengths, neckline, customisations.
 
 > 💡 **Tip:** add a dropdown on the Material cells — **Data → Data validation → Dropdown (from a
 > range)** → `Master Rate List` column B — so you *pick* materials and the lookup always matches.

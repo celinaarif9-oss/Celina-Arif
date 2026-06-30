@@ -22,12 +22,12 @@ Thankyou Card,"=IFERROR(VLOOKUP(TRIM(A18),'Master Rate List'!$B:$E,4,FALSE),""""
 ,"=IFERROR(VLOOKUP(TRIM(A22),'Master Rate List'!$B:$E,4,FALSE),"""")",,"=IFERROR(VLOOKUP(TRIM(A22),'Master Rate List'!$B:$F,5,FALSE),"""")","=IFERROR(C22*D22,"""")"
 ,MATERIALS TOTAL,,,=SUM(E7:E22)
 ,,,,
-B. DIRECT LABOUR — enter Workers per role for this article (rate auto from Setup),,,,
-Role,Workers,Rate/worker,,Total
-Cutting,1,='Labour & Overhead Setup'!E13,,=B27*C27
-Machine Work,1,='Labour & Overhead Setup'!E14,,=B28*C28
-Hand Work,2,='Labour & Overhead Setup'!E15,,=B29*C29
-Stitching,1,='Labour & Overhead Setup'!E16,,=B30*C30
+B. DIRECT LABOUR — enter Workers and Days for this article (daily wage auto from Setup),,,,
+Role,Workers,Days,Daily wage,Total
+Cutting,1,1,='Labour & Overhead Setup'!E13,=B27*C27*D27
+Machine Work,1,1,='Labour & Overhead Setup'!E14,=B28*C28*D28
+Hand Work,2,1,='Labour & Overhead Setup'!E15,=B29*C29*D29
+Stitching,1,1,='Labour & Overhead Setup'!E16,=B30*C30*D30
 Finishing (flat per outfit),,,,='Labour & Overhead Setup'!E17
 ,LABOUR TOTAL,,,=SUM(E27:E31)
 ,,,,
