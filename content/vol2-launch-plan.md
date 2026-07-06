@@ -1,8 +1,8 @@
-# Vol 2 — Launch Plan (August 2026)
+# 2026 Vol 2 — Launch Plan
 
-The filled-in instance of `launch-playbook.md` for the **2026 Vol 2** collection. This is the
-one to work from on drop day. Creative (images, collection story) stays with the founder;
-everything else is a tick-box the team can run.
+The filled-in instance of `launch-playbook.md` for the **2026 Vol 2** collection. Work from this
+on drop day. Website descriptions live in `vol2-product-descriptions.md`; costing in
+`finance/costing/vol2-costed-articles.xlsx`.
 
 > **Human approval:** every caption/email here is a **draft**. A person reviews and posts —
 > nothing auto-publishes. Prices/pieces go live only on your OK.
@@ -10,104 +10,84 @@ everything else is a tick-box the team can run.
 ---
 
 ## Launch brief
-- **Collection:** 2026 Vol 2  *(confirm public name — "Vol 2" or a collection name?)*
-- **Drop date & time:** `___ August 2026`, **8–9pm PKT** (catches PK evening + UK daytime)
-- **Drop style:** `one full drop` / `staggered`  *(confirm)*
-- **Pieces & prices:** ~**Rs 52,000–59,000** (from the finished Cost Cards). Confirmed list below.
+- **Collection:** 2026 Vol 2
+- **Drop:** **Sat 19 July 2026, 8pm PKT** (one full drop — all 10 pieces at once)
+- **Teasers:** **16 & 17 July** · **Countdown:** 18 July · **Sustain:** 22 July
+- **Pieces & prices:** 10 pieces, **Rs 53,000–73,000**
 - **Hero images:** ___ (creative = founder)
 
-### Pieces (from the costing workbook — confirm final list)
-| Piece | Colour | Fabric / silhouette (short) | Price | Caption drafts |
-|-------|--------|-----------------------------|-------|----------------|
-| **Ayesha** | ___ | ___ | 52,500 | *(fill from card)* |
-| **Samira** | Light Tea Pink | ___ | 53,397 | see below |
-| **Mahnoor** | Periwinkle | ___ | 59,000 | see below |
-| **Serena** | Midnight Blue (Navy) | Velvet Silk, halter, balloon shalwar | 58,000 | see below |
-| **Isra** | Black | Sheesha Silk top + wide-leg Dhaka trouser, Soft Net dupatta | 52,500 | see below |
-| **Sabah** | ___ | ___ | ___ | *(fill from card)* |
-| **Norah** | ___ | ___ | ___ | *(fill from card)* |
-| **Zaha** | ___ | ___ | ___ | *(fill from card)* |
+### Pieces (from `vol2-costed-articles.xlsx`)
+| Piece | Colour | Price | Net margin |
+|-------|--------|-------|-----------|
+| Ayesha | Deep Red / Maroon | 62,000 | 58% |
+| Samira | Light Tea Pink | 53,397 | 42% |
+| Mahnoor | Periwinkle *(confirm)* | 62,000 | 38% |
+| Sabah | Butter / Lemon Yellow | 53,500 | 39% |
+| Serena | Midnight Blue (Navy) | **65,000 or 67,000?** | ~39% |
+| Isra | Black | 73,000 | 48% |
+| Norah | Deep Red / Maroon | **58,450 or 52,500?** | ~29–36% |
+| Maya | Hot Pink & Orange | 65,000 | 38% |
+| Nour | Off-White / Champagne | 67,000 | 38% |
+| Tamara | Chocolate Brown | 62,000 | 49% |
 
-*I'll complete every blank row + caption from the `.xlsx` you send — colour, fabric, price and
-lengths are all already on each card's Product Details.*
+*Serena & Norah prices need a decision — see the costing audit note below.*
 
 ---
 
-## Timeline (map to your chosen drop date = **T**)
-| When | Channel | Action |
+## Timeline (dates locked)
+| Date | Channel | Action |
 |------|---------|--------|
-| **T‑7** | IG/FB post + Story | Teaser — hint, no reveal |
-| **T‑3** | Story | Behind-the-scenes / fabric close-up (Velvet, Sheesha Silk) |
-| **T‑1** | IG/FB post + Story + **Email** | Countdown — "tomorrow" |
-| **Launch day (T)** | IG/FB post + Story + **Email** | Launch — it's live |
-| **T+1** | Story | Repost first **#wearC** / detail shots |
-| **T+3** | IG/FB post + Story | Sustain — "final sizes" on the fastest sellers |
+| **Wed 16 Jul** | IG/FB post + Story | **Teaser 1** — hint, no reveal |
+| **Thu 17 Jul** | IG/FB post + Story | **Teaser 2** — behind-the-scenes / fabric close-up (Velvet, Sheesha Silk, Raw Silk) |
+| **Fri 18 Jul** | IG/FB post + Story + **Email** | **Countdown** — "tomorrow, 8pm" |
+| **Sat 19 Jul (T)** | IG/FB post + Story + **Email** | **Launch** — all 10 live, 8pm |
+| **Sun 20 Jul** | Story | Repost first **#wearC** / detail shots |
+| **Tue 22 Jul** | IG/FB post + Story | **Sustain** — "final sizes" on the fastest sellers |
 
 ---
 
-## Collection captions (brand voice — warm, minimal; pick one, then approve)
-
-**T‑7 Teaser**
-- `Something new, this August.`
-- `A new edit is on its way.`
-
-**T‑1 Countdown**
-- `Tomorrow. Vol 2.`
-- `Vol 2 — live tomorrow, 8pm.`
-
-**Launch day**
-- `Vol 2 is here.`
-- `Say hello to Vol 2. Made to order, in your size.`
-
-**T+3 Sustain**
-- `Going quietly fast — a few sizes left.`
-- `Still available: your favourites from Vol 2. Made to order.`
+## Collection captions (pick one, then approve)
+**16 Jul Teaser 1** — `Something new, this July.` · `A new edit is on its way.`
+**17 Jul Teaser 2** — `A closer look, tomorrow's tomorrow.` · `In the atelier this week.`
+**18 Jul Countdown** — `Tomorrow. Vol 2.` · `Vol 2 — live tomorrow, 8pm.`
+**19 Jul Launch** — `Vol 2 is here.` · `Say hello to Vol 2. Made to order, in your size.`
+**22 Jul Sustain** — `Going quietly fast — a few sizes left.` · `Still available, made to order.`
 
 ---
 
-## Per-piece captions (drafts — for the pieces with details so far)
-
-**Serena** — Midnight Blue, Velvet Silk, halter
-- `Say hello to Serena.`
-- `Serena — velvet, in midnight blue. Made to order.`
-- `Serena. Quietly striking.`
-
-**Isra** — Black, Sheesha Silk top + wide-leg trouser
-- `Say hello to Isra.`
-- `Isra, in black. Made to order, in your size.`
-- `Isra — a clean line, in black.`
-
-**Samira** — Light Tea Pink
-- `Say hello to Samira.`
-- `Samira, in tea pink. Now available.`
-
-**Mahnoor** — Periwinkle
-- `Say hello to Mahnoor.`
-- `Mahnoor — soft periwinkle. Made to order.`
-
-*Ayesha, Sabah, Norah, Zaha captions to follow once I have their colour/detail from the workbook.*
+## Per-piece captions (drafts — pick & approve)
+- **Ayesha** — `Say hello to Ayesha.` · `Ayesha, in deep maroon. Made to order.`
+- **Samira** — `Say hello to Samira.` · `Samira, in tea pink. Now available.`
+- **Mahnoor** — `Say hello to Mahnoor.` · `Mahnoor — 3D florals, softly done.`
+- **Sabah** — `Say hello to Sabah.` · `Sabah, in butter yellow. Now available.`
+- **Serena** — `Say hello to Serena.` · `Serena — velvet, in midnight blue.` · `Serena. Quietly striking.`
+- **Isra** — `Say hello to Isra.` · `Isra, in black. Made to order, in your size.`
+- **Norah** — `Say hello to Norah.` · `Norah, in deep red. Made to order.`
+- **Maya** — `Say hello to Maya.` · `Maya — raw silk, zarih, and colour.`
+- **Nour** — `Say hello to Nour.` · `Nour — a champagne gown, open back.`
+- **Tamara** — `Say hello to Tamara.` · `Tamara — velvet, in chocolate brown.`
 
 ---
 
 ## Emails (Shopify Email — your voice)
-**T‑1 Teaser** — Subject: `Something new is coming` · Body: `Vol 2 arrives tomorrow at 8pm. We
-can't wait to show you. — Celina Arif`
+**18 Jul Countdown** — Subject: `Something new is coming` · Body: `Vol 2 arrives tomorrow at 8pm.
+We can't wait to show you. — Celina Arif`
 
-**Launch** — Subject: `Vol 2 is here` · Body: `Vol 2 is now available — made to order, in your
-size. Explore the edit. [Shop link]`
+**19 Jul Launch** — Subject: `Vol 2 is here` · Body: `Vol 2 is now available — made to order, in
+your size. Explore the edit. [Shop link]`
 
 ---
 
-## Drop-day go-live (5-minute final pass)
-- [ ] All Vol 2 pieces **published**, priced, weight set, sizes + "add measurements" showing
+## Drop-day go-live (Sat 19 Jul, 5-minute final pass)
+- [ ] All 10 pieces **published**, priced, weight set, sizes + "add measurements" showing
 - [ ] Open store in **incognito** — prices, sizes, add-to-cart all work
 - [ ] **Test checkout** to cart — shipping shows (local Rs500 + one international)
-- [ ] Launch **post live** + **Story** up + **email sent**
+- [ ] Launch **post live** + **Story** up + **email sent** at 8pm
 - [ ] Team watching **Instagram/WhatsApp** for the question spike (quick replies ready)
 
-## What I still need from you
-1. **Drop date + time** in August.
-2. Public **collection name** (or keep "Vol 2").
-3. **One drop or staggered.**
-4. The **`.xlsx` export** → I'll fill every blank piece row, all per-piece captions, and draft
-   the **website product descriptions** from each card.
+## Before you launch — costing to finalise (see audit)
+- [ ] **Serena** — decide price (65,000 vs 67,000) and put it in the *Sale Price (you set)* box
+- [ ] **Norah** — decide price (58,450 vs 52,500) and put it in the *Sale Price (you set)* box
+- [ ] **Ayesha & Serena** — fix the "Sequin Shade no.4" line (Total stuck at 120)
+- [ ] **Mahnoor** — confirm colour (Periwinkle vs Light Blue)
+- [ ] **Norah** — tailor description so it isn't identical to Ayesha
