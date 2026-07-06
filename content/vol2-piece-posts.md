@@ -65,6 +65,6 @@ A three-piece — a sleeveless Chiffon Georgette gown with an open back, and a s
 
 ### Tamara — Chocolate Brown
 1. *(dump)* `Tamara, in rich chocolate brown.`
-2. *(video)* `Velvet and a high neck — very her.`
+2. *(video)* `Velvet, and the line of a high neck.`
 3. *(dump)* `Made to order, just for you.`
 A three-piece in Velvet Silk — a high-neck top and flared trouser, with resham, crystal and sequin on the cap sleeves and daaman.
