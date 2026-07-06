@@ -4,10 +4,7 @@ Launch-ready copy for each Vol 2 piece, ready to paste into the Shopify product 
 **Drafts — review before publishing.** Applies to every piece: **XXS–XXL**, **made to order in
 your measurements**, **dry clean only**.
 
-> **Two to confirm:** Mahnoor's colour reads "Light Blue" on its card but "Periwinkle" on the
-> costing tab — pick one. And **Norah reuses Ayesha's description** (both deep maroon) and its fit
-> note says *bootcut* while the copy says *farshi shalwar* — send me Norah's real details and
-> I'll rewrite it distinct.
+> Mahnoor confirmed **Periwinkle**; Norah rewritten with its real design (below).
 
 ---
 
@@ -23,7 +20,7 @@ resham and moti handwork on the neckline and daaman, with pleats and buttons alo
 trouser. Collared neckline with buttons and a side zip.
 *Sheesha Silk · pearl, resham & moti · collar neckline · side chaak 4–4.5" · 1.5 kg*
 
-## Mahnoor — Periwinkle *(confirm colour)*
+## Mahnoor — Periwinkle
 A three-piece set in Sheesha Silk, scattered with 3D sequin flowers and lace on the sleeves,
 neckline and daaman. Paired with a Sheesha Silk farshi shalwar and an Organza dupatta.
 *Sheesha Silk · Organza dupatta · 3D sequin flower + lace · neckline 8" with hook · 1.5 kg*
@@ -46,10 +43,11 @@ trouser. Resham and handwork on the shirt, with straps and a heavy Soft Net dupa
 and tassels.
 *Sheesha Silk · Soft Net dupatta · resham, crystal & sequin · slim-fit, wide leg · 3.5 kg*
 
-## Norah — Deep Red / Maroon *(needs its own copy — see note above)*
-A three-piece set in Sheesha Silk: a slim-fit shirt (inner attached) with resham and handwork on
-the neckline and daaman, and a Chiffon Georgette dupatta.
-*Sheesha Silk · Chiffon Georgette dupatta · resham, crystal & sequin · slim-fit, bootcut · 1.5 kg*
+## Norah — Deep Red / Maroon
+A one-shoulder three-piece set: a Chiffon Georgette top with a separate Sheesha Silk bustier, and
+bootcut trousers with lining. A single strap at the top and hooks at the back for an adjustable
+fit, with resham and handwork throughout.
+*Chiffon Georgette top + Sheesha Silk bustier · bootcut trousers, lined · one-shoulder, adjustable hook back · resham, crystal & sequin · 1.5 kg*
 
 ## Maya — Hot Pink & Orange
 A three-piece set in Raw Silk: a shirt (inner attached) and straight trousers, with golden zarih

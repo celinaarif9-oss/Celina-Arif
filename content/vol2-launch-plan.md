@@ -21,7 +21,7 @@ on drop day. Website descriptions live in `vol2-product-descriptions.md`; costin
 |-------|--------|-------|-----------|
 | Ayesha | Deep Red / Maroon | 62,000 | 58% |
 | Samira | Light Tea Pink | 53,397 | 42% |
-| Mahnoor | Periwinkle *(confirm)* | 62,000 | 38% |
+| Mahnoor | Periwinkle | 62,000 | 38% |
 | Sabah | Butter / Lemon Yellow | 53,500 | 39% |
 | Serena | Midnight Blue (Navy) | 65,000 | ~37% |
 | Isra | Black | 73,000 | 48% |
@@ -88,6 +88,8 @@ your size. Explore the edit. [Shop link]`
 ## Before you launch — costing to finalise (see audit)
 - [ ] **Serena** — set **65,000** in the *Sale Price (you set)* box AND the summary SALE PRICE line (summary currently shows 67,000)
 - [ ] **Norah** — set **65,000** in the *Sale Price (you set)* box AND the summary SALE PRICE line (input shows 58,450, summary 52,500)
-- [ ] **Ayesha & Serena** — fix the "Sequin Shade no.4" line (Total stuck at 120)
-- [ ] **Mahnoor** — confirm colour (Periwinkle vs Light Blue)
-- [ ] **Norah** — tailor description so it isn't identical to Ayesha
+- [ ] **Ayesha** — unit-cost lookups are blank (materials counted as 399, not ~10k). Refresh the
+      formulas (copy B7 & D7 down from a working card like Samira), then fix the Sequin total.
+      Real margin will drop from the false 58% to ~low-40s%.
+- [ ] **Serena** — fix the "Sequin Shade no.4" line (Total stuck at 120)
+- [x] Mahnoor colour confirmed Periwinkle · Norah description rewritten
