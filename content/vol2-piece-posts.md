@@ -34,10 +34,10 @@ A two-piece in Sheesha Silk with straight culottes — silver stone and zarih on
 A three-piece in Sheesha Silk — resham flowers on the neckline and daaman, a flared trouser, and a slim tasselled soft-silk dupatta.
 
 ### Serena — Midnight Blue (Navy)
-1. *(dump)* `This is Serena — velvet, in midnight blue.`
-2. *(video)* `Velvet that catches the light.`
+1. *(dump)* `This is Serena — in midnight blue.`
+2. *(video)* `The way it catches the light.`
 3. *(dump)* `Made to measure, just for you.`
-A three-piece in Velvet Silk — a halter neck and balloon shalwar, resham handwork, and a Chiffon dupatta.
+A three-piece — a halter neck and balloon shalwar, with resham handwork and a Chiffon dupatta.
 
 ### Isra — Black
 1. *(dump)* `Isra, in black. Clean, easy, effortless.`
@@ -65,6 +65,6 @@ A three-piece — a sleeveless Chiffon Georgette gown with an open back, and a s
 
 ### Tamara — Chocolate Brown
 1. *(dump)* `Tamara, in rich chocolate brown.`
-2. *(video)* `Velvet, and the line of a high neck.`
+2. *(video)* `The clean line of a high neck.`
 3. *(dump)* `Made to order, just for you.`
-A three-piece in Velvet Silk — a high-neck top and flared trouser, with resham, crystal and sequin on the cap sleeves and daaman.
+A three-piece — a high-neck top and flared trouser, with resham, crystal and sequin on the cap sleeves and daaman.
