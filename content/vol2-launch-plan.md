@@ -23,14 +23,14 @@ on drop day. Website descriptions live in `vol2-product-descriptions.md`; costin
 | Samira | Light Tea Pink | 53,397 | 42% |
 | Mahnoor | Periwinkle *(confirm)* | 62,000 | 38% |
 | Sabah | Butter / Lemon Yellow | 53,500 | 39% |
-| Serena | Midnight Blue (Navy) | **65,000 or 67,000?** | ~39% |
+| Serena | Midnight Blue (Navy) | 65,000 | ~37% |
 | Isra | Black | 73,000 | 48% |
-| Norah | Deep Red / Maroon | **58,450 or 52,500?** | ~29–36% |
+| Norah | Deep Red / Maroon | 65,000 | ~42% |
 | Maya | Hot Pink & Orange | 65,000 | 38% |
 | Nour | Off-White / Champagne | 67,000 | 38% |
 | Tamara | Chocolate Brown | 62,000 | 49% |
 
-*Serena & Norah prices need a decision — see the costing audit note below.*
+*Prices confirmed by founder 06 Jul (Serena & Norah both 65,000 — revisit if needed).*
 
 ---
 
@@ -86,8 +86,8 @@ your size. Explore the edit. [Shop link]`
 - [ ] Team watching **Instagram/WhatsApp** for the question spike (quick replies ready)
 
 ## Before you launch — costing to finalise (see audit)
-- [ ] **Serena** — decide price (65,000 vs 67,000) and put it in the *Sale Price (you set)* box
-- [ ] **Norah** — decide price (58,450 vs 52,500) and put it in the *Sale Price (you set)* box
+- [ ] **Serena** — set **65,000** in the *Sale Price (you set)* box AND the summary SALE PRICE line (summary currently shows 67,000)
+- [ ] **Norah** — set **65,000** in the *Sale Price (you set)* box AND the summary SALE PRICE line (input shows 58,450, summary 52,500)
 - [ ] **Ayesha & Serena** — fix the "Sequin Shade no.4" line (Total stuck at 120)
 - [ ] **Mahnoor** — confirm colour (Periwinkle vs Light Blue)
 - [ ] **Norah** — tailor description so it isn't identical to Ayesha
