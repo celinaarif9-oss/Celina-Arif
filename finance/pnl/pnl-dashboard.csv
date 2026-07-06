@@ -1,16 +1,16 @@
 Celina Arif — Monthly Profit & Loss (2026),,,,,,,,,,,,,
-All figures PKR. Enter actuals each month; fixed costs are pre-filled — overwrite if they change. Not tax advice — your accountant confirms filings.,,,,,,,,,,,,,
+All figures PKR. Enter actuals each month; fixed costs pre-filled — overwrite if they change. AUGUST is a worked sample — replace with your real numbers. Not tax advice — accountant confirms filings.,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 Line item,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,Year
 REVENUE,,,,,,,,,,,,,
-"Gross sales (online, excl. shipping)",,,,,,,,,,,,,=SUM(B6:M6)
-Less: refunds / returns,,,,,,,,,,,,,=SUM(B7:M7)
+"Gross sales (online, excl. shipping)",,,,,,,,5000000,,,,,=SUM(B6:M6)
+Less: refunds / returns,,,,,,,,100000,,,,,=SUM(B7:M7)
 Net revenue,=B6-B7,=C6-C7,=D6-D7,=E6-E7,=F6-F7,=G6-G7,=H6-H7,=I6-I7,=J6-J7,=K6-K7,=L6-L7,=M6-M7,=SUM(B8:M8)
 ,,,,,,,,,,,,,
 COST OF GOODS SOLD,,,,,,,,,,,,,
-Units sold (articles),,,,,,,,,,,,,=SUM(B11:M11)
-Materials used,,,,,,,,,,,,,=SUM(B12:M12)
-Production payroll (staff wages),,,,,,,,,,,,,=SUM(B13:M13)
+Units sold (articles),,,,,,,,90,,,,,=SUM(B11:M11)
+Materials used,,,,,,,,1080000,,,,,=SUM(B12:M12)
+Production payroll (staff wages),,,,,,,,1300000,,,,,=SUM(B13:M13)
 Total COGS,=B12+B13,=C12+C13,=D12+D13,=E12+E13,=F12+F13,=G12+G13,=H12+H13,=I12+I13,=J12+J13,=K12+K13,=L12+L13,=M12+M13,=SUM(B14:M14)
 GROSS PROFIT,=B8-B14,=C8-C14,=D8-D14,=E8-E14,=F8-F14,=G8-G14,=H8-H14,=I8-I14,=J8-J14,=K8-K14,=L8-L14,=M8-M14,=SUM(B15:M15)
 Gross margin %,"=IFERROR(B15/B8,"""")","=IFERROR(C15/C8,"""")","=IFERROR(D15/D8,"""")","=IFERROR(E15/E8,"""")","=IFERROR(F15/F8,"""")","=IFERROR(G15/G8,"""")","=IFERROR(H15/H8,"""")","=IFERROR(I15/I8,"""")","=IFERROR(J15/J8,"""")","=IFERROR(K15/K8,"""")","=IFERROR(L15/L8,"""")","=IFERROR(M15/M8,"""")","=IFERROR(N15/N8,"""")"
@@ -26,8 +26,8 @@ Marketing — Meta ads,200000,200000,200000,200000,200000,200000,200000,200000,2
 Marketing — Pitch retainer,80000,80000,80000,80000,80000,80000,80000,80000,80000,80000,80000,80000,=SUM(B26:M26)
 Marketing — Pitch commission (8% of gross sales),=0.08*B6,=0.08*C6,=0.08*D6,=0.08*E6,=0.08*F6,=0.08*G6,=0.08*H6,=0.08*I6,=0.08*J6,=0.08*K6,=0.08*L6,=0.08*M6,=SUM(B27:M27)
 Shopify + apps,9520,9520,9520,9520,9520,9520,9520,9520,9520,9520,9520,9520,=SUM(B28:M28)
-Bank charges,,,,,,,,,,,,,=SUM(B29:M29)
-Shipping (your net cost),,,,,,,,,,,,,=SUM(B30:M30)
+Bank charges,,,,,,,,150000,,,,,=SUM(B29:M29)
+Shipping (your net cost),,,,,,,,20000,,,,,=SUM(B30:M30)
 Other,,,,,,,,,,,,,=SUM(B31:M31)
 Total operating expenses,=SUM(B19:B31),=SUM(C19:C31),=SUM(D19:D31),=SUM(E19:E31),=SUM(F19:F31),=SUM(G19:G31),=SUM(H19:H31),=SUM(I19:I31),=SUM(J19:J31),=SUM(K19:K31),=SUM(L19:L31),=SUM(M19:M31),=SUM(B32:M32)
 NET PROFIT (before tax),=B15-B32,=C15-C32,=D15-D32,=E15-E32,=F15-F32,=G15-G32,=H15-H32,=I15-I32,=J15-J32,=K15-K32,=L15-L32,=M15-M32,=SUM(B33:M33)

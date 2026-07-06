@@ -14,6 +14,10 @@ months of the year.
    name the tab **`P&L`**. The `=` cells go live.
 2. It opens with your **fixed monthly costs pre-filled** across every month (rent 260,000,
    electricity 70,000, ads 200,000, Pitch retainer 80,000, etc.). Overwrite any that change.
+3. **August is filled in as a worked sample** (gross sales 5,000,000 → net profit ~1,254,000 at
+   ~26%) so you can see it working end-to-end. **Clear those August inputs and replace with your
+   real numbers** when you start. Empty months show only the fixed-cost burn until you enter their
+   sales — that's normal.
 
 You can keep it in the **same workbook** as your costing (Master Rate List, Cost Cards) or as its
 own sheet — it doesn't need to link to them.
