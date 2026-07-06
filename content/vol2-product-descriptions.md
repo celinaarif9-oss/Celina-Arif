@@ -20,8 +20,8 @@ Collared neckline with buttons and a side zip.
 
 ## Mahnoor — Periwinkle
 A two-piece set in Sheesha Silk: a shirt with attached inner and straight culotte-style trousers,
-with resham and stone work on the neckline and sleeves. Dupatta optional.
-*Sheesha Silk · optional dupatta · resham & stone work (neckline + sleeves) · size chart: Kurta – Culottes / Shalwar · 1.5 kg*
+with silver stone and zarih work on the neckline and sleeves. Dupatta optional.
+*Sheesha Silk · optional dupatta · silver stone & zarih work (neckline + sleeves) · size chart: Kurta – Culottes / Shalwar · 1.5 kg*
 
 ## Sabah — Butter / Lemon Yellow
 A three-piece set in Sheesha Silk: shirt and flared trouser, both lined. Resham flowers and
@@ -41,7 +41,7 @@ trouser. Resham and handwork on the shirt, with straps and a heavy Soft Net dupa
 and tassels.
 *Sheesha Silk · Soft Net dupatta · resham, crystal & sequin · size chart: Slim fit – Wide leg · 3.5 kg*
 
-## Norah — Deep Red / Maroon
+## Norah — Ice Blue
 A one-shoulder three-piece set: a Chiffon Georgette top with a separate Sheesha Silk bustier, and
 bootcut trousers with lining. A single strap at the top and hooks at the back of the bustier for
 an adjustable fit, with resham and handwork throughout.
