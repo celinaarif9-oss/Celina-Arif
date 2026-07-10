@@ -1,0 +1,17 @@
+Celina Arif — Marketing & ROAS dashboard (FY 2025–26),,,,,,,,,,,,,
+Actuals pre-filled from the P&L. Add the two Meta/Shopify inputs to unlock attributed ROAS and cost per order.,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Particulars,Jul-25,Aug-25,Sep-25,Oct-25,Nov-25,Dec-25,Jan-26,Feb-26,Mar-26,Apr-26,May-26,Jun-26,Total
+ACTUALS (from the P&L),,,,,,,,,,,,,
+Sale,749890.87,977750,1157147,2408303,3307233,989271.59,2834998,8412816,3406530,4361744,3749680,1146715,=SUM(B6:M6)
+Ad spend — Meta,0,92163.67,138355.53,186199.93,189116.79,122249.66,157633.7,186190.43,71480.3,210538.82,0,0,=SUM(B7:M7)
+Marketing — Pitch (commission + retainer),0,164088,154504,253400,322728,150044,275460,657795,303104,384872,338036,80000,=SUM(B8:M8)
+Total marketing (ads + Pitch),=B7+B8,=C7+C8,=D7+D8,=E7+E8,=F7+F8,=G7+G8,=H7+H8,=I7+I8,=J7+J8,=K7+K8,=L7+L8,=M7+M8,=SUM(B9:M9)
+Marketing % of sales,"=IFERROR(B9/B6,"""")","=IFERROR(C9/C6,"""")","=IFERROR(D9/D6,"""")","=IFERROR(E9/E6,"""")","=IFERROR(F9/F6,"""")","=IFERROR(G9/G6,"""")","=IFERROR(H9/H6,"""")","=IFERROR(I9/I6,"""")","=IFERROR(J9/J6,"""")","=IFERROR(K9/K6,"""")","=IFERROR(L9/L6,"""")","=IFERROR(M9/M6,"""")","=IFERROR(N9/N6,"""")"
+Blended ROAS on ad spend (Sale / ads),"=IFERROR(B6/B7,""—"")","=IFERROR(C6/C7,""—"")","=IFERROR(D6/D7,""—"")","=IFERROR(E6/E7,""—"")","=IFERROR(F6/F7,""—"")","=IFERROR(G6/G7,""—"")","=IFERROR(H6/H7,""—"")","=IFERROR(I6/I7,""—"")","=IFERROR(J6/J7,""—"")","=IFERROR(K6/K7,""—"")","=IFERROR(L6/L7,""—"")","=IFERROR(M6/M7,""—"")","=IFERROR(N6/N7,""—"")"
+,,,,,,,,,,,,,
+YOU ADD each month (Meta + Shopify),,,,,,,,,,,,,
+Units / orders sold,,,,,,,,,,,,,=SUM(B14:M14)
+Meta attributed purchase value,,,,,,,,,,,,,=SUM(B15:M15)
+Meta attributed ROAS (value / ad spend),"=IFERROR(B15/B7,""—"")","=IFERROR(C15/C7,""—"")","=IFERROR(D15/D7,""—"")","=IFERROR(E15/E7,""—"")","=IFERROR(F15/F7,""—"")","=IFERROR(G15/G7,""—"")","=IFERROR(H15/H7,""—"")","=IFERROR(I15/I7,""—"")","=IFERROR(J15/J7,""—"")","=IFERROR(K15/K7,""—"")","=IFERROR(L15/L7,""—"")","=IFERROR(M15/M7,""—"")","=IFERROR(N15/N7,""—"")"
+Marketing cost per order (total mktg / units),"=IFERROR(B9/B14,"""")","=IFERROR(C9/C14,"""")","=IFERROR(D9/D14,"""")","=IFERROR(E9/E14,"""")","=IFERROR(F9/F14,"""")","=IFERROR(G9/G14,"""")","=IFERROR(H9/H14,"""")","=IFERROR(I9/I14,"""")","=IFERROR(J9/J14,"""")","=IFERROR(K9/K14,"""")","=IFERROR(L9/L14,"""")","=IFERROR(M9/M14,"""")","=IFERROR(N9/N14,"""")"
