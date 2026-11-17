@@ -1,0 +1,33 @@
+"Celina Arif — The Velvet Show, Dubai — Sales sheet (stock on hand)",,,,,
+Prices from your price list (shipping already included). Rate: AED 1 = PKR 76.,,,,,
+,,,,,
+S.No,Article,Qty,Price PKR,Price AED,Value AED,Value PKR
+1,Natasha Cap Sleeves,3,46450,650,=C5*E5,=F5*76
+2,Natasha Full Sleeves,3,46450,650,=C6*E6,=F6*76
+3,Azure Sleeveless,2,48450,670,=C7*E7,=F7*76
+4,Azure Cap Sleeves,3,50850,670,=C8*E8,=F8*76
+5,Sarah Sleeveless,3,47450,660,=C9*E9,=F9*76
+6,Sarah Full Sleeves,3,49250,680,=C10*E10,=F10*76
+7,Maria,5,39650,560,=C11*E11,=F11*76
+8,Jasmine,3,31450,450,=C12*E12,=F12*76
+9,Nubia,2,35250,500,=C13*E13,=F13*76
+10,Zinnia,2,43750,610,=C14*E14,=F14*76
+11,Zara,3,41750,580,=C15*E15,=F15*76
+12,Zayna Cap Sleeves,2,54450,750,=C16*E16,=F16*76
+13,Zayna Full Sleeves,4,55650,770,=C17*E17,=F17*76
+14,Zaha Green,4,57250,790,=C18*E18,=F18*76
+15,Zaha Pink,4,57250,790,=C19*E19,=F19*76
+16,Zaha Black,4,57250,790,=C20*E20,=F20*76
+17,Kiara,4,62450,860,=C21*E21,=F21*76
+18,Serena Sleeveless,3,58750,810,=C22*E22,=F22*76
+19,Serena Full Sleeves,2,60650,830,=C23*E23,=F23*76
+20,Sama,3,60250,830,=C24*E24,=F24*76
+21,Sabah Sleeveless,3,53500,740,=C25*E25,=F25*76
+22,Sabah Full Sleeves,5,60650,780,=C26*E26,=F26*76
+23,Isra Sleeveless,3,72000,980,=C27*E27,=F27*76
+24,Isra Cap Sleeves,3,75000,1020,=C28*E28,=F28*76
+25,Ayesha,4,60450,830,=C29*E29,=F29*76
+26,Tamara Cap Sleeves,3,58500,800,=C30*E30,=F30*76
+27,Tamara Full Sleeves,4,58500,800,=C31*E31,=F31*76
+,TOTAL,=SUM(C5:C31),,,=SUM(F5:F31),=SUM(G5:G31)
+,Weighted avg price / piece,,,=F32/C32,=G32/C32,

@@ -9,33 +9,33 @@ Return flights (2 people),280000,PKR,"=IF(C8=""AED"",B8,B8/$B$2)","=IF(C8=""AED"
 "Hotel (19–26 Nov, 7 nights)",3754.77,AED,"=IF(C9=""AED"",B9,B9/$B$2)","=IF(C9=""AED"",B9*$B$2,B9)",
 UAE visas (2),90000,PKR,"=IF(C10=""AED"",B10,B10/$B$2)","=IF(C10=""AED"",B10*$B$2,B10)",
 "Local transport + food (2 ppl, ~7 days)",2000,AED,"=IF(C11=""AED"",B11,B11/$B$2)","=IF(C11=""AED"",B11*$B$2,B11)",ESTIMATE — refine with real spend
-"DHL freight (stock, 5 boxes)",138000,PKR,"=IF(C12=""AED"",B12,B12/$B$2)","=IF(C12=""AED"",B12*$B$2,B12)",
+"DHL freight (stock, 5 boxes)",138000,PKR,"=IF(C12=""AED"",B12,B12/$B$2)","=IF(C12=""AED"",B12*$B$2,B12)","Prices include shipping, so not double-charged to customers"
 "Display, branding, signage & bags",13000,PKR,"=IF(C13=""AED"",B13,B13/$B$2)","=IF(C13=""AED"",B13*$B$2,B13)",
 Customs / import duty,0,PKR,"=IF(C14=""AED"",B14,B14/$B$2)","=IF(C14=""AED"",B14*$B$2,B14)",Handled — no extra cost
 Marketing / promo,0,PKR,"=IF(C15=""AED"",B15,B15/$B$2)","=IF(C15=""AED"",B15*$B$2,B15)",Not included
 TOTAL FIXED COST,,,=SUM(D7:D15),=SUM(E7:E15),
 ,,,,,
-SALES & BREAK-EVEN,,,,,
-Inputs — replace the EXAMPLE values with your real averages,,,,,
-Average selling price / piece (AED),850,AED,,,EXAMPLE — use average from your price list
-Average production cost / piece (PKR),25000,PKR,,,"EXAMPLE — production only: materials+labour+overhead, NO marketing/bank %"
-Average production cost / piece (AED),=B21/$B$2,,,,
-Card charge we absorb (% of price),0.03,,,,On card sales. Customer pays the 5% VAT separately
-Share of sales paid by card,0.7,,,,Estimate — cash sales carry no charge
-Effective card cost / piece (AED),=B20*B23*B24,,,,
-Contribution / piece (AED),=B20-B22-B25,,,,price − production cost − card cost
+SALES & BREAK-EVEN  (prices real; production cost is the one value to pin),,,,,
+Weighted avg selling price / piece (AED),741.4,AED,,,"From price list — 87 pieces, AED 450–1,020"
+Total pieces in stock,87,,,,"Potential revenue if all sold: AED 64,500 (Rs4.9M)"
+Avg production cost / piece (PKR),28000,PKR,,,"← PIN THIS: production only — materials+labour+overhead, NO marketing/bank %"
+Avg production cost / piece (AED),=B21/$B$2,,,,
+Card charge absorbed (% of price),0.03,,,,On card sales. Customer pays the 5% VAT separately
+Share of sales paid by card,0.7,,,,Estimate — cash carries no charge
+Card cost / piece (AED),=B19*B23*B24,,,,
+Contribution / piece (AED),=B19-B22-B25,,,,price − production cost − card
 ,,,,,
 OUTPUTS,,,,,
 Break-even — pieces to sell,"=CEILING(D16/B26,1)",,,,covers ALL fixed costs
-Break-even — sales value (AED),=B29*B20,,,,
-Break-even — sales value (PKR),=B30*$B$2,,,,
-Pieces in stock to sell on the day,90,,,,+ unlimited pre-orders from catalog
-Contribution needed to break even on 90 stock (AED),=D16/B32,,,,"if you sell all 90, each must clear this"
-Profit if all 90 stock sold (AED),=B32*B26-D16,,,,
+Break-even — % of your 87 stock,=B29/B20,,,,
+Break-even — sales value (AED),=B29*B19,,,,
+Profit if ALL 87 stock sold (AED),=B20*B26-D16,,,,+ every pre-order is extra
+Profit if all 87 sold (PKR),=B32*$B$2,,,,
 ,,,,,
-SCENARIOS  (profit after all fixed costs),pieces sold,profit AED,profit PKR,,
-,30,=B37*$B$26-$D$16,=C37*$B$2,,
-,50,=B38*$B$26-$D$16,=C38*$B$2,,
-,70,=B39*$B$26-$D$16,=C39*$B$2,,
-All stock,90,=B40*$B$26-$D$16,=C40*$B$2,,
-Stock + pre-orders,120,=B41*$B$26-$D$16,=C41*$B$2,,
+SENSITIVITY — break-even by avg production cost,avg cost PKR,contribution AED,break-even pieces,% of 87 stock,profit if all 87 sold (AED)
+,15000,=$B$19-B36/$B$2-$B$19*$B$23*$B$24,"=CEILING($D$16/C36,1)",=D36/$B$20,=$B$20*C36-$D$16
+,20000,=$B$19-B37/$B$2-$B$19*$B$23*$B$24,"=CEILING($D$16/C37,1)",=D37/$B$20,=$B$20*C37-$D$16
+,25000,=$B$19-B38/$B$2-$B$19*$B$23*$B$24,"=CEILING($D$16/C38,1)",=D38/$B$20,=$B$20*C38-$D$16
+,30000,=$B$19-B39/$B$2-$B$19*$B$23*$B$24,"=CEILING($D$16/C39,1)",=D39/$B$20,=$B$20*C39-$D$16
+,35000,=$B$19-B40/$B$2-$B$19*$B$23*$B$24,"=CEILING($D$16/C40,1)",=D40/$B$20,=$B$20*C40-$D$16
+,40000,=$B$19-B41/$B$2-$B$19*$B$23*$B$24,"=CEILING($D$16/C41,1)",=D41/$B$20,=$B$20*C41-$D$16
