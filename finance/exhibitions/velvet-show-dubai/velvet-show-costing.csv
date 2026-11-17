@@ -1,0 +1,41 @@
+Celina Arif — The Velvet Show — Show costing & exact break-even,,,,,,,,
+"Fill column E (production cost/piece, PKR) from your cost cards — production only: materials+labour+overhead, NO marketing/bank %.",,,,,,,,
+Rate AED 1 = PKR 76. Card 3% absorbed on 70% card sales. VAT paid by customer. Prices include shipping.,,,,,,,,
+S.No,Article,Qty,Price AED,Prod cost PKR  (FILL),Prod cost AED,Card AED,Contribution/pc AED,Line contribution AED
+1,Natasha Cap Sleeves,3,650,,"=IF(E5="""","""",E5/76)","=IF(D5="""","""",D5*0.03*0.7)","=IF(E5="""","""",D5-F5-G5)","=IF(E5="""","""",C5*H5)"
+2,Natasha Full Sleeves,3,650,,"=IF(E6="""","""",E6/76)","=IF(D6="""","""",D6*0.03*0.7)","=IF(E6="""","""",D6-F6-G6)","=IF(E6="""","""",C6*H6)"
+3,Azure Sleeveless,2,670,,"=IF(E7="""","""",E7/76)","=IF(D7="""","""",D7*0.03*0.7)","=IF(E7="""","""",D7-F7-G7)","=IF(E7="""","""",C7*H7)"
+4,Azure Cap Sleeves,3,670,,"=IF(E8="""","""",E8/76)","=IF(D8="""","""",D8*0.03*0.7)","=IF(E8="""","""",D8-F8-G8)","=IF(E8="""","""",C8*H8)"
+5,Sarah Sleeveless,3,660,,"=IF(E9="""","""",E9/76)","=IF(D9="""","""",D9*0.03*0.7)","=IF(E9="""","""",D9-F9-G9)","=IF(E9="""","""",C9*H9)"
+6,Sarah Full Sleeves,3,680,,"=IF(E10="""","""",E10/76)","=IF(D10="""","""",D10*0.03*0.7)","=IF(E10="""","""",D10-F10-G10)","=IF(E10="""","""",C10*H10)"
+7,Maria,5,560,,"=IF(E11="""","""",E11/76)","=IF(D11="""","""",D11*0.03*0.7)","=IF(E11="""","""",D11-F11-G11)","=IF(E11="""","""",C11*H11)"
+8,Jasmine,3,450,,"=IF(E12="""","""",E12/76)","=IF(D12="""","""",D12*0.03*0.7)","=IF(E12="""","""",D12-F12-G12)","=IF(E12="""","""",C12*H12)"
+9,Nubia,2,500,,"=IF(E13="""","""",E13/76)","=IF(D13="""","""",D13*0.03*0.7)","=IF(E13="""","""",D13-F13-G13)","=IF(E13="""","""",C13*H13)"
+10,Zinnia,2,610,,"=IF(E14="""","""",E14/76)","=IF(D14="""","""",D14*0.03*0.7)","=IF(E14="""","""",D14-F14-G14)","=IF(E14="""","""",C14*H14)"
+11,Zara,3,580,,"=IF(E15="""","""",E15/76)","=IF(D15="""","""",D15*0.03*0.7)","=IF(E15="""","""",D15-F15-G15)","=IF(E15="""","""",C15*H15)"
+12,Zayna Cap Sleeves,2,750,,"=IF(E16="""","""",E16/76)","=IF(D16="""","""",D16*0.03*0.7)","=IF(E16="""","""",D16-F16-G16)","=IF(E16="""","""",C16*H16)"
+13,Zayna Full Sleeves,4,770,,"=IF(E17="""","""",E17/76)","=IF(D17="""","""",D17*0.03*0.7)","=IF(E17="""","""",D17-F17-G17)","=IF(E17="""","""",C17*H17)"
+14,Zaha Green,4,790,,"=IF(E18="""","""",E18/76)","=IF(D18="""","""",D18*0.03*0.7)","=IF(E18="""","""",D18-F18-G18)","=IF(E18="""","""",C18*H18)"
+15,Zaha Pink,4,790,,"=IF(E19="""","""",E19/76)","=IF(D19="""","""",D19*0.03*0.7)","=IF(E19="""","""",D19-F19-G19)","=IF(E19="""","""",C19*H19)"
+16,Zaha Black,4,790,,"=IF(E20="""","""",E20/76)","=IF(D20="""","""",D20*0.03*0.7)","=IF(E20="""","""",D20-F20-G20)","=IF(E20="""","""",C20*H20)"
+17,Kiara,4,860,,"=IF(E21="""","""",E21/76)","=IF(D21="""","""",D21*0.03*0.7)","=IF(E21="""","""",D21-F21-G21)","=IF(E21="""","""",C21*H21)"
+18,Serena Sleeveless,3,810,,"=IF(E22="""","""",E22/76)","=IF(D22="""","""",D22*0.03*0.7)","=IF(E22="""","""",D22-F22-G22)","=IF(E22="""","""",C22*H22)"
+19,Serena Full Sleeves,2,830,,"=IF(E23="""","""",E23/76)","=IF(D23="""","""",D23*0.03*0.7)","=IF(E23="""","""",D23-F23-G23)","=IF(E23="""","""",C23*H23)"
+20,Sama,3,830,,"=IF(E24="""","""",E24/76)","=IF(D24="""","""",D24*0.03*0.7)","=IF(E24="""","""",D24-F24-G24)","=IF(E24="""","""",C24*H24)"
+21,Sabah Sleeveless,3,740,,"=IF(E25="""","""",E25/76)","=IF(D25="""","""",D25*0.03*0.7)","=IF(E25="""","""",D25-F25-G25)","=IF(E25="""","""",C25*H25)"
+22,Sabah Full Sleeves,5,780,,"=IF(E26="""","""",E26/76)","=IF(D26="""","""",D26*0.03*0.7)","=IF(E26="""","""",D26-F26-G26)","=IF(E26="""","""",C26*H26)"
+23,Isra Sleeveless,3,980,,"=IF(E27="""","""",E27/76)","=IF(D27="""","""",D27*0.03*0.7)","=IF(E27="""","""",D27-F27-G27)","=IF(E27="""","""",C27*H27)"
+24,Isra Cap Sleeves,3,1020,,"=IF(E28="""","""",E28/76)","=IF(D28="""","""",D28*0.03*0.7)","=IF(E28="""","""",D28-F28-G28)","=IF(E28="""","""",C28*H28)"
+25,Ayesha,4,830,,"=IF(E29="""","""",E29/76)","=IF(D29="""","""",D29*0.03*0.7)","=IF(E29="""","""",D29-F29-G29)","=IF(E29="""","""",C29*H29)"
+26,Tamara Cap Sleeves,3,800,,"=IF(E30="""","""",E30/76)","=IF(D30="""","""",D30*0.03*0.7)","=IF(E30="""","""",D30-F30-G30)","=IF(E30="""","""",C30*H30)"
+27,Tamara Full Sleeves,4,800,,"=IF(E31="""","""",E31/76)","=IF(D31="""","""",D31*0.03*0.7)","=IF(E31="""","""",D31-F31-G31)","=IF(E31="""","""",C31*H31)"
+,TOTALS,=SUM(C5:C31),,,,,,=SUM(I5:I31)
+,Pieces costed so far,"=SUMPRODUCT((E5:E31<>"""")*C5:C31)",,Weighted avg prod cost PKR,"=IFERROR(SUMPRODUCT(C5:C31,N(E5:E31))/C33,"""")",,,
+,,,,,,,,
+EXACT BREAK-EVEN  (updates live as you fill column E),,,,,,,,
+Fixed cost to cover (AED),20480,,,from the cost sheet,,,,
+Avg contribution / piece so far (AED),"=IFERROR(I32/C33,"""")",,,,,,,
+Break-even — pieces to sell,"=IFERROR(CEILING(B36/B37,1),"""")",,,,,,,
+Break-even — % of 87 stock,"=IFERROR(B38/87,"""")",,,,,,,
+Profit so far if costed pieces all sell (AED),"=IFERROR(I32-B36,"""")",,,becomes your full result once all 27 are costed,,,,
+  same in PKR,"=IFERROR(B40*76,"""")",,,,,,,
